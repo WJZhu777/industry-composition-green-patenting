@@ -1,0 +1,94 @@
+industry_code,industry_name,role,status,P,W,E,R,K,M,technology_families
+A01,农业,supplier,unknown_or_unlinked_role,,,,,,,[]
+A01,农业,process_rd,conditional_documented_domain,1,1,1,1,1,1,"[""biological_and_physical_crop_pest_control"", ""crop_nutrient_diagnostics"", ""cropping_nutrient_loss_control"", ""food_drying_cooling_and_postharvest_loss_control"", ""forage_and_crop_livestock_circular_operations"", ""irrigation_drainage_and_runoff_operations"", ""soil_contamination_and_land_restoration""]"
+A01,农业,user,conditional_documented_domain,1,1,1,1,1,1,"[""agricultural_residue_digestion_and_recycling"", ""biological_and_physical_crop_pest_control"", ""crop_nutrient_diagnostics"", ""cropping_nutrient_loss_control"", ""fertilizer_product_and_manufacture"", ""food_drying_cooling_and_postharvest_loss_control"", ""forage_and_crop_livestock_circular_operations"", ""forest_residue_products_and_manufacture"", ""hydrological_and_water_resource_measurement"", ""irrigation_drainage_and_runoff_operations"", ""mobile_engine_emission_control"", ""soil_contamination_and_land_restoration""]"
+A02,林业,supplier,unknown_or_unlinked_role,,,,,,,[]
+A02,林业,process_rd,conditional_documented_domain,0,0,0,0,1,0,"[""soil_maintaining_forest_cultivation""]"
+A02,林业,user,conditional_documented_domain,0,0,0,0,1,1,"[""forest_resource_monitoring"", ""soil_maintaining_forest_cultivation""]"
+A03,畜牧业,supplier,unknown_or_unlinked_role,,,,,,,[]
+A03,畜牧业,process_rd,conditional_documented_domain,0,1,1,1,0,0,"[""forage_and_crop_livestock_circular_operations"", ""resource_efficient_husbandry""]"
+A03,畜牧业,user,conditional_documented_domain,1,1,1,1,0,0,"[""agricultural_residue_digestion_and_recycling"", ""forage_and_crop_livestock_circular_operations"", ""resource_efficient_husbandry"", ""veterinary_products_for_antibiotic_reduction""]"
+A05,农、林、牧、渔服务业,supplier,unknown_or_unlinked_role,,,,,,,[]
+A05,农、林、牧、渔服务业,process_rd,conditional_documented_domain,0,0,1,1,0,0,"[""food_drying_cooling_and_postharvest_loss_control""]"
+A05,农、林、牧、渔服务业,user,conditional_documented_domain,0,0,1,1,0,0,"[""food_drying_cooling_and_postharvest_loss_control""]"
+C13,农副食品加工业,supplier,conditional_documented_domain,0,0,0,1,0,0,"[""forage_and_crop_livestock_circular_operations"", ""forest_residue_products_and_manufacture""]"
+C13,农副食品加工业,process_rd,conditional_documented_domain,1,1,1,1,0,0,"[""food_drying_cooling_and_postharvest_loss_control"", ""food_resource_efficient_unit_processing"", ""forage_and_crop_livestock_circular_operations"", ""forest_residue_products_and_manufacture""]"
+C13,农副食品加工业,user,conditional_documented_domain,1,1,1,1,0,0,"[""cooking_fume_control"", ""food_drying_cooling_and_postharvest_loss_control"", ""food_resource_efficient_unit_processing"", ""forage_and_crop_livestock_circular_operations"", ""forest_residue_products_and_manufacture""]"
+C14,食品制造业,supplier,unknown_or_unlinked_role,,,,,,,[]
+C14,食品制造业,process_rd,conditional_documented_domain,1,1,1,1,0,0,"[""food_resource_efficient_unit_processing""]"
+C14,食品制造业,user,conditional_documented_domain,1,1,1,1,0,0,"[""cooking_fume_control"", ""food_resource_efficient_unit_processing""]"
+C15,酒、饮料和精制茶制造业,supplier,unknown_or_unlinked_role,,,,,,,[]
+C15,酒、饮料和精制茶制造业,process_rd,conditional_documented_domain,1,0,1,0,0,0,"[""food_resource_efficient_unit_processing""]"
+C15,酒、饮料和精制茶制造业,user,conditional_documented_domain,1,0,1,0,0,0,"[""food_resource_efficient_unit_processing""]"
+C20,木材加工和木、竹、藤、棕、草制品业,supplier,conditional_documented_domain,0,0,0,1,0,0,"[""low_material_loss_wood_and_furniture_processing""]"
+C20,木材加工和木、竹、藤、棕、草制品业,process_rd,conditional_documented_domain,0,0,0,1,0,0,"[""low_material_loss_wood_and_furniture_processing""]"
+C20,木材加工和木、竹、藤、棕、草制品业,user,conditional_documented_domain,0,0,0,1,0,0,"[""low_material_loss_wood_and_furniture_processing""]"
+C21,家具制造业,supplier,conditional_documented_domain,0,0,0,1,0,0,"[""low_material_loss_wood_and_furniture_processing""]"
+C21,家具制造业,process_rd,conditional_documented_domain,0,0,0,1,0,0,"[""low_material_loss_wood_and_furniture_processing""]"
+C21,家具制造业,user,conditional_documented_domain,0,0,0,1,0,0,"[""low_material_loss_wood_and_furniture_processing""]"
+C22,造纸和纸制品业,supplier,conditional_documented_domain,0,0,0,1,0,0,"[""forest_residue_products_and_manufacture""]"
+C22,造纸和纸制品业,process_rd,conditional_documented_domain,0,0,0,1,0,0,"[""forest_residue_products_and_manufacture""]"
+C22,造纸和纸制品业,user,conditional_documented_domain,0,0,0,1,0,0,"[""forest_residue_products_and_manufacture""]"
+C26,化学原料和化学制品制造业,supplier,conditional_documented_domain,1,1,1,1,0,0,"[""biological_and_physical_crop_pest_control"", ""desalination_materials_equipment_and_processes"", ""fertilizer_product_and_manufacture"", ""forest_residue_products_and_manufacture"", ""nonwood_forest_chemical_and_rubber_processing"", ""soil_contamination_and_land_restoration""]"
+C26,化学原料和化学制品制造业,process_rd,conditional_documented_domain,1,0,1,1,0,0,"[""agricultural_residue_digestion_and_recycling"", ""biological_and_physical_crop_pest_control"", ""fertilizer_product_and_manufacture"", ""forest_residue_products_and_manufacture"", ""nonwood_forest_chemical_and_rubber_processing"", ""stationary_industrial_emission_and_resource_control""]"
+C26,化学原料和化学制品制造业,user,conditional_documented_domain,1,0,1,1,0,1,"[""agricultural_residue_digestion_and_recycling"", ""fertilizer_product_and_manufacture"", ""forest_residue_products_and_manufacture"", ""nonwood_forest_chemical_and_rubber_processing"", ""stationary_industrial_emission_and_resource_control""]"
+C27,医药制造业,supplier,conditional_documented_domain,1,0,0,0,0,0,"[""veterinary_products_for_antibiotic_reduction""]"
+C27,医药制造业,process_rd,conditional_documented_domain,1,0,0,0,0,0,"[""veterinary_products_for_antibiotic_reduction""]"
+C27,医药制造业,user,unknown_or_unlinked_role,,,,,,,[]
+C29,橡胶和塑料制品业,supplier,conditional_documented_domain,0,0,1,1,0,0,"[""nonwood_forest_chemical_and_rubber_processing""]"
+C29,橡胶和塑料制品业,process_rd,conditional_documented_domain,0,0,1,1,0,0,"[""nonwood_forest_chemical_and_rubber_processing""]"
+C29,橡胶和塑料制品业,user,conditional_documented_domain,0,0,1,1,0,0,"[""nonwood_forest_chemical_and_rubber_processing""]"
+C30,非金属矿物制品业,supplier,unknown_or_unlinked_role,,,,,,,[]
+C30,非金属矿物制品业,process_rd,conditional_documented_domain,1,0,1,1,0,0,"[""stationary_industrial_emission_and_resource_control""]"
+C30,非金属矿物制品业,user,conditional_documented_domain,1,0,1,1,0,0,"[""stationary_industrial_emission_and_resource_control""]"
+C31,黑色金属冶炼和压延加工业,supplier,unknown_or_unlinked_role,,,,,,,[]
+C31,黑色金属冶炼和压延加工业,process_rd,conditional_documented_domain,1,0,1,1,0,0,"[""stationary_industrial_emission_and_resource_control""]"
+C31,黑色金属冶炼和压延加工业,user,conditional_documented_domain,1,0,1,1,0,0,"[""stationary_industrial_emission_and_resource_control""]"
+C32,有色金属冶炼和压延加工业,supplier,unknown_or_unlinked_role,,,,,,,[]
+C32,有色金属冶炼和压延加工业,process_rd,conditional_documented_domain,1,0,1,1,0,0,"[""stationary_industrial_emission_and_resource_control""]"
+C32,有色金属冶炼和压延加工业,user,conditional_documented_domain,1,0,1,1,0,0,"[""stationary_industrial_emission_and_resource_control""]"
+C34,通用设备制造业,supplier,conditional_documented_domain,1,0,1,1,0,0,"[""food_drying_cooling_and_postharvest_loss_control"", ""mobile_engine_emission_control""]"
+C34,通用设备制造业,process_rd,unknown_or_unlinked_role,,,,,,,[]
+C34,通用设备制造业,user,unknown_or_unlinked_role,,,,,,,[]
+C35,专用设备制造业,supplier,conditional_documented_domain,1,1,1,1,0,0,"[""agricultural_residue_digestion_and_recycling"", ""biological_and_physical_crop_pest_control"", ""cooking_fume_control"", ""desalination_materials_equipment_and_processes"", ""excavation_and_sediment_resource_recovery"", ""fertilizer_product_and_manufacture"", ""food_drying_cooling_and_postharvest_loss_control"", ""food_resource_efficient_unit_processing"", ""indoor_air_purification"", ""irrigation_drainage_and_runoff_operations"", ""mobile_engine_emission_control"", ""resource_efficient_husbandry"", ""soil_contamination_and_land_restoration"", ""stationary_industrial_emission_and_resource_control""]"
+C35,专用设备制造业,process_rd,unknown_or_unlinked_role,,,,,,,[]
+C35,专用设备制造业,user,conditional_documented_domain,1,0,0,0,0,0,"[""mobile_engine_emission_control""]"
+C36,汽车制造业,supplier,conditional_documented_domain,1,0,0,0,0,0,"[""mobile_engine_emission_control""]"
+C36,汽车制造业,process_rd,unknown_or_unlinked_role,,,,,,,[]
+C36,汽车制造业,user,conditional_documented_domain,1,0,0,0,0,0,"[""mobile_engine_emission_control""]"
+C38,电气机械和器材制造业,supplier,conditional_documented_domain,1,0,0,0,0,0,"[""household_combustion_emission_control""]"
+C38,电气机械和器材制造业,process_rd,unknown_or_unlinked_role,,,,,,,[]
+C38,电气机械和器材制造业,user,unknown_or_unlinked_role,,,,,,,[]
+C40,仪器仪表制造业,supplier,conditional_documented_domain,0,0,0,1,0,1,"[""agricultural_residue_digestion_and_recycling"", ""atmospheric_measurement_and_forecasting"", ""crop_nutrient_diagnostics"", ""grain_storage_resource_monitoring"", ""hydrological_and_water_resource_measurement"", ""soil_pollution_measurement""]"
+C40,仪器仪表制造业,process_rd,unknown_or_unlinked_role,,,,,,,[]
+C40,仪器仪表制造业,user,unknown_or_unlinked_role,,,,,,,[]
+D44,电力、热力生产和供应业,supplier,unknown_or_unlinked_role,,,,,,,[]
+D44,电力、热力生产和供应业,process_rd,conditional_documented_domain,1,0,0,1,0,0,"[""stationary_industrial_emission_and_resource_control""]"
+D44,电力、热力生产和供应业,user,conditional_documented_domain,1,0,0,1,0,0,"[""stationary_industrial_emission_and_resource_control""]"
+D45,燃气生产和供应业,supplier,unknown_or_unlinked_role,,,,,,,[]
+D45,燃气生产和供应业,process_rd,conditional_documented_domain,1,0,0,1,0,0,"[""agricultural_residue_digestion_and_recycling""]"
+D45,燃气生产和供应业,user,conditional_documented_domain,1,0,0,1,0,1,"[""agricultural_residue_digestion_and_recycling""]"
+D46,水的生产和供应业,supplier,unknown_or_unlinked_role,,,,,,,[]
+D46,水的生产和供应业,process_rd,conditional_documented_domain,1,1,1,0,1,0,"[""desalination_materials_equipment_and_processes"", ""water_ecosystem_and_ecological_flow_operations""]"
+D46,水的生产和供应业,user,conditional_documented_domain,1,1,1,0,1,0,"[""desalination_materials_equipment_and_processes"", ""water_ecosystem_and_ecological_flow_operations""]"
+E48,土木工程建筑业,supplier,unknown_or_unlinked_role,,,,,,,[]
+E48,土木工程建筑业,process_rd,conditional_documented_domain,1,1,0,1,0,0,"[""excavation_and_sediment_resource_recovery"", ""irrigation_drainage_and_runoff_operations"", ""soil_contamination_and_land_restoration""]"
+E48,土木工程建筑业,user,conditional_documented_domain,1,1,0,1,0,0,"[""excavation_and_sediment_resource_recovery"", ""irrigation_drainage_and_runoff_operations"", ""soil_contamination_and_land_restoration""]"
+G59,仓储业,supplier,unknown_or_unlinked_role,,,,,,,[]
+G59,仓储业,process_rd,conditional_documented_domain,0,0,1,1,0,0,"[""food_drying_cooling_and_postharvest_loss_control""]"
+G59,仓储业,user,conditional_documented_domain,0,0,1,1,0,1,"[""food_drying_cooling_and_postharvest_loss_control"", ""grain_storage_resource_monitoring""]"
+H62,餐饮业,supplier,unknown_or_unlinked_role,,,,,,,[]
+H62,餐饮业,process_rd,unknown_or_unlinked_role,,,,,,,[]
+H62,餐饮业,user,conditional_documented_domain,1,0,0,0,0,0,"[""cooking_fume_control""]"
+I65,软件和信息技术服务业,supplier,conditional_documented_domain,0,1,0,1,1,1,"[""agricultural_residue_digestion_and_recycling"", ""atmospheric_measurement_and_forecasting"", ""forest_resource_monitoring"", ""grain_storage_resource_monitoring"", ""hydrological_and_water_resource_measurement"", ""operational_vehicle_emission_monitoring"", ""soil_pollution_measurement"", ""water_ecosystem_and_ecological_flow_operations""]"
+I65,软件和信息技术服务业,process_rd,unknown_or_unlinked_role,,,,,,,[]
+I65,软件和信息技术服务业,user,unknown_or_unlinked_role,,,,,,,[]
+M74,专业技术服务业,supplier,unknown_or_unlinked_role,,,,,,,[]
+M74,专业技术服务业,process_rd,unknown_or_unlinked_role,,,,,,,[]
+M74,专业技术服务业,user,conditional_documented_domain,0,0,0,0,0,1,"[""atmospheric_measurement_and_forecasting"", ""hydrological_and_water_resource_measurement"", ""soil_pollution_measurement""]"
+N76,水利管理业,supplier,unknown_or_unlinked_role,,,,,,,[]
+N76,水利管理业,process_rd,conditional_documented_domain,1,1,0,1,1,0,"[""excavation_and_sediment_resource_recovery"", ""irrigation_drainage_and_runoff_operations"", ""water_ecosystem_and_ecological_flow_operations""]"
+N76,水利管理业,user,conditional_documented_domain,1,1,0,1,1,1,"[""excavation_and_sediment_resource_recovery"", ""hydrological_and_water_resource_measurement"", ""irrigation_drainage_and_runoff_operations"", ""water_ecosystem_and_ecological_flow_operations""]"
+N77,生态保护和环境治理业,supplier,unknown_or_unlinked_role,,,,,,,[]
+N77,生态保护和环境治理业,process_rd,conditional_documented_domain,1,0,0,1,1,0,"[""agricultural_residue_digestion_and_recycling"", ""soil_contamination_and_land_restoration"", ""water_ecosystem_and_ecological_flow_operations""]"
+N77,生态保护和环境治理业,user,conditional_documented_domain,1,0,0,1,1,1,"[""agricultural_residue_digestion_and_recycling"", ""soil_contamination_and_land_restoration"", ""soil_pollution_measurement"", ""water_ecosystem_and_ecological_flow_operations""]"

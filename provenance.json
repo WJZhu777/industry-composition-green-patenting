@@ -1,0 +1,1375 @@
+{
+  "status": "Private GitHub repository; not publicly released, no public license selected or Zenodo archive created.",
+  "title": "Industry Composition and the Green Invention Patenting Gap between Agricultural and Other Listed Firms in China",
+  "modules": [
+    {
+      "module": "sample",
+      "readability_changes": {
+        "module_aliases": {},
+        "console_messages": {
+          "P1 synthetic checks passed: nesting, partition, missingness, group scope, overlapping firms, concentration, and invalid inputs.": "Sample-selection synthetic checks passed: nesting, partition, missingness, group scope, overlapping firms, concentration, and invalid inputs."
+        }
+      },
+      "source": "03_code/21_major_revision_10_08/p1_sample_selection_and_clusters.py",
+      "source_sha256": "9c801785e855c79901d6ea4dfa78e9eafd3c6023aa7f535117bc8a3c6d5e281c",
+      "functions": [
+        {
+          "function": "validate_panel",
+          "source_line": 76,
+          "ast_sha256": "1298489896d5c0ed440a8b4106d1471ad19c5f0a59c6ba7240cdbf6a1471c3eb"
+        },
+        {
+          "function": "load_panel",
+          "source_line": 111,
+          "ast_sha256": "74aabd2dcb200acb48e5205698480426ccbd1966b3ea8b1af825ea03f2f326e3"
+        },
+        {
+          "function": "group_mask",
+          "source_line": 121,
+          "ast_sha256": "a0b93abd92b6f541a9d64de6eacb6fdec380548a244cf4367b308c9e0f710c43"
+        },
+        {
+          "function": "build_masks",
+          "source_line": 125,
+          "ast_sha256": "10681ba6fe98d33047aaa0a37c888185e41b983511c440d17ce018f20ee85b72"
+        },
+        {
+          "function": "sample_flow",
+          "source_line": 147,
+          "ast_sha256": "30198ecced273e58653936078d7b6f1e2fa29571d41ad96c62687795f85d028d"
+        },
+        {
+          "function": "first_failures",
+          "source_line": 168,
+          "ast_sha256": "d67b349798bcf0b00076575efb4da646b275f725efba77731415ab9a8d580201"
+        },
+        {
+          "function": "standardized_difference",
+          "source_line": 187,
+          "ast_sha256": "7ed638f21f60af022e49132a2681bbfab56058b24dd638a3a66a951654093602"
+        },
+        {
+          "function": "compare_samples",
+          "source_line": 197,
+          "ast_sha256": "24523fa7ec4e01a204fc375e7fc0c50a1fa99b611d117c9d4ee1800320e64148"
+        },
+        {
+          "function": "categorical_retention",
+          "source_line": 231,
+          "ast_sha256": "41ff0b82676d0d0d1d471a3fd786a95701dd04e063045798f89d585f2c0ee4ed"
+        },
+        {
+          "function": "concentration",
+          "source_line": 256,
+          "ast_sha256": "594ad84768b464068425da03beea9f6d95b582fd056d6adf42605cf3949c12fb"
+        },
+        {
+          "function": "industry_clusters",
+          "source_line": 273,
+          "ast_sha256": "00e6dc08392ae457da27ea65aba6b87933239ef2b97a9c7844c21968a557aee7"
+        },
+        {
+          "function": "self_test",
+          "source_line": 310,
+          "ast_sha256": "d87598b557aba4e429ed034bb3cb3bbd2b400f913d1ff554914a0b37aae13af0"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": []
+    },
+    {
+      "module": "rd",
+      "readability_changes": {
+        "module_aliases": {
+          "p1": "sample"
+        },
+        "console_messages": {
+          "P2 synthetic checks passed.": "R&D synthetic checks passed."
+        }
+      },
+      "source": "03_code/21_major_revision_10_08/p2_nonpatent_rd_comparison.py",
+      "source_sha256": "ba9fd93d6ffddd93ae705ff8bb52ef2d3d733f739e9992d0d99023e274c97ba5",
+      "functions": [
+        {
+          "function": "records",
+          "source_line": 40,
+          "ast_sha256": "c5a46ac0e4a7d22616246427643ac62254c7c3e885695cfe672661ff25036df9"
+        },
+        {
+          "function": "fingerprint",
+          "source_line": 44,
+          "ast_sha256": "c34fc7fdd8ee0a038f77cd7798641ef067d925f9dde7823653d85eeaf73346f4"
+        },
+        {
+          "function": "strict_annual",
+          "source_line": 50,
+          "ast_sha256": "35d565bf50917873089539556412a265358a6efb4cdde500b350aebbc39a25b0"
+        },
+        {
+          "function": "construct_environment",
+          "source_line": 90,
+          "ast_sha256": "bc7eadef378c7fcacabf41f65110d8f7145c62f3204faf3c5ca0bc8bf1ae1108"
+        },
+        {
+          "function": "samples",
+          "source_line": 147,
+          "ast_sha256": "be7c3063454958c2bb685942dc31157c367a50baab2c22a2daf172495f7d7637"
+        },
+        {
+          "function": "sample_details",
+          "source_line": 164,
+          "ast_sha256": "f5c45e5cd2db86388f79b51d5cf4065b7ee3b75ae2fc8776c91d3cf416d49a73"
+        },
+        {
+          "function": "estimate_design",
+          "source_line": 180,
+          "ast_sha256": "d072d7d4a862afcbdd05c4b047679d9c9e93d753e060fb61b64fcdba50660306"
+        },
+        {
+          "function": "compare_models",
+          "source_line": 214,
+          "ast_sha256": "326ffe4c3a2a69b13e85595c6f174961b731ac52773f57036fee32ffaad07b99"
+        },
+        {
+          "function": "self_test",
+          "source_line": 245,
+          "ast_sha256": "61d8bbca085a1174c4c2a73e85e3001bae3521ca6440feb26e1d50e66ee791e7"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": []
+    },
+    {
+      "module": "accounting",
+      "readability_changes": {
+        "module_aliases": {
+          "p1": "sample"
+        },
+        "console_messages": {
+          "P3 synthetic checks passed: cluster multiplicities, explicit duplication, rescaling, identities and invalid draws.": "Accounting synthetic checks passed: cluster multiplicities, explicit duplication, rescaling, identities and invalid draws."
+        }
+      },
+      "source": "03_code/21_major_revision_10_08/p3_component_bootstrap.py",
+      "source_sha256": "c944f33231d141896a65d82b59a854110b41f64bde7bd131d64df24e49929158",
+      "functions": [
+        {
+          "function": "build_design",
+          "source_line": 35,
+          "ast_sha256": "62214f448263716211580fb9099ac636931ea6819fb0c5ef0c363decaf43153c"
+        },
+        {
+          "function": "metrics_from_fits",
+          "source_line": 67,
+          "ast_sha256": "e9c64f7a0d853e21dff299cb0067f2e94dddaf8ed6e41c014ecd41f73e9f1308"
+        },
+        {
+          "function": "check_identities",
+          "source_line": 94,
+          "ast_sha256": "d218a7f28f0ee60df9d93bad217bf21247d1a17c9ce504f63adf84e577b4bd4e"
+        },
+        {
+          "function": "direct_metrics",
+          "source_line": 104,
+          "ast_sha256": "5bbf2ced12bd33f5c17905e5b5b983ccd761d90f9a15de8efa528c374a9af201"
+        },
+        {
+          "function": "cluster_statistics",
+          "source_line": 123,
+          "ast_sha256": "4df4051ce3e46e4abbcdfd30e5131ecd3f169a2f53477703382815151c9defb1"
+        },
+        {
+          "function": "gram_metrics",
+          "source_line": 143,
+          "ast_sha256": "f4469e838f725479b86ec0d425fdf5747615cdac84448db939118d20100ab1dd"
+        },
+        {
+          "function": "compare_metrics",
+          "source_line": 180,
+          "ast_sha256": "b7df7723e7116e29a43014e7094f97f1b9793d029e0cf1eefbbcf8868420b2cb"
+        },
+        {
+          "function": "self_test",
+          "source_line": 226,
+          "ast_sha256": "9e5628e2a59397ade22afb270490f18bd82e0e3dff7bb819da95d0c07d51e741"
+        },
+        {
+          "function": "summarize",
+          "source_line": 262,
+          "ast_sha256": "d6412b2946240959197012825d4a5db049b6fca9404d304517fa468d8b1744ef"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": []
+    },
+    {
+      "module": "nb2",
+      "readability_changes": {
+        "module_aliases": {
+          "p1": "sample",
+          "p3": "accounting"
+        },
+        "console_messages": {
+          "P4 synthetic checks passed: joint alpha, design rescaling, tiny-mean likelihood/scores, two algorithms and cluster covariance.": "NB2 synthetic checks passed: joint alpha, design rescaling, tiny-mean likelihood/scores, two algorithms and cluster covariance."
+        }
+      },
+      "source": "03_code/21_major_revision_10_08/p4_joint_nb2_sensitivity.py",
+      "source_sha256": "034419be45ff4c033e646859f394ac8b2c627a473032b983a2c83bb08031520a",
+      "functions": [
+        {
+          "function": "designs",
+          "source_line": 71,
+          "ast_sha256": "96fec98bbd01dba41a3d2aab37fdc09f03184369bd9d5e2a7cbc7ec2140e6da3"
+        },
+        {
+          "function": "likelihood_and_scores",
+          "source_line": 96,
+          "ast_sha256": "8a2d87a031203aedf4fd4b2ff33e4693b78d9c78a72794a310667034e4a74ce2"
+        },
+        {
+          "function": "fit_diagnostics",
+          "source_line": 112,
+          "ast_sha256": "99fa4228eed1a1fce087b8f2ea9564f4be10ab114cdb8e1c18d1f8201c955665"
+        },
+        {
+          "function": "covariance_and_parameters",
+          "source_line": 145,
+          "ast_sha256": "b99ce11671e6bfc635cfeaf7b8bd3f0468abae9b80f96bbae797d80e53fd8366"
+        },
+        {
+          "function": "fixed_fit",
+          "source_line": 180,
+          "ast_sha256": "b8b61cf3cea0bd110ab79fbb8bfb79c4e34a1aa4fa7e07964778d5cad616ddc0"
+        },
+        {
+          "function": "joint_fit",
+          "source_line": 195,
+          "ast_sha256": "53c7b3c3a46dceedb6973e13589fb5ab9db9ab350e72e9f8c419766b5dd0072a"
+        },
+        {
+          "function": "self_test",
+          "source_line": 292,
+          "ast_sha256": "1f7c4d74acb4ccaefc119401ab56ccf5af763c779587f5d3502c35d3b4b69436"
+        }
+      ],
+      "class_definitions": [
+        {
+          "class": "StableNB2",
+          "source_line": 42,
+          "ast_sha256": "2e90cdff9ffa55f162c89124fb7d8736b24807dbfd5944265c045fc63f5343b1"
+        }
+      ],
+      "restricted_rule_inputs": []
+    },
+    {
+      "module": "sector_a",
+      "readability_changes": {
+        "module_aliases": {
+          "p1": "sample"
+        },
+        "console_messages": {
+          "P4 sector-A synthetic checks passed: unknown codes, strict calendar transitions, source switches and deterministic industry support.": "Sector-A synthetic checks passed: unknown codes, strict calendar transitions, source switches and deterministic industry support."
+        }
+      },
+      "source": "03_code/21_major_revision_10_08/p4_sector_a_feasibility.py",
+      "source_sha256": "5d4f02def80e827d7cceb9a59245804680ef7887b78d9a351cfde8c82446b631",
+      "functions": [
+        {
+          "function": "classify",
+          "source_line": 35,
+          "ast_sha256": "99b6e2b54621b235d6a45e9a72e9da0e25e88e65ff07154f9b2203d42452472f"
+        },
+        {
+          "function": "describe",
+          "source_line": 92,
+          "ast_sha256": "83be63afcff4726bbbf73b7ada5a2e46f2fee6df33f81f318d2b54a64727d856"
+        },
+        {
+          "function": "stage_and_year_tables",
+          "source_line": 103,
+          "ast_sha256": "564fde329aa5b18add922eefe4483d9a27b97de20f231b72734667fd1106de60"
+        },
+        {
+          "function": "source_agreement",
+          "source_line": 131,
+          "ast_sha256": "3e60b722648c3a77dd0a251cf488b457baa4c5c1e7d8f0627389ac01eec1691b"
+        },
+        {
+          "function": "transitions",
+          "source_line": 158,
+          "ast_sha256": "1da918a7a53589425e053db3c5357b9418355cb69faac1b8abe2300525bc5008"
+        },
+        {
+          "function": "support_diagnostics",
+          "source_line": 191,
+          "ast_sha256": "c17501f764c5d1e37b27b42a73de1a1b2d5c46040e7476603100c57bec08460f"
+        },
+        {
+          "function": "self_test",
+          "source_line": 239,
+          "ast_sha256": "2f6751c15830a82e8b535471f9ce2e0d1802158dbecbeb401e58954a145525f8"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": []
+    },
+    {
+      "module": "history",
+      "readability_changes": {
+        "module_aliases": {
+          "p1": "sample",
+          "p2": "rd"
+        },
+        "console_messages": {
+          "P8 synthetic calendar-lag, missingness, key and regression checks passed.": "Patent-history synthetic calendar-lag, missingness, key and regression checks passed."
+        }
+      },
+      "source": "03_code/21_major_revision_10_08/p8_patent_history_diagnostic.py",
+      "source_sha256": "1b8931b6fa884d2beb5d42c7a7833f9b7c5a697de44cfaef14d3f852034fc969",
+      "functions": [
+        {
+          "function": "add_calendar_history",
+          "source_line": 36,
+          "ast_sha256": "a0a6ee709c008ef08a6dc4fdf46c30ea50266ca4eabd3654077c99961b0416bb"
+        },
+        {
+          "function": "estimate",
+          "source_line": 142,
+          "ast_sha256": "c15a08007d5aa3d41ae42ffa57f0089227a2925b37786af2526da44dca61052b"
+        },
+        {
+          "function": "self_test",
+          "source_line": 198,
+          "ast_sha256": "7d8a5d237e81aa3138ef74d1b039330aa87b71cf663fbe676d7a127c9dca74f8"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": []
+    },
+    {
+      "module": "environment",
+      "readability_changes": {
+        "module_aliases": {
+          "p1": "sample",
+          "p2": "rd"
+        },
+        "console_messages": {}
+      },
+      "source": "03_code/21_major_revision_10_08/p10_green_investment_diagnostic.py",
+      "source_sha256": "acb581939684d6ff9eba3ab529d75e1edfb97f0654b20f184613a0e0cfc0c825",
+      "functions": [
+        {
+          "function": "read_export",
+          "source_line": 60,
+          "ast_sha256": "554af60ce5d54b6012793e53ee8a80d4a08022556db1d3cbe9cb2a798dd8d1a1"
+        },
+        {
+          "function": "environment",
+          "source_line": 180,
+          "ast_sha256": "23f9b8e428f6dcd4db9717724f3eb8d668d7032763770ba8b958390685ecdb89"
+        },
+        {
+          "function": "sample_overview",
+          "source_line": 218,
+          "ast_sha256": "881c92cb1c97a8392a4fcebe31ea4486c366d7865780557edebce33b0bbddc65"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": []
+    },
+    {
+      "module": "investment",
+      "readability_changes": {
+        "module_aliases": {
+          "p1": "sample",
+          "p2": "rd",
+          "p8": "patent_history",
+          "p10": "industry_environment"
+        },
+        "console_messages": {
+          "P11 checks passed: exported zeros/blanks, duplicate keys, ratios, strict lag and same-industry leave-one-out.": "Environmental-investment checks passed: exported zeros/blanks, duplicate keys, ratios, strict lag and same-industry leave-one-out.",
+          "P11 ": "Environmental-investment "
+        }
+      },
+      "source": "03_code/21_major_revision_10_08/p11_csmar_green_investment_comparison.py",
+      "source_sha256": "a9f06f0c123a8c1db26d4f9ddd68de31fba711da25ce5ef246c871f8642bd903",
+      "functions": [
+        {
+          "function": "select_measure",
+          "source_line": 38,
+          "ast_sha256": "6eda5af8fb2655cab6e9f00d42b5446916f52dcc2a3b653a72abd8cfe9a8a583"
+        },
+        {
+          "function": "compare",
+          "source_line": 64,
+          "ast_sha256": "1952e83d7ae6114ddde37b5f3cf081fcf7a2c3edc4c3b324e1b899aeb743dc3e"
+        },
+        {
+          "function": "self_test",
+          "source_line": 139,
+          "ast_sha256": "3027188aaa14481d27c545371518ff31c2384ff7e1e5b5e974fbc787c5d206c7"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": []
+    },
+    {
+      "module": "influence",
+      "readability_changes": {
+        "module_aliases": {
+          "p1": "sample",
+          "p3": "accounting"
+        },
+        "console_messages": {
+          "P13 synthetic checks passed: shared sample, fixed proxies, disappearing categories, QR checks and identities.": "Industry-influence synthetic checks passed: shared sample, fixed proxies, disappearing categories, QR checks and identities."
+        }
+      },
+      "source": "03_code/21_major_revision_10_08/p13_leave_industry_out_accounting.py",
+      "source_sha256": "91fc77c8781e466e547085d86b20c18b292d2bc9a88cfcb7ac310e916374271f",
+      "functions": [
+        {
+          "function": "fingerprint",
+          "source_line": 32,
+          "ast_sha256": "1f0417b92445d0bf008940c59c196ca1b869b25f1fa4187d01432fe4ef631ea3"
+        },
+        {
+          "function": "sample_info",
+          "source_line": 49,
+          "ast_sha256": "ae0120f5112fc62e2da3f92c1b34535d04dafb77377c0206ad663515709b3eb7"
+        },
+        {
+          "function": "fit_case",
+          "source_line": 87,
+          "ast_sha256": "216c0147fee88418a0a90e441dd1f939ff294c88acb64dcd545bb797f9768eee"
+        },
+        {
+          "function": "summarize",
+          "source_line": 197,
+          "ast_sha256": "cbac8248ad6651c062d1e2b00e6c7124c0202a419e9bf92744d55a84ee1d9f2e"
+        },
+        {
+          "function": "self_test",
+          "source_line": 226,
+          "ast_sha256": "2ef96d02e673a68d87b6938815bcdc9f43fe08bf8581f8f953f796903db5ffd1"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": []
+    },
+    {
+      "module": "shared_industries",
+      "readability_changes": {
+        "module_aliases": {
+          "p1": "sample",
+          "p13": "influence"
+        },
+        "console_messages": {
+          "P15 synthetic selection, row preservation, distinct cell support and accounting checks passed.": "Shared-industry synthetic selection, row preservation, distinct cell support and accounting checks passed."
+        }
+      },
+      "source": "03_code/21_major_revision_10_08/p15_shared_industry_accounting.py",
+      "source_sha256": "7bb4078a49b3ee1ee6da8d9ed2997c46c868dc6ad630b532e981e305f963f214",
+      "functions": [
+        {
+          "function": "restrict_to_shared_industries",
+          "source_line": 28,
+          "ast_sha256": "a0ce0dfca9e1f9b86bcefd254542ee1a67f81fc3cb767c5fad43b8871abde3c6"
+        },
+        {
+          "function": "cell_support",
+          "source_line": 46,
+          "ast_sha256": "3b58e3b4373870b6f6004866cf0e132174e83e8934d827391453b385bc9a40e4"
+        },
+        {
+          "function": "comparisons",
+          "source_line": 99,
+          "ast_sha256": "abc49f806768679dc0b73354f3dcd587ca71bb0a68af01f2f5859dde6f219a61"
+        },
+        {
+          "function": "self_test",
+          "source_line": 113,
+          "ast_sha256": "782eea57f066ed1a6ad1a20ebdd27183ae3456a2711e4c3e46ab86a2752bd3c1"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": []
+    },
+    {
+      "module": "subsidy_titles",
+      "source": "03_code/21_major_revision_10_08/p17_green_rd_subsidy_feasibility.py",
+      "source_sha256": "ba770d5f98c2ef5ab53c5fab12f557a78de24749e71e774a3a5d1469d1109917",
+      "functions": [
+        {
+          "function": "normalise_title",
+          "source_line": 160,
+          "ast_sha256": "821f228296a539ade39192736ebeabd83be17c26d2657d524342796d1305cac6"
+        },
+        {
+          "function": "classify_title",
+          "source_line": 164,
+          "ast_sha256": "31c5b038068a02a9436d4456af0e104ac0d917dd1d52c1542a4b8e0d8204609a"
+        },
+        {
+          "function": "read_source",
+          "source_line": 201,
+          "ast_sha256": "4b7be42aab1438d7ee8fef143891f14fb9642c684c065a51a2ecb9e5a0cefffe"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": [
+        "TITLE_REVIEW_RULES"
+      ]
+    },
+    {
+      "module": "subsidy",
+      "readability_changes": {
+        "module_aliases": {
+          "p1": "sample",
+          "p2": "rd",
+          "p8": "patent_history",
+          "p10": "industry_environment"
+        },
+        "console_messages": {}
+      },
+      "source": "03_code/21_major_revision_10_08/p18_green_rd_subsidy_share_comparison.py",
+      "source_sha256": "dc0b3dd0c1da03119e7af8806cbf5167f2e6e2dc1fbde86732d5c9a1727f5be4",
+      "functions": [
+        {
+          "function": "environment",
+          "source_line": 99,
+          "ast_sha256": "11f303655daf78c76b3cf16806f6e72bd83567b55cfb2ae5b95dd4636af8e201"
+        },
+        {
+          "function": "audit",
+          "source_line": 154,
+          "ast_sha256": "17626372d1fa10fc43ca0f686ef319c5bb9563f64f0d3c7a77222fe5b6c7fe17"
+        },
+        {
+          "function": "self_test",
+          "source_line": 182,
+          "ast_sha256": "32c21a309d2981aceb36aec08280bcc321cd24b085c77c710f6700f8f85b07f1"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": []
+    },
+    {
+      "module": "project_titles",
+      "source": "03_code/21_major_revision_10_08/p19_green_rd_project_feasibility.py",
+      "source_sha256": "c940ef1a656951b39e3d69ef38a8eaee0eba4c34619b311778727ba21ae2accc",
+      "functions": [
+        {
+          "function": "normalise",
+          "source_line": 115,
+          "ast_sha256": "f767da6e6d769854a4b6a25e9d62e7ed85ff2f3febf0df71e195d6423aca500b"
+        },
+        {
+          "function": "classify",
+          "source_line": 119,
+          "ast_sha256": "9cce530dfa82087d63ebef87fdcabe2338e133659fafe3452e52c0cbff9897f4"
+        },
+        {
+          "function": "read_export",
+          "source_line": 153,
+          "ast_sha256": "d67958356ab466523140994875b5089dab74acc9a0b39fb772d03599621060b2"
+        },
+        {
+          "function": "records",
+          "source_line": 181,
+          "ast_sha256": "fc4470cb4a820c32885cd82074a56d740288c8a43498837e79f06120b0800655"
+        },
+        {
+          "function": "subset_summary",
+          "source_line": 221,
+          "ast_sha256": "3b23801c3af4e4df0fe137fe0f55606de10fa63c6f65d4ede93329b34aae0ca2"
+        },
+        {
+          "function": "support_coverage",
+          "source_line": 238,
+          "ast_sha256": "6443900dc3dedc9f9a8538ca677ac9a0c2d226d670165048131b5714ed8123d6"
+        },
+        {
+          "function": "file_key_hash",
+          "source_line": 285,
+          "ast_sha256": "f433aef9ae0ef42e7d40784904431437ef7a76e8e3b17851bc8ef5135b98de1e"
+        },
+        {
+          "function": "make_flags",
+          "source_line": 290,
+          "ast_sha256": "3234a312118bcc805d49a87da758ba946d414f3551f0fb70379fd8f376f2e351"
+        },
+        {
+          "function": "self_test",
+          "source_line": 471,
+          "ast_sha256": "c27ecdfeac353ae99c31acf929c37468b54d94174b560049b60207c492178add"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": [
+        "TITLE_RULES"
+      ]
+    },
+    {
+      "module": "projects",
+      "readability_changes": {
+        "module_aliases": {
+          "p1": "sample",
+          "p2": "rd",
+          "p8": "patent_history",
+          "p10": "industry_environment",
+          "p19": "project_titles"
+        },
+        "console_messages": {
+          "P20 self-tests passed: distinct firms, separate sources, unknown/blank titles, amount independence, agriculture/focal exclusion, exact lag and support.": "Project-record self-tests passed: distinct firms, separate sources, unknown/blank titles, amount independence, agriculture/focal exclusion, exact lag and support."
+        }
+      },
+      "source": "03_code/21_major_revision_10_08/p20_green_rd_project_share_comparison.py",
+      "source_sha256": "3834910a265390dd0941548f08f6213e0964f79b03c8fdbdad2d918cc9f89a4d",
+      "functions": [
+        {
+          "function": "firm_flags",
+          "source_line": 86,
+          "ast_sha256": "3e11ac701cd60f54d0724047068a85e8fe73bb1d0f7c694e785e5d7b532f5008"
+        },
+        {
+          "function": "environment",
+          "source_line": 116,
+          "ast_sha256": "180538a4ec350ec962a1c12a3340720c5b17edf0747c02b3eb5697ac12dcd756"
+        },
+        {
+          "function": "audit",
+          "source_line": 170,
+          "ast_sha256": "3c15e996ceacfc829c8b1381d2edd075751afe433529826cfb12bf2b7bf050da"
+        },
+        {
+          "function": "self_test",
+          "source_line": 227,
+          "ast_sha256": "408086c53f49ec01a4aae34616424a5adb5d793164a1016ada741e5395ff4b8b"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": []
+    },
+    {
+      "module": "guide_design",
+      "readability_changes": {
+        "module_aliases": {},
+        "console_messages": {
+          "P32 synthetic checks passed: aliases, exact absorption, span preservation and group nonidentifiability; no outcomes or fits.": "Guide-design synthetic checks passed: aliases, exact absorption, span preservation and group nonidentifiability; no outcomes or fits."
+        }
+      },
+      "source": "03_code/21_major_revision_10_08/p32_rd_guide_design_preflight.py",
+      "source_sha256": "05ccb6a3073a55ae9f609f703181fd8472c538bad43156477d25ae099df37bdb",
+      "functions": [
+        {
+          "function": "sample_hash",
+          "source_line": 64,
+          "ast_sha256": "608d6f4fafdb90c3e603977c5d516b981763dcc6908d0ffa2e58e20ff01361cf"
+        },
+        {
+          "function": "sample_summary",
+          "source_line": 69,
+          "ast_sha256": "81468aa4343098b1b1117e9dc85402277d148e83c153b50482dd98e4d7072f00"
+        },
+        {
+          "function": "descriptors",
+          "source_line": 114,
+          "ast_sha256": "df3e92f79af3e91d029dad5d4482584ac75a2437afb065baefd8c14f33ef8f08"
+        },
+        {
+          "function": "block_columns",
+          "source_line": 150,
+          "ast_sha256": "4cdbd536fa830063ba666ed16b9edde827f95e111797d67247931df8c953eb38"
+        },
+        {
+          "function": "normalized",
+          "source_line": 155,
+          "ast_sha256": "46e4b2e75a74fafc665d28f2294796e6f950b955cdc71ef792bc6c3589f706c7"
+        },
+        {
+          "function": "rank_info",
+          "source_line": 162,
+          "ast_sha256": "285d80c12627e0da471f1d3a9646552a227c480d8b977ec0ad566b1ea1433e55"
+        },
+        {
+          "function": "matrix_check",
+          "source_line": 173,
+          "ast_sha256": "c2b867d478c11da1d24422ca66ac7430ffd6a8a5a0405497928ab67e1e6bd4fd"
+        },
+        {
+          "function": "preserved_space",
+          "source_line": 197,
+          "ast_sha256": "880dc0740aadcd2b3f2d29f9ff0d7c6cd20ea0322127347b62744c82854afc9d"
+        },
+        {
+          "function": "profile_design",
+          "source_line": 220,
+          "ast_sha256": "63c1a44917956527ea2111ac7a20f29ea242a6200368baae49c7b2456f817766"
+        },
+        {
+          "function": "family_support",
+          "source_line": 231,
+          "ast_sha256": "5276867fc142b1d73fa1cd465ba43f13f9238fe04a6f8513b7bd54d0efd84b3a"
+        },
+        {
+          "function": "self_test",
+          "source_line": 375,
+          "ast_sha256": "3b44229045af70e0840530e6e96bbd706cf3a4c1cd39ce47d8291074533b1af7"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": []
+    },
+    {
+      "module": "guides",
+      "readability_changes": {
+        "module_aliases": {
+          "p1": "sample",
+          "p2": "rd",
+          "p32": "guide_design"
+        },
+        "console_messages": {
+          "P33 synthetic checks passed: nominal reference, fixed keys, QR/cluster covariance and normal/t inference.": "Guide-comparison synthetic checks passed: nominal reference, fixed keys, QR/cluster covariance and normal/t inference.",
+          "P33 ": "Guide-comparison "
+        }
+      },
+      "source": "03_code/21_major_revision_10_08/p33_rd_guide_profile_comparison.py",
+      "source_sha256": "50913da3835d65a0b8680cba6388ce99550c9c2380a2f361960ff1c75854c231",
+      "functions": [
+        {
+          "function": "compare",
+          "source_line": 119,
+          "ast_sha256": "12a6a1fa6ca35bba906e1e7fc19a98b9d141a25887a97cb6f788f2bab0f5e1f1"
+        },
+        {
+          "function": "independent_numeric_check",
+          "source_line": 150,
+          "ast_sha256": "b4e3785c5e3b8a7f0e4ef44ff70acd721366378e90222c0e951bb6987a3d31c0"
+        },
+        {
+          "function": "self_test",
+          "source_line": 224,
+          "ast_sha256": "65a1a8fc12efd04a02bea7bdbcb7ffa37681e20ea648de01d57d7f63ce4e745e"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": []
+    },
+    {
+      "module": "structural_utils",
+      "source": "07_structural_modeling_extension/01_scripts/structural_extension_utils.py",
+      "source_sha256": "f45c396d8646826f9fd3baebc4ff29764184504546b30423fdf56568d7678de7",
+      "functions": [
+        {
+          "function": "build_enhanced_panel",
+          "source_line": 132,
+          "ast_sha256": "3463526a7f83412447f13dea93798ca58f7407a432ec9f3d044a214eca9c83d9"
+        },
+        {
+          "function": "common_sample",
+          "source_line": 297,
+          "ast_sha256": "696ef16bdc5d347a9a9ab193e6f9b4e981a1af354e24dae0bde4985144f59ea6"
+        },
+        {
+          "function": "clustered_ols",
+          "source_line": 342,
+          "ast_sha256": "8d456af89522b134066e7e0a5f878e10b379c5471c3b6a4d05302a1caf20b928"
+        },
+        {
+          "function": "stars",
+          "source_line": 401,
+          "ast_sha256": "74ebccfa148c7b7f1566c3d5ab49ef26b777161dd1e471632b4064565f07a803"
+        },
+        {
+          "function": "fmt_coef_se",
+          "source_line": 413,
+          "ast_sha256": "3849f2706fa1fc52d5094d9352fae3943857d805c82fefadca7a05dcc15e8b83"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": []
+    },
+    {
+      "module": "decomposition",
+      "source": "07_structural_modeling_extension/01_scripts/02_structural_decomposition.py",
+      "source_sha256": "bb4d89baf767162f1cb9f777e30ad581c83b7856b20c20a58fab67eadca8f325",
+      "functions": [
+        {
+          "function": "build_design_blocks",
+          "source_line": 45,
+          "ast_sha256": "e08c3bcd378c05c4d9969d14f6e0e6dfb7955692826d55c8d360259d93861ed5"
+        },
+        {
+          "function": "matrix_with_const",
+          "source_line": 68,
+          "ast_sha256": "8cb35a62bb8dc40644193e36d7344e075b989e0624ce818ec392740c64b6f596"
+        },
+        {
+          "function": "fit_ols_matrix",
+          "source_line": 76,
+          "ast_sha256": "3e9bacc537145117225f5f5e6ac3ae1ab0ef75a869d16f47bd8bf8b9d707e34f"
+        },
+        {
+          "function": "gelbach_for_outcome",
+          "source_line": 83,
+          "ast_sha256": "5daa165ac7f417f49be33cdb885328c1e3bea0f3f3870b90973153419a046e97"
+        },
+        {
+          "function": "pooled_oaxaca_for_outcome",
+          "source_line": 157,
+          "ast_sha256": "784c50169023e1966e802ad2b7854aa0a6b9ce0d5ae0b388d0ac55d55c65a2c3"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": []
+    },
+    {
+      "module": "count_models",
+      "source": "07_structural_modeling_extension/01_scripts/03_count_models_and_gtos.py",
+      "source_sha256": "2e81b5a8b48a0f475ee7a00e507253ef8542af2627ad2c366f2b48edc021b448",
+      "functions": [
+        {
+          "function": "extract_rows",
+          "source_line": 40,
+          "ast_sha256": "6ddb95500f8cacc14923c10eab3a022ef3052c05532e6caefe97448851cde065"
+        },
+        {
+          "function": "fit_poisson_clustered",
+          "source_line": 66,
+          "ast_sha256": "7cae55ade962672b6846588f36c0a62b18b691d2851b5d40b199b60b46d6b902"
+        },
+        {
+          "function": "fit_nb_glm",
+          "source_line": 71,
+          "ast_sha256": "eeeb4794c2ddb0a9b6b2f38f601b0a7ac2b6c72486f8319935c39d4e8a23032d"
+        },
+        {
+          "function": "run_ppml",
+          "source_line": 94,
+          "ast_sha256": "aeb8746ad26d2baf13bcb72b0f4fc2c7c899d2a0a2694c5a272b2f71dab6017f"
+        },
+        {
+          "function": "run_negative_binomial",
+          "source_line": 124,
+          "ast_sha256": "c3c8103c4485cc452bc201f8285df6565dfb1ba0639d8f564666e8e996553bfb"
+        },
+        {
+          "function": "run_two_part",
+          "source_line": 182,
+          "ast_sha256": "6ec2a08ad306aa18b80e768689e099f38fc5fd0aa59e70059eb8028fa2751866"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": []
+    },
+    {
+      "module": "support",
+      "source": "07_structural_modeling_extension/01_scripts/04_multilevel_and_support_checks.py",
+      "source_sha256": "151430a71e3cfd4730dad1fa653954652db71d7958c36c058bef5aacf5c6d973",
+      "functions": [
+        {
+          "function": "build_common_support",
+          "source_line": 271,
+          "ast_sha256": "72d6cd525fee482711fb560fd520094363594b77ae229b20d6d948aaf59f69a2"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": []
+    },
+    {
+      "module": "baseline",
+      "source": "03_code/20_gtos_calendar_lag_correction/run_gtos_calendar_lag_correction.py",
+      "source_sha256": "7b58efaaa97f2bde8a712feba2ca0a5680cfcc0eca6a82c4eacdb38d9502cf93",
+      "functions": [
+        {
+          "function": "common_sample",
+          "source_line": 117,
+          "ast_sha256": "f92de57e2ded66ad18074059e27de4c422a4639df78a44d702405ec2dd4c2a00"
+        },
+        {
+          "function": "nested_coefficients",
+          "source_line": 121,
+          "ast_sha256": "6d94d841ab9cb41759f58c1dc62e3a301ab21be701e2dd9531f6a6220a94b5f2"
+        },
+        {
+          "function": "exposure_tables",
+          "source_line": 151,
+          "ast_sha256": "26f9eb4a07962983008d1661f5beaa5e42cd27559e64dfd56372a9b4c20309c9"
+        },
+        {
+          "function": "decomposition_tables",
+          "source_line": 294,
+          "ast_sha256": "dd8f9f9d5df43ed1058c6bed4e8aa8594ccec34213df836415b51ecbbdb43cc3"
+        },
+        {
+          "function": "support_summary",
+          "source_line": 318,
+          "ast_sha256": "92e78c15af5f73a61366b02e2448540f804ef9a24d56b0a9944a24df9ccb2fa7"
+        },
+        {
+          "function": "base_design",
+          "source_line": 324,
+          "ast_sha256": "c3bb79497973ec4671dafcd37bbcc01fdea930251addd277ecc4c5b9c71c7970"
+        },
+        {
+          "function": "q_matrix",
+          "source_line": 336,
+          "ast_sha256": "68581a03001a4f66b3e4e5f8ee0f7d6f0e07b4d3a830721a2420702241e3b31c"
+        },
+        {
+          "function": "residualize",
+          "source_line": 341,
+          "ast_sha256": "55f80dfded1c56c9b8f9d5d26d485ebce19fe3a14af080e4a26a2d541abed12b"
+        },
+        {
+          "function": "partial_out",
+          "source_line": 345,
+          "ast_sha256": "8a383e71df4cd1e170a58aaae8c2ed98d853b116a7d3ad18e6a10d3290fe8c2c"
+        },
+        {
+          "function": "coefficient",
+          "source_line": 352,
+          "ast_sha256": "4464d8617e60577e02764d84e0b6cff9f0b7b6a22ad3a7e3db2c7ad974c62581"
+        },
+        {
+          "function": "reassignment_checks",
+          "source_line": 356,
+          "ast_sha256": "89687005473c6d48003e497e13fdcf686a1b72fd9d9ae8b9fad65e18486ccb0d"
+        },
+        {
+          "function": "leave_one_out_check",
+          "source_line": 485,
+          "ast_sha256": "ca4166953e69d644704b9d42e082b9d9929ce98dd3e2dc14beedb5643c7e7cec"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": []
+    },
+    {
+      "module": "diagnostics",
+      "source": "03_code/15_final_technical_corrections/rebuild_final_diagnostics.py",
+      "source_sha256": "61ec7c675d6e82b38428e38454b08abf5527ffdaf0f799e03ac02996ba5c2814",
+      "functions": [
+        {
+          "function": "build_core_gtos_regime",
+          "source_line": 53,
+          "ast_sha256": "74f17c03bd27f33e5e9e758ca923d9e9c835037b8ce1ba45841444e7662339b8"
+        },
+        {
+          "function": "regime_distribution",
+          "source_line": 109,
+          "ast_sha256": "6c5af63553edff83c049809caa5c3dbc2d94d1b67ad3e6a0d6711f84d3d43669"
+        },
+        {
+          "function": "regime_support",
+          "source_line": 126,
+          "ast_sha256": "52024aa06715ac51aa3fc58303efd85bafb1668a7bdd17687baba70815bee711"
+        },
+        {
+          "function": "firm_cluster_bootstrap_gap",
+          "source_line": 150,
+          "ast_sha256": "eecfc2a9e4cdfbc68b9832bcfc56d156c7ca9b4f647f35e662af8fbdcc4c3240"
+        },
+        {
+          "function": "high_regime_tail_sensitivity",
+          "source_line": 193,
+          "ast_sha256": "f43a564821dd32c97e951722befc540ffeb40b2f1cd0c1d3698e1b1d5b7d405c"
+        },
+        {
+          "function": "summarize_definition",
+          "source_line": 218,
+          "ast_sha256": "dbfe31d67df4f6599415cda7646d564d550577944659ebfb1564962c1f023305"
+        },
+        {
+          "function": "alternative_high_definitions",
+          "source_line": 242,
+          "ast_sha256": "db4ce079cdf5c51064cb5729ad3a2086721c50678b88ffb8c417a7cb28f88317"
+        },
+        {
+          "function": "minimum_support_by_industry",
+          "source_line": 272,
+          "ast_sha256": "28b296387218493aae40b1a9bdf1571585991735d1adcd90f573f3abfface165"
+        },
+        {
+          "function": "patent_concentration",
+          "source_line": 302,
+          "ast_sha256": "5b4a678f7fd5a1295a84b83a165ea24c528d32d1c667cdd1b210201c7f579701"
+        },
+        {
+          "function": "covariance_for_scheme",
+          "source_line": 475,
+          "ast_sha256": "6550dcb4f32d92682e3d277d1023245824b0d27b5096ceb0ea6270a7771b8121"
+        },
+        {
+          "function": "robust_term_statistics",
+          "source_line": 488,
+          "ast_sha256": "4ce18173aa3dbcdfc85cf0c12d7e17400ce2ab00d4f82d454efd8b541c7b88e7"
+        },
+        {
+          "function": "joint_wald_pvalue",
+          "source_line": 502,
+          "ast_sha256": "19062cb42813b77320260e8317bf6c3527ef76b5941f2a90787318d1b0d56786"
+        },
+        {
+          "function": "clustering_sensitivity",
+          "source_line": 510,
+          "ast_sha256": "64b4002110ff6e8a43b7f70776eb0ef8d6cb2af6eb9e4aaf1f2622678b64ffc6"
+        },
+        {
+          "function": "post2015_clustering_sensitivity",
+          "source_line": 548,
+          "ast_sha256": "d2192826f82380f19a578c361aafc18358f1c64c28f37dbcbba60e0348507af1"
+        },
+        {
+          "function": "frontier_2013_sensitivity",
+          "source_line": 580,
+          "ast_sha256": "a1a35a70a3166fb2e94c6612d95b2a4f9b9a140320e178e978ebc6eddfeac62f"
+        },
+        {
+          "function": "distribution_variance",
+          "source_line": 602,
+          "ast_sha256": "ba3c70319bd74da26829d74815a753f17a80bb5b116f988256c996a557cc2309"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": []
+    },
+    {
+      "module": "reference_decomposition",
+      "source": "03_code/12_revision_diagnostics/analyze_decomposition_and_frontier_support.py",
+      "source_sha256": "6ca85b89b93dd79ec4aee19443d3ab01ffb189a7124b182062ca50aab27c070d",
+      "functions": [
+        {
+          "function": "agricultural_reference_decomposition",
+          "source_line": 92,
+          "ast_sha256": "d88fadf933bd9df4a040deaf92284f9ca87a4d7cda25e35984258fba5c0d21e6"
+        },
+        {
+          "function": "overlap_reference_decompositions",
+          "source_line": 190,
+          "ast_sha256": "656771b573e5ade0f1f90d33b3b27d159831eac41df7c939baa89f0c4d90729a"
+        },
+        {
+          "function": "build_decomposition_diagnostics",
+          "source_line": 297,
+          "ast_sha256": "5126770225e9a28d802a59daf45730a3798019c4abd5ab4e483f206c6e9785e9"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": []
+    },
+    {
+      "module": "sparse_cells",
+      "source": "03_code/17_sparse_cell_decomposition_sensitivity/run_sparse_cell_decomposition_sensitivity.py",
+      "source_sha256": "8f56e6e0abf7234aaea26ae2d1c1d733ddb9a54105d1e040d33810a9793d9025",
+      "functions": [
+        {
+          "function": "build_supported_cells",
+          "source_line": 51,
+          "ast_sha256": "5ecc323fd05bb46254854b7c7d189e360623a5fa42f681578dcf665440174bcc"
+        },
+        {
+          "function": "decompose",
+          "source_line": 90,
+          "ast_sha256": "db91dca0cdc7bff35fd9ae0613c306daf769659b2df67f9508e455ea54bf2e31"
+        },
+        {
+          "function": "cell_size_distribution",
+          "source_line": 172,
+          "ast_sha256": "f28ae73b975ad9113a44d5e393cf7da86ecf311dabd43950a4c8997750ac71dd"
+        },
+        {
+          "function": "threshold_retention",
+          "source_line": 200,
+          "ast_sha256": "1c4ac1dd3a8e807bad17becc935efaf1a35e2be2f606b80ab49912844360e9e8"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": []
+    },
+    {
+      "module": "industry_sources",
+      "source": "03_code/18_industry_code_source_sensitivity/run_industry_code_source_sensitivity.py",
+      "source_sha256": "5d52c11577fe768c6584df59033705fef7a19f7f69593c8db09472b0ef28a3b8",
+      "functions": [
+        {
+          "function": "build_gtos",
+          "source_line": 82,
+          "ast_sha256": "09a9fc999268e2987e621227dc1a2138163f00b834ae647ef3d80133a25f01d3"
+        },
+        {
+          "function": "decomposition",
+          "source_line": 176,
+          "ast_sha256": "522ad935106bfd0247883df636c4b60af38d2e76a7b6baec29af602793f7b8e2"
+        },
+        {
+          "function": "accounting_models",
+          "source_line": 240,
+          "ast_sha256": "36e10aa6a8863f2f48e1a379ac62ba6f4fc73b0d7b0b21b1951193d10cf400b3"
+        },
+        {
+          "function": "standardized_baseline_models",
+          "source_line": 287,
+          "ast_sha256": "767567045aae08fb38375cebe7888016a1c8f68f373a13114bad69b4da88d737"
+        },
+        {
+          "function": "verify_hybrid_rebuild",
+          "source_line": 341,
+          "ast_sha256": "26dc243f91a99476840e2d332d21a865464ab593edfd04a0340358ecd26bc6e5"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": []
+    },
+    {
+      "module": "controls",
+      "source": "03_code/12_revision_diagnostics/audit_controls_and_model_roles.py",
+      "source_sha256": "13ea4d43b567c62290b2a7fa3abc419c1c41c2f2dcb5ee0b5cbfb2a6f773c507",
+      "functions": [
+        {
+          "function": "standardize_code",
+          "source_line": 79,
+          "ast_sha256": "3cb347aa2c5518d1a0840e363f8492989d08fc703e574b9582b3c6661dad4e8b"
+        },
+        {
+          "function": "stars",
+          "source_line": 83,
+          "ast_sha256": "4ddea74780c48a25964d2afaf488595bde27680e5da7d5374c99da5bd105599e"
+        },
+        {
+          "function": "format_estimate",
+          "source_line": 93,
+          "ast_sha256": "00604fe285d841c6cf869199ee0f042003d66080f89e3b896dca70a9a4a7f1bc"
+        },
+        {
+          "function": "winsorize",
+          "source_line": 119,
+          "ast_sha256": "7f3a59aac8a3cef5a97516a3796d5f51fb12f94486ad00fd79df330b1359a98c"
+        },
+        {
+          "function": "formula",
+          "source_line": 300,
+          "ast_sha256": "f0be2fe584cccd9c58446418f36cdb6958a829affce005b294da44d6ff0122d4"
+        },
+        {
+          "function": "extract_model",
+          "source_line": 314,
+          "ast_sha256": "7c51cffe7a998383982d7ab25bc0e501f3c560c40bb5216bdc762ed4a1b12648"
+        },
+        {
+          "function": "run_candidate_control_sensitivity",
+          "source_line": 340,
+          "ast_sha256": "9aef1ff472b23957a6c42e012a434347a6f8733239482bb46e4dff164019fa53"
+        },
+        {
+          "function": "run_industry_fe_role_sensitivity",
+          "source_line": 460,
+          "ast_sha256": "31764376dc62b2e197a2326fdb0cc694ee8510006edd29f52669f32c05f1c017"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": []
+    },
+    {
+      "module": "sign_diagnostics",
+      "source": "03_code/12_revision_diagnostics/diagnose_gtos_sign_reversal.py",
+      "source_sha256": "1a558d20a8049fc60701d3aac4eb5698f7c3e49e945cfe51e5cfcb48f1a19962",
+      "functions": [
+        {
+          "function": "residualize",
+          "source_line": 83,
+          "ast_sha256": "0e165fef171a810aeb82d8f5c6d1fc6aca5cd48e3fa6525c441dd3212f4db8e7"
+        },
+        {
+          "function": "background_design",
+          "source_line": 89,
+          "ast_sha256": "574935c6dc362643021f926605c0556f188382fe6e1fdf5e67c5dcbe8ee60f62"
+        },
+        {
+          "function": "correlation_long",
+          "source_line": 93,
+          "ast_sha256": "f862bbe8e7a2d8239648f742d383516985056710731998e9928cb05020432d24"
+        },
+        {
+          "function": "residualized_dataframe",
+          "source_line": 109,
+          "ast_sha256": "e155bea74959dc86e432977f76491aef0914554fdebd5eb430df098111669281"
+        },
+        {
+          "function": "vif_from_matrix",
+          "source_line": 122,
+          "ast_sha256": "2b600c11b6cc409f7ef6c8cf5555453659201772e978d6e81ce22f1aab5c1c6b"
+        },
+        {
+          "function": "condition_index_table",
+          "source_line": 142,
+          "ast_sha256": "67f86297a52f3329d1a2c4cd6938f94acdb33083306c6924dd0d00452304ca59"
+        },
+        {
+          "function": "fit_specification",
+          "source_line": 195,
+          "ast_sha256": "bdaf622b5b96f87969b2791bc8d104b9bdfdedbfb725b0f835f35e98e4703afa"
+        },
+        {
+          "function": "build_nested_paths",
+          "source_line": 231,
+          "ast_sha256": "442b63d494e066490cedcf1ea0499e7208f91c81bb92665e754955b0c6a7470b"
+        },
+        {
+          "function": "build_order_sensitivity",
+          "source_line": 269,
+          "ast_sha256": "7265219a7761eead06204ff0d770a9db77425225d7f105bc88e24dac35b27fee"
+        },
+        {
+          "function": "build_leave_one_out",
+          "source_line": 324,
+          "ast_sha256": "e86a233e7eb9e612bbf9a009bd37c9819f7be0ca531861851e5b8c4d8a06c2f6"
+        },
+        {
+          "function": "build_fwl_diagnostics",
+          "source_line": 346,
+          "ast_sha256": "7d9f2aba9fe18e9314de1d314a033b2a4a41befd4635a54ec003178ba322e04d"
+        },
+        {
+          "function": "build_conditional_exposure_associations",
+          "source_line": 387,
+          "ast_sha256": "b453621cfc1b568e3de658247034fd7c513f6e179164462519da5e390a52b9e6"
+        },
+        {
+          "function": "build_gtos_block_joint_tests",
+          "source_line": 404,
+          "ast_sha256": "dcc81b3113dd566ecc2d564904185de15f0143d0c002509c1d5353f715004dc2"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": []
+    },
+    {
+      "module": "rd_triangulation",
+      "source": "03_code/12_revision_diagnostics/audit_rd_investment_data.py",
+      "source_sha256": "5d2c9a5e6f78f0fcac5c3cb41b47efade054ec7fb4a0a97fe2b43672332a9f0d",
+      "functions": [
+        {
+          "function": "select_strict_annual",
+          "source_line": 129,
+          "ast_sha256": "75e0a00e824606c1f2d9d24ae1b9c94633cbd28b85fe657aa0e6dcfb2e6af4cf"
+        },
+        {
+          "function": "merge_rd",
+          "source_line": 266,
+          "ast_sha256": "0dc48c679f6d321a07237dbbdb8a212268a5c614826d23379e73e337d844dd86"
+        },
+        {
+          "function": "build_industry_rd_environment",
+          "source_line": 476,
+          "ast_sha256": "b1e48adc1c0c990b0b38a346860af3dd0d3ca0effae8bc771495eb19f66d8fb7"
+        },
+        {
+          "function": "industry_environment_coverage",
+          "source_line": 552,
+          "ast_sha256": "c050558c0f248ea2f8f9cf02cd74341757e0d61b54d70d6f05a7e26a71116921"
+        },
+        {
+          "function": "gtos_correlations",
+          "source_line": 586,
+          "ast_sha256": "e8e5da9e9d4a4c86abbd4cf354e0234f796f7674d1a5285368f86d73dbfe81fd"
+        },
+        {
+          "function": "group_exposure",
+          "source_line": 644,
+          "ast_sha256": "a98830dbd307866ee767d1f3eeafcfee2bdd089db9e41d763765934593edbdb4"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": []
+    },
+    {
+      "module": "investment_triangulation",
+      "source": "03_code/12_revision_diagnostics/audit_green_investment_data.py",
+      "source_sha256": "5d14b7d8b707cf0a1252151620d833346328b4b2a2c6a345478a448aa0df3831",
+      "functions": [
+        {
+          "function": "build_matched_data",
+          "source_line": 169,
+          "ast_sha256": "8718e219b06eb39c9a4fc0e9c8a27d088381f434882f34e7114e52ba2c00ba88"
+        },
+        {
+          "function": "build_industry_year_investment",
+          "source_line": 222,
+          "ast_sha256": "186de42c06ab2bffd7c869291326f239900a3eda6ecad10a089f635b43e963d3"
+        },
+        {
+          "function": "cell_coverage",
+          "source_line": 292,
+          "ast_sha256": "41d456841039ddef47abe4e8efad5ea943fe5ada79f58bf46c215d52c0d99184"
+        },
+        {
+          "function": "gtos_correlations",
+          "source_line": 327,
+          "ast_sha256": "ec1268dec5ee43a57972c454ab7031fa5a75bc22fcce645a153f24aabb82ab83"
+        },
+        {
+          "function": "group_exposure_summary",
+          "source_line": 386,
+          "ast_sha256": "225267d4ad0b053f4eec0c8cedd60edc2d597a1542ba9dc3b34a8f0bc6309c34"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": []
+    },
+    {
+      "module": "industry_baseline_models",
+      "source": "03_code/06_static_controls/run_model_d_with_static_controls.py",
+      "source_sha256": "132805319a4aed838ea09d8eed886e64fcf9057ff12a41427bf1c84518523b57",
+      "functions": [
+        {
+          "function": "fit_clustered_ols",
+          "source_line": 48,
+          "ast_sha256": "31d1798ca770420ff444b6899e7908279139b1a4a6a5fe1d776284254df75d55"
+        },
+        {
+          "function": "model_formulas",
+          "source_line": 53,
+          "ast_sha256": "8774ca00eaa64a8422b6f86745a7ba42cf818f8da2e5b3c54e9022e0e979a5bf"
+        },
+        {
+          "function": "run_new_models",
+          "source_line": 75,
+          "ast_sha256": "d038bf9335b052f8cdd73a2916ca70a1af9da65543c3f46509093cdee8b156ef"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": []
+    },
+    {
+      "module": "descriptive_alignment",
+      "source": "03_code/12_revision_diagnostics/build_major_revision_tables_and_online_resource.py",
+      "source_sha256": "4ea57464534620efadc65f3b44b866fda100af62ff207d723eb6cfce70571a46",
+      "functions": [
+        {
+          "function": "agricultural_reference_decomposition",
+          "source_line": 147,
+          "ast_sha256": "deeaf3b3826207a700a215698065c2015f24e5b276a6ec944dce37b2e947759e"
+        },
+        {
+          "function": "latest_year_decompositions",
+          "source_line": 238,
+          "ast_sha256": "8ded5ae92f7a28fec7ca4bc3b531442505b5933809841eac94bc8e7c48153b80"
+        },
+        {
+          "function": "tail_decompositions",
+          "source_line": 297,
+          "ast_sha256": "fd3a8df6632dde363f42f4f8ee776b6e0e0d18e1957d2fed575829787f942edf"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": []
+    }
+  ],
+  "adaptations": [
+    "Portable relative imports; original execution entrypoints and project paths omitted.",
+    "Final common-sample omission of industry_name_std retained from the strict-calendar wrapper.",
+    "Literal project-title override dictionaries require external restricted inputs.",
+    "Public guide coding excludes internal paths, firm records and embedded source PDFs.",
+    "Readable module aliases and console text are recorded per module; source AST hashes are retained and checked after reversing only these substitutions."
+  ]
+}

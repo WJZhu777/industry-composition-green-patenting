@@ -1,0 +1,66 @@
+[
+  {
+    "source_id": "agro_2017",
+    "document_title": "\"化学肥料和农药减施增效综合技术研发\"试点专项项目申报指南",
+    "edition_year": 2017,
+    "url": "https://www.gov.cn/xinwen/2016-10/11/5117251/files/61056a8431b44c1189cc466e0b1f3542.pdf",
+    "sha256": "1e299b98095cd684b18feab9e5b4e663b61f301ff0a62c90f2fae94fb3b620d2",
+    "pdf_pages": 19
+  },
+  {
+    "source_id": "air_2017",
+    "document_title": "\"大气污染成因与控制技术研究\"试点专项项目申报指南",
+    "edition_year": 2017,
+    "url": "https://service.most.gov.cn/u/cms/static/201610/12181130ipt2.pdf",
+    "sha256": "2d086472ce5fd19af33970d99d4738dd5dc5a3fb05478e15c664afe32ec1c2e8",
+    "pdf_pages": 13
+  },
+  {
+    "source_id": "water_2017",
+    "document_title": "\"水资源高效开发利用\"重点专项项目申报指南",
+    "edition_year": 2017,
+    "url": "https://service.most.gov.cn/u/cms/static/201710/16144110ud5x.pdf",
+    "sha256": "f81edf086b795f7854f3e02eacb183e832ed4f11fecb133c56dca37f83a1eff7",
+    "pdf_pages": 12
+  },
+  {
+    "source_id": "soil_2017",
+    "document_title": "\"农业面源和重金属污染农田综合防治与修复技术研发\"重点专项项目申报指南",
+    "edition_year": 2017,
+    "url": "https://service.most.gov.cn/u/cms/static/201610/10154508ne0m.pdf",
+    "sha256": "1f4639fa197dc94e8acaeb72bfae450d28209a11db97b54da3a5850ce2100a91",
+    "pdf_pages": 16
+  },
+  {
+    "source_id": "food_2017",
+    "document_title": "\"现代食品加工及粮食收储运技术与装备\"重点专项项目申报指南",
+    "edition_year": 2017,
+    "url": "https://service.most.gov.cn/u/cms/static/201610/1015453374t5.pdf",
+    "sha256": "4c17e2729479a40c189034f8f2b1e0a98f6ffc22fa6f33ca0c728a08e17eb0fb",
+    "pdf_pages": 24
+  },
+  {
+    "source_id": "livestock_2017",
+    "document_title": "\"畜禽重大疫病防控与高效安全养殖综合技术研发\"重点专项项目申报指南",
+    "edition_year": 2017,
+    "url": "https://service.most.gov.cn/u/cms/static/201610/101545445k47.pdf",
+    "sha256": "55490ce74a695b128f25a88d85f8cccd55506446edf3f311f6a8cf0c93f3af05",
+    "pdf_pages": 18
+  },
+  {
+    "source_id": "forest_2017",
+    "document_title": "\"林业资源培育及高效利用技术创新\"重点专项项目申报指南",
+    "edition_year": 2017,
+    "url": "https://service.most.gov.cn/u/cms/static/201610/101545547krg.pdf",
+    "sha256": "c50b42949f3017481d9b7187b250b9557e3e34906d8a29cfc9f0ee1c3e54e1f7",
+    "pdf_pages": 15
+  },
+  {
+    "source_record": "GB/T 4754-2011",
+    "url": "https://sthjt.hunan.gov.cn/uploadfiles/201206/20120628163717102.pdf",
+    "document_title": "国民经济行业分类",
+    "edition_year": 2011,
+    "pdf_pages": 70,
+    "sha256": "52453dd358765f4f0124686d3ceb2facc578b9c62168e3f1d469d2ca1f134ccf"
+  }
+]
