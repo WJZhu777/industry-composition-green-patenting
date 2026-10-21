@@ -92,7 +92,7 @@ For each industry and development role, the code collects the complete set of `(
 
 The two CSV files are readable projections of the JSON, not additional observations. List/dictionary cells use JSON text. `guide_coding.json` retains the full source lineage and unresolved decisions; use it for the analysis and audit rather than interpreting CSV blanks as observed zeros.
 
-This inventory documents the reported input boundary. It does not supply the commercial raw-export-to-canonical-panel build or promise access to restricted labels. Provider versions or download dates not retained in the source records are not invented.
+This inventory documents the reported input boundary. It does not supply the commercial raw-export-to-canonical-panel build or promise access to restricted labels.
 
 ## Canonical panel
 
@@ -142,4 +142,4 @@ The `subsidy` and `projects` commands only accept a ledger that matches its expo
 
 The full panel must also retain `industry_name_std`, `industry_code`, `industry_code_std_source`, `ln_revenue`, `revenue_used_y`, `staff_count` and `penalty_count_announcement_year` for the supplementary routines. These fields cannot be recovered from a minimal panel. Alternative R&D controls use `RDSpendSumRatio / 100` as a fraction, with the original 1%/99% caps and exact previous-calendar-year matching; this differs from the uncapped percentage-point environment in P2. Earlier construct-comparison helpers also retain ratio-fraction diagnostics. Source sensitivity reconstructs GTOS separately under the original source rules.
 
-Some diagnostics remain API-only, as listed in `ANALYSIS_MAP.md`; no empirical input example is fabricated.
+Some diagnostics remain API-only, as listed in `ANALYSIS_MAP.md`.

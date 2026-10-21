@@ -50,7 +50,7 @@ def estimate(frame: pd.DataFrame, saved: dict) -> dict:
     key_digest = rd.fingerprint(frame)
     for label, additions in SPECIFICATIONS.items():
         rhs = rd.BASE + (" + " + " + ".join(additions) if additions else "")
-        print(f"Fitting P8: {label}; N={len(frame)}", flush=True)
+        print(f"Fitting patent-history model: {label}; N={len(frame)}", flush=True)
         model_rows, design = rd.estimate_design(frame, rhs, additions)
         for row in model_rows:
             row.update(sample=SAMPLE, model=label, sample_key_sha256=key_digest)

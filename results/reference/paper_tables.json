@@ -2,7 +2,7 @@
   "interpretation": "Displayed tables copied from current Word files, not recomputed results.",
   "manuscript": {
     "source_file": "Manuscript.docx",
-    "source_sha256": "49351e583e5ea0aca11abdf1346c9eeda25267a7ba6052560ae65743923aec8b",
+    "source_sha256": "bd4404b08502db6237362c64905bfded0c87614cc44506f1666918597390d936",
     "tables": [
       {
         "table_object": 1,
@@ -102,12 +102,12 @@
             "177"
           ]
         ],
-        "notes": "Notes: Panel a uses 53,396 full-panel firm-years with valid baseline classification and reports quartiles of 2007-2012 non-agricultural industry patent intensity. FI identifies the same industries as Q4; it is not a fifth quartile or independent dimension. Panel b uses 47,773 common-sample observations and the lagged OI/OD tertiles with FI assigned to the high/frontier regime. The panels have different rules and samples. GTOS denotes green technology opportunity space."
+        "notes": "Notes: Panel A uses support-adjusted decompositions for valid detailed CSRC 2012 industry-year cells with agricultural-reference weights. Eleven agricultural-only cells (47 firm-years) are excluded because no non-agricultural comparator exists. Panel B varies reference distributions on overlap-support cells and industry aggregation. Shares above 100% arise when the within-cell component has the opposite sign to the aggregate gap. Components may not sum exactly because of rounding."
       },
       {
         "table_object": 3,
-        "caption": "Table 2. GTOS exposure and opportunity-regime distribution",
-        "panel": "Panel A. Baseline opportunity-intensity quartiles and baseline high-intensity industry membership",
+        "caption": "Table 2. Historical green patent activity and GTOS groups",
+        "panel": "Panel A. Baseline patent-intensity quartiles and baseline high-intensity industry membership",
         "rows": [
           [
             "Exposure category",
@@ -149,35 +149,35 @@
       },
       {
         "table_object": 4,
-        "caption": "Table 2. GTOS exposure and opportunity-regime distribution",
-        "panel": "Panel B. GTOS regime distribution",
+        "caption": "Table 2. Historical green patent activity and GTOS groups",
+        "panel": "Panel B. GTOS patent-activity group distribution",
         "rows": [
           [
-            "GTOS regime",
+            "GTOS patent-activity group",
             "Agricultural firms",
             "Non-agricultural firms",
             "Gap (percentage points)"
           ],
           [
-            "Low-opportunity",
+            "Low activity",
             "32.35%",
             "13.68%",
             "18.66"
           ],
           [
-            "Middle-opportunity",
+            "Middle activity",
             "45.73%",
             "25.12%",
             "20.61"
           ],
           [
-            "High/frontier opportunity",
+            "High activity",
             "21.92%",
             "61.20%",
             "-39.28"
           ]
         ],
-        "notes": "Notes: Panels a-c show common-sample agricultural coefficients for patent count, log(1 + patent count), and patent entry. The sparse model includes the agricultural indicator and year effects; the full model adds firm controls, province effects, and GTOS. Whiskers are firm-clustered 95% confidence intervals. These are coefficients from alternative accounting specifications, not treatment effects. Industry clustering reduces precision (Appendix Table A2, Panel F)."
+        "notes": "Notes: Panel A uses 53,396 full-panel firm-years with valid 2007-2012 baseline classification. FI is identical to Q4 in this comparison; the two rows distinguish a binary indicator from the quartile distribution, not independent dimensions. Panel B uses 47,773 common-sample observations, pooled tertiles of the equal-weight standardized lagged OI/OD score, and FI industries assigned to the high-activity group. This is a descriptive patent-activity classification. Percentage-point gaps use unrounded values. GTOS denotes green technology opportunity space."
       },
       {
         "table_object": 5,
@@ -469,7 +469,7 @@
             "Not a placebo p-value"
           ],
           [
-            "Joint GTOS-bundle placebo mean",
+            "Mean under joint GTOS-profile reassignment",
             "-0.017",
             "200",
             "0 of 200; plus-one = 0.005"
@@ -506,7 +506,7 @@
   },
   "supplement": {
     "source_file": "ESM_1.docx",
-    "source_sha256": "d236249fadfd82cad9f4010ac955addd7ac83dbb0c9819571f524c64748eba4d",
+    "source_sha256": "45de7cfef90065a8d5bd60243eea5146ac6385795ccb1412269fd37db57fcaac",
     "tables": [
       {
         "table_object": 1,
@@ -835,9 +835,9 @@
             "Time-invariant ex post baseline classification; the 2013-2024 sensitivity removes the early-window look-ahead feature."
           ],
           [
-            "GTOS regime",
+            "GTOS patent-activity group",
             "Industry-year",
-            "Pooled tertiles of the equal-weight mean of standardized lagged opportunity intensity and diffusion; baseline high-intensity industries are assigned to the high/frontier regime.",
+            "Pooled tertiles of the equal-weight mean of standardized lagged opportunity intensity and diffusion; baseline high-intensity industries are assigned to the high-activity group.",
             "Constructed from the three GTOS proxies",
             "Defined for all 47,773 common-sample observations. Tertile cutoffs use unique common-sample industry-year cells."
           ],
@@ -898,7 +898,7 @@
             "Invalid or unknown codes are excluded from standardized-code decompositions and the common accounting sample."
           ]
         ],
-        "notes": "Notes: ALF denotes agricultural listed firm; GTOS denotes green technology opportunity space. Main accounting models use the uncapped control variables shown above. Patent records come from CNRDS's Green Patent Research Database. Its manual identifies the World Intellectual Property Organization's green patent classification as the basis for green coding; the detailed applicant-to-listed-firm matching procedure is not documented in the project files."
+        "notes": "Notes: ALF denotes agricultural listed firm; GTOS denotes green technology opportunity space. Main accounting models use the uncapped control variables shown above. Patent records come from CNRDS's Green Patent Research Database. Its manual identifies the World Intellectual Property Organization's green patent classification as the basis for green coding; the available documentation does not describe the detailed applicant-to-listed-firm matching procedure."
       },
       {
         "table_object": 6,
@@ -3171,7 +3171,7 @@
       {
         "table_object": 40,
         "caption": "Table A6. Latest-year robustness and model alignment",
-        "panel": "Panel B. Opportunity-exposure robustness",
+        "panel": "Panel B. Baseline patent-activity exposure robustness",
         "rows": [
           [
             "Sample window",
@@ -3229,7 +3229,7 @@
             "47,773"
           ]
         ],
-        "notes": "Notes: Panel A uses the same valid detailed CSRC-code, support-adjusted agricultural-reference decomposition as Table 1. Panel B reports full-panel opportunity-exposure measures for firm-years with valid 2007-2012 baseline intensity or baseline high-intensity classification, applying the stated year cutoff; it is not the common estimation sample. In this sample, the baseline high-intensity industry set coincides exactly with the highest baseline-intensity quartile; the two rows are retained to distinguish the indicator definition from the quartile distribution. Panel C aligns the final common-sample specifications used in Table 6. These checks assess sensitivity to possible database-completion lags and do not identify causal effects."
+        "notes": "Notes: Panel A uses the same valid detailed CSRC-code, support-adjusted agricultural-reference decomposition as Table 1. Panel B reports full-panel baseline patent-activity exposure measures for firm-years with valid 2007-2012 baseline intensity or baseline high-intensity classification, applying the stated year cutoff; it is not the common estimation sample. In this sample, the baseline high-intensity industry set coincides exactly with the highest baseline-intensity quartile; the two rows are retained to distinguish the indicator definition from the quartile distribution. Panel C aligns the final common-sample specifications used in Table 6. These checks assess sensitivity to possible database-completion lags and do not identify causal effects."
       },
       {
         "table_object": 42,
@@ -3577,11 +3577,11 @@
       },
       {
         "table_object": 48,
-        "caption": "Table A8. GTOS regime support, uncertainty, and sensitivity",
+        "caption": "Table A8. GTOS patent-activity groups: support, uncertainty, and sensitivity",
         "panel": "Panel A. Regime support and descriptive distribution",
         "rows": [
           [
-            "GTOS regime",
+            "GTOS patent-activity group",
             "Group",
             "Firm-year observations",
             "Firms",
@@ -3592,7 +3592,7 @@
             "Maximum patent count"
           ],
           [
-            "Low-opportunity",
+            "Low activity",
             "Non-agricultural firms",
             "6,037",
             "1,180",
@@ -3603,7 +3603,7 @@
             "102"
           ],
           [
-            "Low-opportunity",
+            "Low activity",
             "Agricultural firms",
             "1,182",
             "188",
@@ -3614,7 +3614,7 @@
             "47"
           ],
           [
-            "Middle-opportunity",
+            "Middle activity",
             "Non-agricultural firms",
             "11,081",
             "1,893",
@@ -3625,7 +3625,7 @@
             "470"
           ],
           [
-            "Middle-opportunity",
+            "Middle activity",
             "Agricultural firms",
             "1,671",
             "231",
@@ -3636,7 +3636,7 @@
             "74"
           ],
           [
-            "High/frontier opportunity",
+            "High activity",
             "Non-agricultural firms",
             "27,001",
             "3,212",
@@ -3647,7 +3647,7 @@
             "2,360"
           ],
           [
-            "High/frontier opportunity",
+            "High activity",
             "Agricultural firms",
             "801",
             "100",
@@ -3661,11 +3661,11 @@
       },
       {
         "table_object": 49,
-        "caption": "Table A8. GTOS regime support, uncertainty, and sensitivity",
+        "caption": "Table A8. GTOS patent-activity groups: support, uncertainty, and sensitivity",
         "panel": "Panel B. Firm-cluster bootstrap uncertainty",
         "rows": [
           [
-            "GTOS regime",
+            "GTOS patent-activity group",
             "Raw mean gap",
             "Median gap",
             "Bootstrap repetitions",
@@ -3675,7 +3675,7 @@
             "95% CI upper"
           ],
           [
-            "Low-opportunity",
+            "Low activity",
             "0.436",
             "0.0",
             "2,000",
@@ -3685,7 +3685,7 @@
             "0.921"
           ],
           [
-            "Middle-opportunity",
+            "Middle activity",
             "-0.536",
             "0.0",
             "2,000",
@@ -3695,7 +3695,7 @@
             "-0.173"
           ],
           [
-            "High/frontier opportunity",
+            "High activity",
             "-3.975",
             "1.0",
             "2,000",
@@ -3708,8 +3708,8 @@
       },
       {
         "table_object": 50,
-        "caption": "Table A8. GTOS regime support, uncertainty, and sensitivity",
-        "panel": "Panel C. High/frontier upper-tail sensitivity",
+        "caption": "Table A8. GTOS patent-activity groups: support, uncertainty, and sensitivity",
+        "panel": "Panel C. High-activity group upper-tail sensitivity",
         "rows": [
           [
             "Specification",
@@ -3743,11 +3743,11 @@
       },
       {
         "table_object": 51,
-        "caption": "Table A8. GTOS regime support, uncertainty, and sensitivity",
-        "panel": "Panel D. Alternative high-opportunity definitions",
+        "caption": "Table A8. GTOS patent-activity groups: support, uncertainty, and sensitivity",
+        "panel": "Panel D. Alternative definitions of the high-activity group",
         "rows": [
           [
-            "High-opportunity definition",
+            "High-activity group definition",
             "Agricultural firm-years",
             "Non-agricultural firm-years",
             "Raw mean gap",
@@ -3813,7 +3813,7 @@
       },
       {
         "table_object": 52,
-        "caption": "Table A8. GTOS regime support, uncertainty, and sensitivity",
+        "caption": "Table A8. GTOS patent-activity groups: support, uncertainty, and sensitivity",
         "panel": "Panel E. Minimum agricultural support by industry",
         "rows": [
           [
@@ -3856,8 +3856,8 @@
       },
       {
         "table_object": 53,
-        "caption": "Table A8. GTOS regime support, uncertainty, and sensitivity",
-        "panel": "Panel F. Firm-level patent concentration in the high/frontier regime",
+        "caption": "Table A8. GTOS patent-activity groups: support, uncertainty, and sensitivity",
+        "panel": "Panel F. Firm-level patent concentration in the high-activity group",
         "rows": [
           [
             "Group and concentration cutoff",
@@ -3905,7 +3905,7 @@
             "62.4%"
           ]
         ],
-        "notes": "Notes: The primary regime classification uses all 47,773 common-sample observations. The high/frontier agricultural group contains 801 firm-years from 100 firms across 24 industries. Industry-year cells are ranked by an equal-weight mean of standardized lagged opportunity intensity and diffusion, split into pooled tertiles, and baseline high-intensity industries are assigned to the high/frontier regime. Bootstrap intervals use 2,000 firm-cluster replications and preserve firm-year weighting within sampled firms. Upper-tail-capped estimates are one-sided tail diagnostics, not winsorized estimates. Alternative definitions generally preserve a negative raw high-opportunity mean gap, but upper-tail capping shows that its magnitude remains sensitive to extreme patent counts. Panel E restricts both groups to high/frontier-regime industries meeting the stated minimum agricultural-support threshold; non-agricultural observations in high/frontier-regime industries with no agricultural observations are therefore excluded. These comparisons are descriptive. The high/frontier name is only a descriptive label. The negative raw mean gap is not evidence of stable agricultural underperformance: the agricultural median exceeds the non-agricultural median, and p95 capping changes the mean gap to +0.098. The central conclusion concerns lower representation, not lower outcomes within this regime."
+        "notes": "Notes: The primary GTOS patent-activity grouping uses all 47,773 common-sample observations. The high-activity group contains 801 agricultural firm-years from 100 firms across 24 industries. Industry-year cells are ranked by an equal-weight mean of standardized lagged opportunity intensity and diffusion, split into pooled tertiles, and baseline high-intensity industries are assigned to the high-activity group. Bootstrap intervals use 2,000 firm-cluster replications and preserve firm-year weighting within sampled firms. Upper-tail-capped estimates are one-sided tail diagnostics, not winsorized estimates. Alternative definitions generally preserve a negative raw mean gap in the high-activity group, but upper-tail capping shows that its magnitude remains sensitive to extreme patent counts. Panel E restricts both firm groups to industries with at least the stated number of agricultural observations in the high-activity group. It therefore excludes non-agricultural observations from industries with no agricultural observations in that group. These comparisons are descriptive. The negative raw mean gap is not evidence of stable agricultural underperformance: the agricultural median exceeds the non-agricultural median, and p95 capping changes the mean gap to +0.098. The central conclusion concerns lower representation, not lower outcomes within this group."
       },
       {
         "table_object": 54,

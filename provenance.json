@@ -320,6 +320,7 @@
           "p2": "rd"
         },
         "console_messages": {
+          "Fitting P8: ": "Fitting patent-history model: ",
           "P8 synthetic calendar-lag, missingness, key and regression checks passed.": "Patent-history synthetic calendar-lag, missingness, key and regression checks passed."
         }
       },

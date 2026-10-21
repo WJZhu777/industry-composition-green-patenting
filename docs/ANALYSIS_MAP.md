@@ -27,6 +27,29 @@ The package includes retained numerical functions from the final analytical sour
 | A9 subsidy title share / detail title shares (P18/P20) | `subsidy`, `projects`, `investment`, `rd`, `history`; corresponding commands | Construct/audit/compare; frozen labels remain restricted |
 | A9 guide profiles (P31-P33) | `guide_design`, `guides`; `guide` | Bundled author coding, 2018-2020 role-separated fixed samples |
 
+## Running analyses
+
+Run commands from the repository root with the inputs specified in `INPUT_SCHEMA.md`. Empirical outputs must be new JSON files outside the repository:
+
+```bash
+python run.py sample --panel ../licensed/panel.csv --output ../results/sample.json
+python run.py core --panel ../licensed/panel.csv --output ../results/core.json
+python run.py guide --panel ../licensed/panel.csv --output ../results/guide.json
+python run.py rd --panel ../licensed/panel.csv --rd ../licensed/PT_LCRDSPENDING.xlsx --output ../results/rd.json
+```
+
+Other commands are `history`, `investment`, `subsidy`, `projects`, `bootstrap`, `nb2`, `influence`, `shared`, `reassignment`, `tails`, `supplementary` and `descriptive`. Use `python run.py COMMAND --help` for required files. The `subsidy` and `projects` commands need frozen classification ledgers as well as source exports; those ledgers are not included.
+
+Use `descriptive` for the final A6/A7 tail tables. It retains the reported caps of 16, 32 and 83; the generic within-subset percentile helper is not equivalent. The `supplementary` command covers alternative controls, industry-code sources and earlier R&D/investment comparisons.
+
+The `bootstrap` command uses 2,000 firm draws and the original seed. The `reassignment` command uses 500 firm-label, 500 within-cell and 200 GTOS-bundle reassignments. Neither runs as part of `check`.
+
+## Display labels
+
+The paper uses `Low activity`, `Middle activity` and `High activity`. Saved code outputs retain `Low-opportunity`, `Middle-opportunity` and `High/frontier opportunity`, respectively. Group membership and calculations are unchanged.
+
+Table 6 uses `Mean under joint GTOS-profile reassignment` for the simulation retained in code and saved results under `GTOS-bundle placebo`. This is a display-name change, not a different procedure.
+
 ## Supplementary title-share regression API
 
 The `subsidy` and `projects` commands call the same routine used for the original reported regressions. With a correctly prepared external `merged` panel and the original indicator `variable`, its API is:
@@ -44,7 +67,5 @@ It compares controls, patent GTOS and the non-patent input in separate specifica
 - Alternative controls and earlier A9 comparisons now have an explicit `supplementary` command. The complete raw-source build and frozen restricted labels remain outside the public package.
 - `core` and all other explicit empirical commands were run using the authorized original inputs. Main results were compared with selected current saved results and displayed tables. The generic `core` tail-percentile helper is not the final A7 table; `descriptive` implements that table's original fixed caps.
 - No Word, figure or submission-file generator is included. Reference table extraction is a snapshot, not model execution.
-- The full component bootstrap, count models and final guide regressions were rerun. NB2 floating-point differences and Poisson threading sensitivity are documented in the README; exact numerical identity is not claimed.
+- The full component bootstrap, count models and final guide regressions were rerun. [Reproduction notes](RELEASE_CHECKLIST.md#reproduction-notes) document NB2 floating-point differences and Poisson threading sensitivity.
 - Some supplementary functions remain API-only, including parts of the FWL/coefficient-path diagnostics and sector-A feasibility summaries. This run does not certify every historical helper or every displayed table cell.
-
-Do not describe this candidate as complete open-data, end-to-end reproduction before these limits and supplier access conditions are resolved or clearly disclosed in the public release.
