@@ -48,6 +48,11 @@ def check():
 def canonical_sample(path):
     from research_release import sample
     panel = sample.load_panel(Path(path))
+    # The retained leave-one-out helper uses row shifts for own-firm history.
+    ordered = panel.sort_values([sample.FIRM, "year"])
+    year_steps = ordered.groupby(sample.FIRM).year.diff().dropna()
+    if not year_steps.eq(1).all():
+        raise ValueError("Legacy leave-one-out own-history shifts require review for this nonconsecutive panel.")
     masks, excluded = sample.build_masks(panel)
     counts = [int(mask.sum()) for mask in masks.values()]
     if counts != sample.EXPECTED_COUNTS:
@@ -99,8 +104,6 @@ def validate_inputs(path):
     frames, guide = guide_frames(common)
     ordered = panel.sort_values([sample.FIRM, "year"])
     gaps = ordered.groupby(sample.FIRM).year.diff().dropna()
-    if not gaps.eq(1).all():
-        raise ValueError("Legacy leave-one-out own-history shifts require review for this nonconsecutive panel.")
     return {"sample_flow": [int(mask.sum()) for mask in masks.values()],
             "firms": int(panel[sample.FIRM].nunique()), "common_firms": int(common[sample.FIRM].nunique()),
             "strict_calendar_gtos": "passed", "rebuilt_fi_threshold": threshold,

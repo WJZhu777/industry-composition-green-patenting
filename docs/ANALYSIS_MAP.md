@@ -32,6 +32,7 @@ The package includes retained numerical functions from the final analytical sour
 Run commands from the repository root with the inputs specified in `INPUT_SCHEMA.md`. Empirical outputs must be new JSON files outside the repository:
 
 ```bash
+python run.py validate-inputs --panel ../licensed/panel.csv
 python run.py sample --panel ../licensed/panel.csv --output ../results/sample.json
 python run.py core --panel ../licensed/panel.csv --output ../results/core.json
 python run.py guide --panel ../licensed/panel.csv --output ../results/guide.json
@@ -44,11 +45,15 @@ Use `descriptive` for the final A6/A7 tail tables. It retains the reported caps 
 
 The `bootstrap` command uses 2,000 firm draws and the original seed. The `reassignment` command uses 500 firm-label, 500 within-cell and 200 GTOS-bundle reassignments. Neither runs as part of `check`.
 
+Run `validate-inputs` before estimation. The legacy leave-one-out helper uses row shifts for each firm's own history and requires consecutive firm years; the canonical panel satisfies this condition, and the CLI rejects gaps before sample selection. Direct API callers must also supply complete firm histories, not a gapped or prefiltered panel.
+
 ## Display labels
 
 The paper uses `Low activity`, `Middle activity` and `High activity`. Saved code outputs retain `Low-opportunity`, `Middle-opportunity` and `High/frontier opportunity`, respectively. Group membership and calculations are unchanged.
 
 Table 6 uses `Mean under joint GTOS-profile reassignment` for the simulation retained in code and saved results under `GTOS-bundle placebo`. This is a display-name change, not a different procedure.
+
+The Oaxaca output label `Explained total` denotes the paper's `model-accounted component`. It is an algebraic quantity, not a causal explanation or a share of variance explained.
 
 ## Supplementary title-share regression API
 

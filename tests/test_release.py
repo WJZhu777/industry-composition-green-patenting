@@ -35,6 +35,16 @@ class AdapterTests(unittest.TestCase):
     def setUpClass(cls):
         cls.runner = load_runner()
 
+    def test_canonical_input_rejects_gapped_firm_history_before_selection(self):
+        from research_release import sample
+        panel = pd.DataFrame({sample.FIRM: ["100001", "100002", "100001"],
+                              "year": [2009, 2008, 2007]})
+        with patch.object(sample, "load_panel", return_value=panel), \
+             patch.object(sample, "build_masks") as select:
+            with self.assertRaisesRegex(ValueError, "nonconsecutive panel"):
+                self.runner.canonical_sample("unused")
+            select.assert_not_called()
+
     def test_high_regime_bootstrap_uses_original_group_seed(self):
         from research_release import diagnostics
         from argparse import Namespace
@@ -309,6 +319,96 @@ class NumericalTests(unittest.TestCase):
                               "has_green_patent_application": [1, 0, 1, 1, 0, 1]})
         result, threshold = gtos.build_gtos(frame, "industry_code_std")
         self.assertTrue(result.loc[result.year.eq(2009), "opportunity_intensity"].isna().all())
+
+    def test_supported_zero_is_not_missing_peer_support(self):
+        from research_release import industry_sources as gtos
+        rows = []
+        for year in range(2007, 2011):
+            for firm, industry, agricultural, count in [
+                ("100001", "C01", 0, 0), ("100002", "C01", 1, 999),
+                ("100003", "C02", 1, 999),
+            ]:
+                rows.append({gtos.FIRM: firm, "year": year, "industry_code_std": industry,
+                             gtos.AGRI: agricultural, gtos.OUTCOME: count, gtos.ENTRY: int(count > 0)})
+        frame = pd.DataFrame(rows)
+        original = frame.copy(deep=True)
+        result, _ = gtos.build_gtos(frame, "industry_code_std")
+        lagged = result.loc[result.year.gt(2007)]
+        supported = lagged.loc[lagged.industry_code_std.eq("C01")]
+        unsupported = lagged.loc[lagged.industry_code_std.eq("C02")]
+        self.assertTrue(supported[["opportunity_intensity", "opportunity_diffusion"]].eq(0).all().all())
+        self.assertTrue(unsupported[gtos.REBUILT_GTOS].isna().all().all())
+        pd.testing.assert_frame_equal(frame, original)
+
+    def test_fi_uses_equal_baseline_years_and_inclusive_threshold(self):
+        from research_release import industry_sources as gtos
+        annual_counts = {
+            # C01 has annual means 0, 0, 12; weighting firms would change its FI.
+            "C01": {2007: [0], 2008: [0] * 9, 2009: [12]},
+            "C02": {year: [2] for year in range(2007, 2010)},
+            "C03": {year: [4] for year in range(2007, 2010)},
+            "C04": {year: [4] for year in range(2007, 2010)},
+            "C05": {2007: [100] * 5, 2008: [100] * 5},
+        }
+        rows = []
+        for industry, years in annual_counts.items():
+            for year, counts in {2006: [1000], **years, 2013: [1000]}.items():
+                for i, count in enumerate(counts):
+                    rows.append({gtos.FIRM: f"{industry}_{i}", "year": year, "industry_code_std": industry,
+                                 gtos.AGRI: 0, gtos.OUTCOME: count, gtos.ENTRY: int(count > 0)})
+        result, threshold = gtos.build_gtos(pd.DataFrame(rows), "industry_code_std")
+        self.assertEqual(threshold, 4.)
+        for industry, expected in [("C01", 1.), ("C02", 0.), ("C03", 1.), ("C04", 1.)]:
+            self.assertTrue(result.loc[result.industry_code_std.eq(industry), "frontier_exposure"].eq(expected).all())
+        self.assertTrue(result.loc[result.industry_code_std.eq("C05"), "frontier_exposure"].isna().all())
+
+    def test_common_sample_does_not_require_descriptive_industry_name(self):
+        from research_release import structural_utils as utils
+        fields = ["是否涉农", "year", "province", "industry_code_std", "证券代码",
+                  *utils.CORE_FIRM_CONTROLS, *utils.PATENT_OUTCOMES,
+                  "is_penalized_announcement_year", *utils.CORE_GTOS_VARS]
+        self.assertEqual(utils.CORE_SAMPLE_VARS, fields)
+        frame = pd.DataFrame({field: [1., 2.] for field in fields}, index=[7, 9])
+        frame["证券代码"] = ["100001", "100002"]
+        frame["province"] = "Synthetic"
+        frame["industry_code_std"] = "C01"
+        frame["year"] = [2008, 2009]
+        frame["是否涉农"] = [1, 0]
+        frame["has_green_patent_application"] = 1
+        frame["log1p_green_patent_application_count"] = np.log1p(frame.green_patent_application_count)
+        original = frame.copy(deep=True)
+        selected = utils.common_sample(frame, utils.PATENT_OUTCOMES)
+        pd.testing.assert_frame_equal(frame, original)
+        self.assertEqual(selected.index.tolist(), [7, 9])
+        with_missing_name = utils.common_sample(frame.assign(industry_name_std=None), utils.PATENT_OUTCOMES)
+        pd.testing.assert_frame_equal(selected, with_missing_name.drop(columns="industry_name_std"))
+        frame.loc[9, utils.CORE_GTOS_VARS[0]] = np.nan
+        self.assertEqual(utils.common_sample(frame, utils.PATENT_OUTCOMES).index.tolist(), [7])
+        pd.testing.assert_frame_equal(selected, utils.common_sample(original, utils.PATENT_OUTCOMES))
+
+    def test_reference_weights_and_one_sided_cells(self):
+        from research_release import reference_decomposition as reference
+        outcome = "green_patent_application_count"
+        frame = pd.DataFrame({"证券代码": [f"{i:06d}" for i in range(9)], "year": [2020] * 9,
+                              "industry_code_std": ["C01"] * 3 + ["C02"] * 4 + ["C03", "C04"],
+                              "是否涉农": [1, 1, 0, 1, 0, 0, 0, 0, 1],
+                              outcome: [3., 3., 2., 10., 8., 8., 8., 100., 500.]})
+        summary, _ = reference.agricultural_reference_decomposition(frame, outcome, "industry_code_std")
+        self.assertEqual(summary["Unsupported agricultural firm-years"], 1)
+        self.assertEqual(summary["Agricultural firm-years used"], 3)
+        self.assertEqual(summary["Non-agricultural firm-years used"], 5)
+        self.assertAlmostEqual(summary["Aggregate gap"], 16 / 3 - 126 / 5)
+        self.assertAlmostEqual(summary["Within-cell component"], 4 / 3)
+        self.assertAlmostEqual(summary["Aggregate gap"], summary["Within-cell component"] + summary["Between-cell component"])
+        self.assertGreater(summary["Between-cell share"], 1.)
+        overlap = reference.overlap_reference_decompositions(frame, outcome, "industry_code_std")
+        overlap = overlap.set_index("Reference distribution")
+        for name, within in [("Agricultural-reference", 4 / 3), ("Non-agricultural-reference", 7 / 4),
+                             ("Symmetric / pooled reference", 11 / 7), ("Equal-cell reference", 3 / 2)]:
+            row = overlap.loc[name]
+            self.assertAlmostEqual(row["Within-cell component"], within)
+            self.assertAlmostEqual(row["Aggregate gap"], 16 / 3 - 26 / 4)
+            self.assertAlmostEqual(row["Aggregate gap"], row["Within-cell component"] + row["Between-cell component"])
 
 
 class GuideDataTests(unittest.TestCase):

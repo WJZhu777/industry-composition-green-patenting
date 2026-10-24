@@ -31,7 +31,6 @@ CORE_SAMPLE_VARS = [
     "year",
     "province",
     "industry_code_std",
-    "industry_name_std",
     "证券代码",
     *CORE_FIRM_CONTROLS,
     *PATENT_OUTCOMES,
@@ -45,6 +44,8 @@ BASE_FULL = "是否涉农 + C(year) + " + " + ".join(CORE_FIRM_CONTROLS) + " + C
 
 GTOS_FULL = BASE_FULL + " + industry_year_nonagri_patent_per_firm_lag1_log1p + industry_year_has_patent_share_nonagri_lag1 + frontier_industry_flag_baseline"
 
+# Legacy helper: own-firm shifts require consecutive years (checked by the CLI).
+# The current paper uses its leave-one-out columns, not its rolling/PCA regimes.
 def build_enhanced_panel(panel: pd.DataFrame) -> pd.DataFrame:
     dataframe = panel.copy()
     dataframe = dataframe.sort_values(["证券代码", "year"]).reset_index(drop=True)
@@ -257,5 +258,3 @@ def stars(pvalue: float) -> str:
 
 def fmt_coef_se(coef: float, se: float, pvalue: float, digits: int = 3) -> str:
     return f"{coef:.{digits}f}{stars(pvalue)} ({se:.{digits}f})"
-
-CORE_SAMPLE_VARS = [v for v in CORE_SAMPLE_VARS if v != "industry_name_std"]
