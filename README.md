@@ -35,7 +35,7 @@ python run.py validate-inputs --panel ../licensed/panel.csv
 python run.py core --panel ../licensed/panel.csv --output ../results/core.json
 ```
 
-`validate-inputs` checks the sample, stored GTOS variables and guide design without estimating models. Analysis outputs must be new files outside this repository. Some commands need additional R&D, investment or classification inputs; use `python run.py COMMAND --help` and the [analysis map](docs/ANALYSIS_MAP.md) for details. Some appendix diagnostics are available only through the Python API.
+`validate-inputs` checks the fields required by `core`, the 2015 split, the sample, stored GTOS variables and the guide design without estimating models. Analysis outputs must be new files outside this repository. The final appendix diagnostics use `sample-bridge` and `wild-cluster`. Some commands need additional R&D, investment or classification inputs; use `python run.py COMMAND --help` and the [analysis map](docs/ANALYSIS_MAP.md) for details. Some appendix diagnostics are available only through the Python API.
 
 Before empirical runs, read the [reproduction notes](docs/RELEASE_CHECKLIST.md#reproduction-notes) for BLAS settings and known Poisson and NB2 numerical differences.
 
@@ -56,4 +56,4 @@ The code starts from a prepared firm-year analysis panel, which is not distribut
 
 `provenance.json` records the retained functions and source checksums. `release_manifest.json` lists the reviewed files and their hashes.
 
-The repository is currently private. No public license has been selected, and no Zenodo archive has been created.
+The repository is currently private. Public access is planned before submission of the revised manuscript. Distribution will be through GitHub only; no Zenodo deposit is planned. No public license has been selected.

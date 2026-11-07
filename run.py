@@ -96,9 +96,20 @@ def guide_frames(common):
     return frames, reports
 
 
+def validate_core_fields(panel):
+    from research_release.count_models import post_2015_indicator
+    required = ("baseline_nonagri_patent_per_firm", "industry_year_patent_count_nonagri",
+                "industry_year_patent_firms_nonagri", "firm_count_nonagri")
+    missing = [name for name in required if name not in panel.columns]
+    if missing:
+        raise ValueError("Missing required core fields: " + ", ".join(missing))
+    post_2015_indicator(panel)
+
+
 def validate_inputs(path):
     from research_release import sample, industry_sources, guide_design
     panel, common, masks, _ = canonical_sample(path)
+    validate_core_fields(panel)
     rebuilt, threshold = industry_sources.build_gtos(panel, sample.INDUSTRY)
     industry_sources.verify_hybrid_rebuild(panel, rebuilt)
     frames, guide = guide_frames(common)
@@ -282,12 +293,127 @@ def bootstrap(common):
             "replicates": draws, "conditional_on_stored_gtos_and_sample": True}
 
 
+def sample_bridge(panel, masks):
+    import numpy as np
+    import pandas as pd
+    from research_release import sample, accounting, influence, sample_bridge as bridge
+    eligible_mask = masks["Static controls and fields complete"] & panel.year.gt(2007)
+    common_mask = masks["Common estimation sample"]
+    missing = panel[[*sample.LAGGED, sample.FI]].isna().any(axis=1)
+    if (common_mask & ~eligible_mask).any() or not (eligible_mask & ~missing).equals(common_mask):
+        raise ValueError("The sample difference must be exactly GTOS availability after 2007.")
+    eligible = panel.loc[eligible_mask].copy()
+    common = panel.loc[common_mask].copy()
+    excluded = panel.loc[eligible_mask & ~common_mask].copy()
+    a, b = bridge.control_design(eligible), bridge.control_design(common)
+    full = accounting.build_design(common)
+    c = pd.DataFrame(full["original_x"], index=common.index, columns=full["columns"])
+    if list(a.columns) != list(b.columns):
+        raise ValueError("Year or province categories differ across comparison samples.")
+    pd.testing.assert_frame_equal(a.loc[common.index], b)
+    pd.testing.assert_frame_equal(c[b.columns], b)
+    estimates, diagnostics = {}, {}
+    for label, design, frame in [("A", a, eligible), ("B", b, common), ("C", c, common)]:
+        estimates[label], diagnostics[label] = bridge.fit(design, frame[list(accounting.OUTCOMES.values())])
+    rows = []
+    for j, outcome in enumerate(accounting.OUTCOMES):
+        beta_a, beta_b, beta_c = (float(estimates[label][j]) for label in ["A", "B", "C"])
+        error = (beta_b - beta_a) + (beta_c - beta_b) - (beta_c - beta_a)
+        np.testing.assert_allclose(error, 0., atol=1e-12, rtol=0)
+        rows.append({"outcome": outcome, "A_eligible_control": beta_a, "B_common_control": beta_b,
+                     "C_common_full": beta_c, "B_minus_A_sample_restriction": beta_b - beta_a,
+                     "C_minus_B_add_gtos": beta_c - beta_b, "C_minus_A_total_change": beta_c - beta_a,
+                     "path_identity_error": error})
+    lag_missing = excluded[sample.LAGGED].isna().any(axis=1)
+    fi_missing = excluded[sample.FI].isna()
+    missingness = {"lagged_OI_OD_only": int((lag_missing & ~fi_missing).sum()),
+                   "FI_only": int((~lag_missing & fi_missing).sum()),
+                   "both_lagged_OI_OD_and_FI": int((lag_missing & fi_missing).sum())}
+    if sum(missingness.values()) != len(excluded):
+        raise AssertionError("GTOS missingness categories do not exhaust the excluded sample.")
+    return {"samples": {name: influence.sample_info(frame) for name, frame in
+                         [("A_eligible", eligible), ("B_C_common", common), ("A_minus_common", excluded)]},
+            "excluded_missingness": missingness, "estimates": rows, "fit_diagnostics": diagnostics,
+            "interpretation": "Path-specific point comparison, not a selection correction or causal decomposition."}
+
+
+def wild_cluster_cases(common, own_history, guide_samples):
+    import numpy as np
+    from research_release import sample, rd, history
+    full_rhs = rd.BASE + " + " + " + ".join(rd.PATENT)
+    fe_rhs = rd.BASE + " + C(industry_code_std) + " + " + ".join(sample.LAGGED)
+    cases = []
+    for name, rhs in [("Full accounting", full_rhs), ("Industry FE plus OI/OD", fe_rhs)]:
+        for outcome, field in rd.OUTCOMES.items():
+            cases.append((name, outcome, common, rhs, field))
+    positive = common.loc[common[sample.COUNT].gt(0)].copy()
+    positive["log_positive_count"] = np.log(positive[sample.COUNT])
+    cases.append(("Full positive-count intensity", "Log(count) given count > 0", positive,
+                  full_rhs, "log_positive_count"))
+    cases.append(("Own history + patent GTOS", "Patent count", own_history,
+                  full_rhs + " + " + history.HISTORY, sample.COUNT))
+    for role in ["process_rd", "supplier"]:
+        frame = guide_samples[role]
+        columns = [c for c in frame if c.startswith("profile__")]
+        rhs = rd.BASE + (" + " + " + ".join(columns) if columns else "")
+        for outcome, field in rd.OUTCOMES.items():
+            cases.append(("Guide profiles: " + role, outcome, frame, rhs, field))
+    return cases
+
+
+def industry_wild_cluster(common, own_history, guide_samples):
+    import numpy as np
+    import patsy
+    from scipy.stats import t
+    from research_release import sample, rd, wild_cluster as wild
+    rows = []
+    for index, (name, outcome, frame, rhs, field) in enumerate(
+            wild_cluster_cases(common, own_history, guide_samples)):
+        matrix = patsy.dmatrix(rhs, frame, return_type="dataframe", NA_action="raise")
+        if not matrix.index.equals(frame.index):
+            raise ValueError("Design construction changed sample or row alignment.")
+        x, y = matrix.to_numpy(float), frame[field].to_numpy(float)
+        target = matrix.columns.get_loc(sample.AGRI)
+        fit = wild.prepare(x, y, frame[sample.INDUSTRY], target)
+        g = len(fit["levels"])
+        row = {"model": name, "outcome": outcome, "n": len(frame), "industries": g,
+               "firms": int(frame[sample.FIRM].nunique()), "sample_sha256": rd.fingerprint(frame),
+               "rhs": rhs, "design_columns": list(matrix.columns),
+               "coefficient": fit["coefficient"], "industry_se": fit["industry_se"],
+               "industry_cr1_t": fit["t"], "industry_cr1_p_t": float(2 * t.sf(abs(fit["t"]), g - 1)),
+               "wild_cluster": []}
+        for weight_index, distribution in enumerate(["Rademacher", "Webb"]):
+            stream = 2 * index + weight_index
+            weights, exhaustive = wild.draw_weights(g, distribution, stream)
+            values = wild.bootstrap_t(fit, weights)
+            selected = np.linspace(0, len(values) - 1, 3, dtype=int)
+            error = wild.direct_check(x, y, fit, target, weights[:, selected])
+            exceedances = int(np.sum(np.abs(values) >= abs(fit["t"]) - 1e-10))
+            row["wild_cluster"].append({"weights": distribution, "seed_stream": stream,
+                "draws": len(values), "exhaustive_sign_distribution": exhaustive,
+                "exceedances": exceedances, "p_value": exceedances / len(values),
+                "invalid_draws": 0, "direct_refits_checked": 3,
+                "max_t_error_against_direct_refit": error})
+        rows.append(row)
+    return {"plan": wild.plan(), "results": rows}
+
+
 def analysis(args):
     import numpy as np
     import pandas as pd
     from research_release import sample, baseline, structural_utils as utils, diagnostics, decomposition
     panel, common, masks, excluded = canonical_sample(args.panel)
     mode = args.command
+    if mode == "sample-bridge":
+        return sample_bridge(panel, masks)
+    if mode == "wild-cluster":
+        from research_release import history, rd
+        merged, _, _, _ = rd_input(panel, args.rd)
+        enriched = history.add_calendar_history(merged)
+        chosen = enriched.loc[masks["Common estimation sample"] & enriched[rd.RD_MEAN].notna()
+                              & enriched[history.HISTORY].notna()].copy()
+        frames, _ = guide_frames(common)
+        return industry_wild_cluster(common, chosen, frames)
     if mode == "supplementary":
         return supplementary(panel, common, args.rd, args.legacy_investment)
     if mode == "descriptive":
@@ -378,6 +504,7 @@ def analysis(args):
                     seed=20260726 + list(diagnostics.REGIME_LABELS).index("high_frontier_opportunity"))}
     if mode == "core":
         from research_release import count_models, support, reference_decomposition as reference, sign_diagnostics
+        validate_core_fields(panel)
         cells = panel.drop_duplicates([sample.INDUSTRY, "year"])
         valid = panel.loc[panel[sample.INDUSTRY].str.fullmatch(r"[A-Z]\d{2}")].copy()
         valid["broad_industry_sector"] = valid[sample.INDUSTRY].astype(str).str.slice(0, 1)
@@ -425,14 +552,15 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest="command", required=True)
     sub.add_parser("check", help="Import and synthetic checks only; no licensed data or paper models.")
-    validation = sub.add_parser("validate-inputs", help="Read-only sample, GTOS and guide design checks; no estimates.")
+    validation = sub.add_parser("validate-inputs", help="Read-only core-field, sample, GTOS and guide checks; no estimates.")
     validation.add_argument("--panel", required=True)
     for command in ["sample", "core", "guide", "rd", "history", "investment", "subsidy", "projects",
-                    "bootstrap", "nb2", "influence", "shared", "reassignment", "tails", "supplementary", "descriptive"]:
+                    "bootstrap", "nb2", "influence", "shared", "reassignment", "tails", "supplementary", "descriptive",
+                    "sample-bridge", "wild-cluster"]:
         p = sub.add_parser(command)
         p.add_argument("--panel", required=True)
         p.add_argument("--output", required=True, help="A new JSON file OUTSIDE the release directory.")
-        if command in ["rd", "history", "supplementary"]:
+        if command in ["rd", "history", "supplementary", "wild-cluster"]:
             p.add_argument("--rd", required=True)
         if command == "supplementary":
             p.add_argument("--legacy-investment", required=True)

@@ -94,6 +94,8 @@ The two CSV files are readable projections of the JSON, not additional observati
 
 This inventory documents the reported input boundary. It does not supply the commercial raw-export-to-canonical-panel build or promise access to restricted labels.
 
+The final `sample-bridge` diagnostic needs only D01. The 14-test `wild-cluster` command needs D01, D02 and the bundled guide coding: these reconstruct the original common, positive-count, own-history and guide samples. It does not require internal result files or private firm-key/profile ledgers. Neither command changes the original GTOS construction.
+
 ## Canonical panel
 
 One row per stock code and calendar year; UTF-8 CSV. Stock codes are six-character strings with leading zeros. The selected paper panel covers 2007-2024 and has 55,588 rows / 4,582 firms. The original stage counts are 55,588, 55,588, 51,696, 49,982, 48,519 and 47,773; the common sample has 4,290 firms. These are validation anchors, not instructions to force a different dataset into the same counts.
@@ -113,7 +115,7 @@ One row per stock code and calendar year; UTF-8 CSV. Stock codes are six-charact
 | `industry_year_has_patent_share_nonagri_lag1` | OD: preceding-calendar-year non-agricultural patent-entry share |
 | `frontier_industry_flag_baseline` | FI: fixed 2007-2012 high-intensity industry classification; name retained for compatibility, not a persistent frontier claim |
 
-`core` also uses stored industry-year fields: `industry_year_id`, `industry_year_patent_count_nonagri`, `industry_year_patent_firms_nonagri`, `firm_count_nonagri`, `baseline_nonagri_patent_per_firm`, and `post_2015`. Consult `baseline.exposure_tables` and the relevant API before supplying a partial panel. No missing column is guessed or automatically substituted.
+`core` also requires `industry_year_patent_count_nonagri`, `industry_year_patent_firms_nonagri`, `firm_count_nonagri`, and `baseline_nonagri_patent_per_firm`. Both `validate-inputs` and `core` list missing fields before estimation. The code constructs `post_2015` as `year >= 2015`; a supplied column must match that rule on every row. It is not a sample filter.
 
 The v2 strict-calendar panel, rather than the legacy v1 panel, is the input. A non-agricultural industry-year with firms and no applications has a zero benchmark; an unavailable preceding year remains missing. Agricultural applications are excluded from the benchmark. `industry_name_std` is descriptive and not required for common-sample membership.
 

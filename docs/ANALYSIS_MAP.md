@@ -1,6 +1,6 @@
 # Paper-to-code map
 
-The package includes retained numerical functions from the final analytical sources, not all historical project scripts. `provenance.json` records each function's original file and AST checksum. Document synchronization, source-screening experiments not used in the paper, old IV/policy routes and Word editing are excluded.
+The package includes retained numerical functions from the final analytical sources, not all historical project scripts. `provenance.json` records each function's original file and AST checksum. Release-only input and output checks have separate checksums where they change a retained function. Document synchronization, source-screening experiments not used in the paper, old IV/policy routes and Word editing are excluded.
 
 | Reported analysis | Portable module / entrypoint | Input / status |
 |---|---|---|
@@ -11,6 +11,7 @@ The package includes retained numerical functions from the final analytical sour
 | Table 5 entry, positive-count intensity and interactions | `count_models.run_two_part`; `core` | Original entry/intensity samples, original post-2015 definition |
 | Table 6 ranges, reassignment, clustering, count models | `support`, `baseline`, `diagnostics`, `count_models`; `core` / `reassignment` | Marginal range check, not multivariate common support; frequencies are heuristic |
 | A1 / A3 sample flow and support | `sample`, `sector_a`; `sample` | Panel plus classification/source fields for sector diagnostics |
+| A3 Panel G sample-restriction comparison | `sample_bridge`; `sample-bridge` | Post-2007 static-complete sample versus the common sample; then add stored GTOS on identical rows; point estimates only |
 | A2/A5 original industry-FE baseline and penalty context | `industry_baseline_models`; `supplementary` | Original outcome fields and complete-case rules; selected reported A5 entries checked at displayed precision; no legacy panel builder |
 | A2 multicollinearity, FWL, coefficient paths | `sign_diagnostics`; VIF/condition-index part in `core`, remaining functions via API | Fits are not cached across calls or samples; repeated order specifications reuse fits only within one call |
 | A2 alternative controls and industry-FE role | `controls`; `supplementary` | Original revenue/employment fields and R&D export required; preparation follows original calendar lag and control caps |
@@ -19,6 +20,7 @@ The package includes retained numerical functions from the final analytical sour
 | A2 jointly estimated NB2 (P4) | `nb2`; `nb2` | Original starts, optimizer tolerances, likelihood and cluster-score implementation |
 | A2 own-history comparison (P8) | `history`, `rd`; `history` | Exact calendar own lag; same R&D/history intersection |
 | A2 leave-industry-out / shared industries (P13/P15) | `influence`, `shared_industries`; corresponding commands | Stored GTOS retained; no rebuilding from deletion samples |
+| A2 Panel N finite-cluster inference | `wild_cluster`; `wild-cluster` | Fourteen fixed coefficient tests; original common, positive-count, R&D/history and guide samples; requires panel, R&D export and bundled guide coding |
 | A4 alternative clustering / late window | `diagnostics`; `core` | Firm, industry and two-way schemes from original routines |
 | A6-A8 reference/support/tail diagnostics | `descriptive_alignment`, `reference_decomposition`, `sparse_cells`, `diagnostics`; `descriptive`, `supplementary`, `tails` | Final A7 tail caps are 16/32/83, not recomputed within the valid-code subset; high-regime bootstrap uses its original group-specific seed 20260728 |
 | A9 new R&D/personnel comparison (P2) | `rd`; `rd` | Separate private CSMAR input |
@@ -39,11 +41,13 @@ python run.py guide --panel ../licensed/panel.csv --output ../results/guide.json
 python run.py rd --panel ../licensed/panel.csv --rd ../licensed/PT_LCRDSPENDING.xlsx --output ../results/rd.json
 ```
 
-Other commands are `history`, `investment`, `subsidy`, `projects`, `bootstrap`, `nb2`, `influence`, `shared`, `reassignment`, `tails`, `supplementary` and `descriptive`. Use `python run.py COMMAND --help` for required files. The `subsidy` and `projects` commands need frozen classification ledgers as well as source exports; those ledgers are not included.
+Other commands are `history`, `investment`, `subsidy`, `projects`, `bootstrap`, `nb2`, `influence`, `shared`, `reassignment`, `tails`, `supplementary`, `descriptive`, `sample-bridge` and `wild-cluster`. Use `python run.py COMMAND --help` for required files. The `subsidy` and `projects` commands need frozen classification ledgers as well as source exports; those ledgers are not included.
 
 Use `descriptive` for the final A6/A7 tail tables. It retains the reported caps of 16, 32 and 83; the generic within-subset percentile helper is not equivalent. The `supplementary` command covers alternative controls, industry-code sources and earlier R&D/investment comparisons.
 
 The `bootstrap` command uses 2,000 firm draws and the original seed. The `reassignment` command uses 500 firm-label, 500 within-cell and 200 GTOS-bundle reassignments. Neither runs as part of `check`.
+
+`sample-bridge` separates changing sample membership from adding GTOS; it is not a selection correction. `wild-cluster --rd PATH` tests individual agricultural coefficients using restricted wild industry-cluster bootstrap-t (WCR11). It retains the original 14-test order and seed 20261028, with 9,999 Rademacher and Webb draws and exhaustive 8,192 Rademacher signs for 13 industries. It does not test coefficient changes or decomposition components. Neither command runs in `check`.
 
 Run `validate-inputs` before estimation. The legacy leave-one-out helper uses row shifts for each firm's own history and requires consecutive firm years; the canonical panel satisfies this condition, and the CLI rejects gaps before sample selection. Direct API callers must also supply complete firm histories, not a gapped or prefiltered panel.
 

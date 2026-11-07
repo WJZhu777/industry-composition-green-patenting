@@ -45,6 +45,30 @@ class AdapterTests(unittest.TestCase):
                 self.runner.canonical_sample("unused")
             select.assert_not_called()
 
+    def test_validation_and_core_reject_incomplete_inputs_before_analysis(self):
+        from argparse import Namespace
+        from research_release import baseline, industry_sources
+
+        panel = pd.DataFrame({"year": [2014, 2015], "baseline_nonagri_patent_per_firm": [0.2, 0.2],
+                              "industry_year_patent_count_nonagri": [1, 2],
+                              "industry_year_patent_firms_nonagri": [1, 1], "firm_count_nonagri": [5, 5]})
+        for invalid, message in [
+            (panel.drop(columns=["firm_count_nonagri", "industry_year_patent_count_nonagri"]),
+             "industry_year_patent_count_nonagri, firm_count_nonagri"),
+            (panel.assign(post_2015=[0, 0]), "Stored post_2015"),
+        ]:
+            with self.subTest(message=message), \
+                 patch.object(self.runner, "canonical_sample", return_value=(invalid, invalid, {}, {})), \
+                 patch.object(industry_sources, "build_gtos") as rebuild, \
+                 patch.object(baseline, "nested_coefficients") as fit:
+                with self.assertRaisesRegex(ValueError, message):
+                    self.runner.validate_inputs("unused")
+                with self.assertRaisesRegex(ValueError, message):
+                    self.runner.analysis(Namespace(command="core", panel="unused"))
+                rebuild.assert_not_called()
+                fit.assert_not_called()
+        self.runner.validate_core_fields(panel)
+
     def test_high_regime_bootstrap_uses_original_group_seed(self):
         from research_release import diagnostics
         from argparse import Namespace
@@ -217,6 +241,71 @@ class CountConvergenceTests(unittest.TestCase):
                  patch.object(count_models, "extract_rows", side_effect=lambda *args: [{"coef": 0.2, "se": 0.1}]):
                 rows, _ = count_models.run_negative_binomial(self.frame)
                 self.assertEqual(rows.converged.tolist(), [converged] * 4)
+
+    def poisson_output(self, converged=True, **changes):
+        from research_release import count_models, sample
+
+        result = SimpleNamespace(
+            mle_retvals={"converged": converged}, nobs=3, llf=-5., llnull=-8.,
+            params=pd.Series([0.2, 1.], index=[sample.AGRI, "Intercept"]),
+            bse=pd.Series([0.1, 0.2], index=[sample.AGRI, "Intercept"]),
+            pvalues=pd.Series([0.04, 0.001], index=[sample.AGRI, "Intercept"]),
+            conf_int=lambda: pd.DataFrame([[0.004, 0.396], [0.608, 1.392]],
+                                          index=[sample.AGRI, "Intercept"]),
+        )
+        vars(result).update(changes)
+        with patch.object(count_models, "common_sample", return_value=self.frame), \
+             patch.object(count_models, "fit_poisson_clustered", return_value=result):
+            return count_models.run_ppml(self.frame)
+
+    def test_valid_poisson_keeps_reported_values(self):
+        rows = self.poisson_output()
+        self.assertTrue(rows[["optimizer_converged", "converged", "fit_usable", "term_is_finite"]].all().all())
+        self.assertEqual(rows.coef.tolist(), [0.2] * 4)
+        self.assertEqual(rows.se.tolist(), [0.1] * 4)
+        self.assertEqual(rows.pvalue.tolist(), [0.04] * 4)
+        self.assertEqual(rows.pseudo_r2_or_r2.tolist(), [0.375] * 4)
+
+    def test_nonfinite_poisson_is_unusable_despite_optimizer_flag(self):
+        from research_release import sample
+
+        for changes in [{"llf": np.nan}, {"bse": pd.Series([0.1, np.inf], index=[sample.AGRI, "Intercept"])}]:
+            with self.subTest(fields=list(changes)):
+                rows = self.poisson_output(**changes)
+                self.assertTrue(rows.optimizer_converged.all())
+                self.assertFalse(rows[["converged", "fit_usable", "term_is_finite"]].any().any())
+                self.assertTrue(rows[["coef", "se", "pvalue", "ci_low", "ci_high", "pseudo_r2_or_r2"]].isna().all().all())
+                self.assertEqual(rows.numeric_note.tolist(), ["numerically_unstable"] * 4)
+
+    def test_finite_unconverged_poisson_is_unusable(self):
+        rows = self.poisson_output(converged=False)
+        self.assertFalse(rows.fit_usable.any())
+        self.assertTrue(rows.coef.isna().all())
+        self.assertEqual(rows.numeric_note.tolist(), ["optimizer_not_converged"] * 4)
+
+
+class PeriodTests(unittest.TestCase):
+    def test_two_part_derives_the_2015_split_before_sample_selection(self):
+        from research_release import count_models
+
+        panel = pd.DataFrame({"year": [2014, 2015, 2016]}, index=[12, 5, 4])
+        for frame in [panel, panel.assign(post_2015=[0, 1, 1])]:
+            with patch.object(count_models, "common_sample", side_effect=RuntimeError("stop before fitting")) as select:
+                with self.assertRaisesRegex(RuntimeError, "stop before fitting"):
+                    count_models.run_two_part(frame)
+                selected = select.call_args.args[0]
+                self.assertEqual(selected.post_2015.tolist(), [0, 1, 1])
+                self.assertTrue(selected.index.equals(frame.index))
+        self.assertNotIn("post_2015", panel)
+
+    def test_two_part_rejects_wrong_or_missing_supplied_flags(self):
+        from research_release import count_models
+
+        for stored in [[0, 0, 1], [0, np.nan, 1]]:
+            with self.subTest(stored=stored), patch.object(count_models, "common_sample") as select:
+                with self.assertRaisesRegex(ValueError, "Stored post_2015"):
+                    count_models.run_two_part(pd.DataFrame({"year": [2014, 2015, 2016], "post_2015": stored}))
+                select.assert_not_called()
 
 
 class NumericalTests(unittest.TestCase):
@@ -570,7 +659,7 @@ class PackageTests(unittest.TestCase):
             changes = row.get("readability_changes", {})
             aliases = {new: old for old, new in changes.get("module_aliases", {}).items()}
             messages = {new: old for old, new in changes.get("console_messages", {}).items()}
-            # Retain the source hashes; reverse only the declared presentation edits.
+            # Compare with the retained source or an explicitly recorded release change.
             for node in ast.walk(tree):
                 if isinstance(node, ast.Name):
                     node.id = aliases.get(node.id, node.id)
@@ -580,7 +669,10 @@ class PackageTests(unittest.TestCase):
                      if isinstance(n, ast.FunctionDef)}
             for function in row["functions"]:
                 checksum = hashlib.sha256(ast.dump(nodes[function["function"]], include_attributes=False).encode()).hexdigest()
-                self.assertEqual(checksum, function["ast_sha256"])
+                if "release_ast_sha256" in function:
+                    self.assertTrue(function["release_change"])
+                    self.assertNotEqual(function["release_ast_sha256"], function["ast_sha256"])
+                self.assertEqual(checksum, function.get("release_ast_sha256", function["ast_sha256"]))
                 total += 1
             classes = {n.name: n for n in tree.body if isinstance(n, ast.ClassDef)}
             for item in row["class_definitions"]:
@@ -603,7 +695,7 @@ class PackageTests(unittest.TestCase):
     def test_tables_are_aggregate_snapshots(self):
         tables = json.loads((ROOT / "results/reference/paper_tables.json").read_text(encoding="utf-8"))
         self.assertEqual(len(tables["manuscript"]["tables"]), 13)
-        self.assertEqual(len(tables["supplement"]["tables"]), 66)
+        self.assertEqual(len(tables["supplement"]["tables"]), 68)
         for section in ["manuscript", "supplement"]:
             for table in tables[section]["tables"]:
                 self.assertTrue(table["rows"])

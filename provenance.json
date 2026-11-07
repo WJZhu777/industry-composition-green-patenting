@@ -1,5 +1,5 @@
 {
-  "status": "Private GitHub repository; not publicly released, no public license selected or Zenodo archive created.",
+  "status": "Private GitHub repository; public release planned before revised-manuscript submission; no public license selected; no Zenodo deposit planned.",
   "title": "Industry Composition and the Green Invention Patenting Gap between Agricultural and Other Listed Firms in China",
   "modules": [
     {
@@ -846,7 +846,9 @@
         {
           "function": "run_ppml",
           "source_line": 94,
-          "ast_sha256": "aeb8746ad26d2baf13bcb72b0f4fc2c7c899d2a0a2694c5a272b2f71dab6017f"
+          "ast_sha256": "aeb8746ad26d2baf13bcb72b0f4fc2c7c899d2a0a2694c5a272b2f71dab6017f",
+          "release_ast_sha256": "1a84eec875c670a6e414125eaaf5c70c0db53f6f2ffab32495f1ec979ee2c51a",
+          "release_change": "Check the optimizer flag and finite estimates before reporting a fit. Keep the original sample, formulas and optimizer."
         },
         {
           "function": "run_negative_binomial",
@@ -856,7 +858,9 @@
         {
           "function": "run_two_part",
           "source_line": 182,
-          "ast_sha256": "6ec2a08ad306aa18b80e768689e099f38fc5fd0aa59e70059eb8028fa2751866"
+          "ast_sha256": "6ec2a08ad306aa18b80e768689e099f38fc5fd0aa59e70059eb8028fa2751866",
+          "release_ast_sha256": "d07865cf708461fc4025ce5829b99cfdd428f213383e691d1d29883fde4531ba",
+          "release_change": "Derive post_2015 from the calendar year and reject inconsistent stored values before selecting the common sample."
         }
       ],
       "class_definitions": [],
@@ -1364,6 +1368,77 @@
       ],
       "class_definitions": [],
       "restricted_rule_inputs": []
+    },
+    {
+      "module": "sample_bridge",
+      "source": "03_code/21_major_revision_10_08/sample_selection_accounting_bridge.py",
+      "source_sha256": "9b34281471d8ec0b00c4b6e8106d54f0436832c934de3ab59884e10569a92e9c",
+      "functions": [
+        {
+          "function": "control_design",
+          "source_line": 26,
+          "ast_sha256": "9e1e048bf0b3b05b045cf4a6173ba535fe07c6e2a7c1458121805fdb70e813c9"
+        },
+        {
+          "function": "fit",
+          "source_line": 35,
+          "ast_sha256": "536dbec58f1bfa72fc9e78108df2a02a0c47b744d7d398ae51e65ac9c8b14760"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": [],
+      "readability_changes": {
+        "module_aliases": {
+          "p1": "sample",
+          "p3": "accounting"
+        },
+        "console_messages": {}
+      }
+    },
+    {
+      "module": "wild_cluster",
+      "source": "03_code/21_major_revision_10_08/industry_wild_cluster_check.py",
+      "source_sha256": "8d55db32da9a3b70b8b7302b46b78b0a412b28e4599dad3fb7c7f44f7c9a819e",
+      "functions": [
+        {
+          "function": "plan",
+          "source_line": 39,
+          "ast_sha256": "7354afb22a93dc427e68515a0d3a54a33966020ce44abcd77af59ed3d5caa19c"
+        },
+        {
+          "function": "prepare",
+          "source_line": 155,
+          "ast_sha256": "9872eb9b4ff85cc2c2ba2a3f4022d524c6f51772a1e3f23fadbd347f0997f6c0"
+        },
+        {
+          "function": "bootstrap_t",
+          "source_line": 191,
+          "ast_sha256": "1c150afd46ce3de09008406ed28d3298baabf0ca95222e03e2105c9024b285ab"
+        },
+        {
+          "function": "draw_weights",
+          "source_line": 207,
+          "ast_sha256": "57cd5db6f424d1803f37e5aab390a115e97613afbe963e8a471e44406d530a0f"
+        },
+        {
+          "function": "direct_check",
+          "source_line": 217,
+          "ast_sha256": "172190db4ec48c86fe7a0ba3a309a1bec494b9c78b4b2cc03a1b078202f1bc26"
+        },
+        {
+          "function": "synthetic_checks",
+          "source_line": 230,
+          "ast_sha256": "371493e39b91a1572a6def94d1abcf510b0e5bdf2843158e1a2e95c000bb60c3"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": [],
+      "readability_changes": {
+        "module_aliases": {
+          "p1": "sample"
+        },
+        "console_messages": {}
+      }
     }
   ],
   "adaptations": [

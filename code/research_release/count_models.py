@@ -15,6 +15,12 @@ GTOS_LAG1_TERMS = "industry_year_nonagri_patent_per_firm_lag1_log1p + industry_y
 
 GTOS_LAG1_FRONTIER = GTOS_LAG1_TERMS + " + frontier_industry_flag_baseline"
 
+def post_2015_indicator(panel: pd.DataFrame) -> pd.Series:
+    indicator = pd.to_numeric(panel["year"], errors="raise").ge(2015).astype(int)
+    if "post_2015" in panel and not panel["post_2015"].eq(indicator).fillna(False).all():
+        raise ValueError("Stored post_2015 must equal (year >= 2015) on every row.")
+    return indicator
+
 def extract_rows(result, outcome_label: str, model_id: str, terms: list[str]) -> list[dict[str, object]]:
     rows = []
     for term in terms:
@@ -74,24 +80,36 @@ def run_ppml(panel: pd.DataFrame) -> pd.DataFrame:
         "S3_plus_gtos": f"green_patent_application_count ~ {BASE_WITH_CONTROLS} + {GTOS_LAG1_TERMS}",
         "S4_plus_frontier": f"green_patent_application_count ~ {BASE_WITH_CONTROLS} + {GTOS_LAG1_FRONTIER}",
     }
+    terms = ["是否涉农", "industry_year_nonagri_patent_per_firm_lag1_log1p",
+             "industry_year_has_patent_share_nonagri_lag1", "frontier_industry_flag_baseline"]
     rows = []
     for model_id, formula in formulas.items():
         result = fit_poisson_clustered(formula, df)
-        pseudo_r2 = np.nan
-        if hasattr(result, "llf") and hasattr(result, "llnull") and result.llnull not in [0, np.nan]:
-            pseudo_r2 = 1 - result.llf / result.llnull if result.llnull != 0 else np.nan
-        current_rows = extract_rows(
-            result,
-            "patent_count",
-            model_id,
-            ["是否涉农", "industry_year_nonagri_patent_per_firm_lag1_log1p", "industry_year_has_patent_share_nonagri_lag1", "frontier_industry_flag_baseline"],
-        )
+        optimizer_converged = bool(result.mle_retvals.get("converged", False))
+        finite_fit = all(np.isfinite(np.asarray(values)).all() for values in
+                         (result.params, result.bse, result.pvalues, result.conf_int(), result.llf))
+        usable = optimizer_converged and finite_fit
+        if usable:
+            current_rows = extract_rows(result, "patent_count", model_id, terms)
+            null_ll = getattr(result, "llnull", np.nan)
+            pseudo_r2 = 1 - result.llf / null_ll if np.isfinite(null_ll) and null_ll != 0 else np.nan
+        else:
+            current_rows = [
+                {"outcome": "patent_count", "model_id": model_id, "term": term,
+                 "coef": np.nan, "se": np.nan, "pvalue": np.nan,
+                 "ci_low": np.nan, "ci_high": np.nan, "nobs": int(result.nobs)}
+                for term in terms if term in result.params.index
+            ]
+            pseudo_r2 = np.nan
         for row in current_rows:
             row["pseudo_r2_or_r2"] = pseudo_r2
             row["estimator"] = "Poisson QMLE"
-            row["converged"] = bool(getattr(result, "mle_retvals", {}).get("converged", getattr(result, "converged", True)))
-            row["term_is_finite"] = bool(np.isfinite(row["coef"])) and bool(np.isfinite(row["se"]))
-            row["numeric_note"] = "numerically_unstable" if not row["term_is_finite"] else ""
+            row["optimizer_converged"] = optimizer_converged
+            row["converged"] = usable
+            row["fit_usable"] = usable
+            row["term_is_finite"] = usable
+            row["numeric_note"] = ("numerically_unstable" if not finite_fit else
+                                   "optimizer_not_converged" if not optimizer_converged else "")
         rows.extend(current_rows)
     return pd.DataFrame(rows)
 
@@ -153,9 +171,7 @@ def run_negative_binomial(panel: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFra
     return pd.DataFrame(rows), pd.DataFrame(meta_rows)
 
 def run_two_part(panel: pd.DataFrame) -> pd.DataFrame:
-    df = common_sample(panel, PATENT_OUTCOMES, extra_vars=["post_2015"] if "post_2015" in panel.columns else None)
-    if "post_2015" not in df.columns:
-        df["post_2015"] = (df["year"] >= 2015).astype(int)
+    df = common_sample(panel.assign(post_2015=post_2015_indicator(panel)), PATENT_OUTCOMES)
     df["log_positive_patent_count"] = np.nan
     positive_mask = df["green_patent_application_count"] > 0
     df.loc[positive_mask, "log_positive_patent_count"] = np.log(df.loc[positive_mask, "green_patent_application_count"])

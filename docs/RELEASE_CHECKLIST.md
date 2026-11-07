@@ -16,9 +16,9 @@
 - Keep the public guide codebook and pending reviews with the classifications. Source traceability and matrix checks do not establish universal firm eligibility or certify unresolved industry subtypes.
 - Confirm that no new local outputs, credentials, restricted exports, raw PDFs, review correspondence or document versions have entered the directory.
 
-## Private GitHub repository
+## GitHub distribution
 
-The author approved a private repository at [WJZhu777/industry-composition-green-patenting](https://github.com/WJZhu777/industry-composition-green-patenting) on 20 October 2026. Only the reviewed manifest files belong in that repository. Public release requires a separate author decision. No Zenodo record, reserved DOI or public license has been created.
+The code and author-created public-source classifications are hosted in the [GitHub repository](https://github.com/WJZhu777/industry-composition-green-patenting). The repository remains private. Make it public and verify access without signing in before submitting the revised manuscript. The submission-ready availability statement assumes this step has been completed. No Zenodo deposit is planned. Only the reviewed manifest files belong in the repository; restricted inputs are excluded. No public license has been selected.
 
 Keep generated empirical outputs outside this folder. Only deliberately reviewed aggregate publication reference results should be considered for a future release.
 
@@ -31,6 +31,10 @@ The runs used Python 3.12.3 and the pinned dependencies, with `OPENBLAS_NUM_THRE
 - Joint NB2 fits differ from the saved results by small floating-point amounts. Coefficients, standard errors, p-values and intervals agree at four decimal places.
 - The Poisson control-only model reproduces the original overflow and unavailable estimates under default BLAS threading, but converges under single-threaded BLAS with the same specification. That additional estimate did not replace the reference table.
 
+The Poisson output keeps the raw `optimizer_converged` flag. Use `fit_usable` to select valid results: it requires convergence and finite parameters, standard errors, p-values, confidence intervals and log likelihood. `converged` also reflects this check. Unusable estimates are returned as missing. The code does not retry with a different optimizer or model.
+
 Later maintenance added fixed-NB2 convergence checks and confined coefficient-path caching to one call on an unchanged sample. Selected deterministic outputs and saved-bootstrap summaries were checked; this was not another run of all 16 commands. The synthetic/public-data test suite also passed in the local package and in a copy containing only release files. These checks are distinct from empirical reproduction with licensed inputs.
 
-`provenance.json` records the original functions and the declared import-alias and console-message changes. Function checks reverse only those declared substitutions before comparing AST hashes. The strict-calendar sample rule still excludes the descriptive `industry_name_std` field from common-sample requirements. Some inherited helpers return additional columns not reported in the paper; document-generation and historical exploratory scripts are not included.
+On 28 October 2026, `sample-bridge` and `wild-cluster` were added for Appendix Table A3 Panel G and Table A2 Panel N. Their numerical functions retain the checked analytical sources. The local package and an isolated release-file copy each passed 54 synthetic/public-data tests, including fixed sample selection, test order, seeded weights and agreement with direct bootstrap refits. Read-only checks against the licensed inputs matched all 14 empirical sample keys and design-column lists, all 28 random-weight arrays, and the three sample-bridge designs. The portable empirical commands have not been rerun: the existing results and manuscript estimates were not replaced. Display snapshots include both new panels. These local changes have not yet been pushed to GitHub.
+
+`provenance.json` records the original functions and the declared import-alias and console-message changes. Function checks reverse those substitutions before comparing AST hashes. They use separate release hashes for the two count-model functions with added validation. The strict-calendar sample rule still excludes the descriptive `industry_name_std` field from common-sample requirements. Some inherited helpers return additional columns not reported in the paper; document-generation and historical exploratory scripts are not included.
