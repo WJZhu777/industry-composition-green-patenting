@@ -66,6 +66,9 @@ def run_new_models(panel_v3: pd.DataFrame) -> tuple[pd.DataFrame, pd.DataFrame]:
     for outcome, outcome_label, estimator in OUTCOME_SPECS:
         for model_id, (formula, required_cols) in model_formulas(outcome).items():
             work_df = panel_v3.dropna(subset=required_cols).copy()
+            if outcome in {"is_penalized_announcement_year", "penalty_count_announcement_year"}:
+                # The penalty export has complete calendar years only in 2009-2023.
+                work_df = work_df.loc[work_df["year"].between(2009, 2023)].copy()
             result = fit_clustered_ols(work_df, formula)
             ci_low, ci_high = result.conf_int().loc["是否涉农"].tolist()
             rows.append(

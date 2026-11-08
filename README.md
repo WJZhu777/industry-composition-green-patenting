@@ -39,6 +39,8 @@ python run.py core --panel ../licensed/panel.csv --output ../results/core.json
 
 Before empirical runs, read the [reproduction notes](docs/RELEASE_CHECKLIST.md#reproduction-notes) for BLAS settings and known Poisson and NB2 numerical differences.
 
+Use `penalties` for Appendix Table A5. It restricts the contextual penalty comparison to 2009-2023, without changing the patent samples.
+
 ## Data
 
 Commercial records from CNRDS (patents), CCAD (agricultural-firm membership), CSMAR (company attributes, R&D and environmental records) and CCER (penalties) are not included. The earlier annual-report green-investment compilation is also withheld.

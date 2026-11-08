@@ -404,6 +404,9 @@ def analysis(args):
     from research_release import sample, baseline, structural_utils as utils, diagnostics, decomposition
     panel, common, masks, excluded = canonical_sample(args.panel)
     mode = args.command
+    if mode == "penalties":
+        from research_release import penalties
+        return penalties.estimate(panel, common)
     if mode == "sample-bridge":
         return sample_bridge(panel, masks)
     if mode == "wild-cluster":
@@ -556,7 +559,7 @@ def main():
     validation.add_argument("--panel", required=True)
     for command in ["sample", "core", "guide", "rd", "history", "investment", "subsidy", "projects",
                     "bootstrap", "nb2", "influence", "shared", "reassignment", "tails", "supplementary", "descriptive",
-                    "sample-bridge", "wild-cluster"]:
+                    "sample-bridge", "wild-cluster", "penalties"]:
         p = sub.add_parser(command)
         p.add_argument("--panel", required=True)
         p.add_argument("--output", required=True, help="A new JSON file OUTSIDE the release directory.")

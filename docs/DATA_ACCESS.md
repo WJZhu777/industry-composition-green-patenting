@@ -27,7 +27,7 @@ On 14 October 2026, the author confirmed that the patent input comes from CNRDS,
 | Registered location and listing information | `01_raw_data/326.上市公司注册地所在地数据（1991-2023年）/数据说明.txt` | The source note identifies CSMAR and listed-company annual reports. |
 | Financial and ownership inputs | The financial field description and the financial/ownership workbooks' field-name and definition rows | Fields and definitions in the supplied exports. |
 | R&D, environmental investment and green subsidies | CSMAR field descriptions and copyright notices in the R&D and new green-investment directories | Database identity, exported units and categories. |
-| Environmental penalties | `01_raw_data/上市公司环保处罚2009-2024/数据来源说明.txt` | The source note identifies CCER (Xenophon). |
+| Environmental penalties | `01_raw_data/上市公司环保处罚2009-2024/数据来源说明.txt` and `上市公司环保处罚总表xlsx.xlsx` | CCER (Xenophon). Recorded announcements span 12 January 2009 to 30 April 2024; penalty regressions use 2009-2023, not the full patent-panel period. |
 | Earlier green-investment compilation, D03 | `01_raw_data/上市公司绿色投资数据（1999-2024年）/数据说明.txt` | Listed-company annual reports and the environmental-verification industry list; not an official CSMAR export. |
 
 The [CNRDS access page](https://www.cnrds.com/Home/Login) provides registration and data-use-agreement procedures. Researchers need authorized access to the required provider modules. Source documentation identifies the datasets but does not establish account-specific access or redistribution permission, including for compilations and derived data. Restricted inputs are not offered on request.

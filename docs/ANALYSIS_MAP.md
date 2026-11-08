@@ -12,7 +12,8 @@ The package includes retained numerical functions from the final analytical sour
 | Table 6 ranges, reassignment, clustering, count models | `support`, `baseline`, `diagnostics`, `count_models`; `core` / `reassignment` | Marginal range check, not multivariate common support; frequencies are heuristic |
 | A1 / A3 sample flow and support | `sample`, `sector_a`; `sample` | Panel plus classification/source fields for sector diagnostics |
 | A3 Panel G sample-restriction comparison | `sample_bridge`; `sample-bridge` | Post-2007 static-complete sample versus the common sample; then add stored GTOS on identical rows; point estimates only |
-| A2/A5 original industry-FE baseline and penalty context | `industry_baseline_models`; `supplementary` | Original outcome fields and complete-case rules; selected reported A5 entries checked at displayed precision; no legacy panel builder |
+| A2 industry-FE baseline | `industry_baseline_models`; `supplementary` | Original patent outcomes and complete-case rules; no legacy panel builder |
+| A5 contextual penalty comparisons | `penalties`; `penalties` | Complete source years 2009-2023; specification-specific samples in Panel A and 42,332 original common-sample rows in Panels B-C |
 | A2 multicollinearity, FWL, coefficient paths | `sign_diagnostics`; VIF/condition-index part in `core`, remaining functions via API | Fits are not cached across calls or samples; repeated order specifications reuse fits only within one call |
 | A2 alternative controls and industry-FE role | `controls`; `supplementary` | Original revenue/employment fields and R&D export required; preparation follows original calendar lag and control caps |
 | A2 classification-source sensitivity | `industry_sources`; `supplementary` | Original dual-source fields required; no alternate classifications invented |
@@ -37,6 +38,7 @@ Run commands from the repository root with the inputs specified in `INPUT_SCHEMA
 python run.py validate-inputs --panel ../licensed/panel.csv
 python run.py sample --panel ../licensed/panel.csv --output ../results/sample.json
 python run.py core --panel ../licensed/panel.csv --output ../results/core.json
+python run.py penalties --panel ../licensed/panel.csv --output ../results/penalties.json
 python run.py guide --panel ../licensed/panel.csv --output ../results/guide.json
 python run.py rd --panel ../licensed/panel.csv --rd ../licensed/PT_LCRDSPENDING.xlsx --output ../results/rd.json
 ```
@@ -46,6 +48,8 @@ Other commands are `history`, `investment`, `subsidy`, `projects`, `bootstrap`, 
 Use `descriptive` for the final A6/A7 tail tables. It retains the reported caps of 16, 32 and 83; the generic within-subset percentile helper is not equivalent. The `supplementary` command covers alternative controls, industry-code sources and earlier R&D/investment comparisons.
 
 The `bootstrap` command uses 2,000 firm draws and the original seed. The `reassignment` command uses 500 firm-label, 500 within-cell and 200 GTOS-bundle reassignments. Neither runs as part of `check`.
+
+`penalties` reproduces all three panels of Table A5. The export begins in 2009 and ends on 30 April 2024, so penalty models exclude 2007-2008 and incomplete 2024. The period split is 2009-2014 versus 2015-2023. The legacy baseline API applies the same restriction to penalty outcomes only. Patent samples and the original full-panel winsorization cutoffs are unchanged.
 
 `sample-bridge` separates changing sample membership from adding GTOS; it is not a selection correction. `wild-cluster --rd PATH` tests individual agricultural coefficients using restricted wild industry-cluster bootstrap-t (WCR11). It retains the original 14-test order and seed 20261028, with 9,999 Rademacher and Webb draws and exhaustive 8,192 Rademacher signs for 13 industries. It does not test coefficient changes or decomposition components. Neither command runs in `check`.
 

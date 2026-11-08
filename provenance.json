@@ -1339,7 +1339,9 @@
         {
           "function": "run_new_models",
           "source_line": 75,
-          "ast_sha256": "d038bf9335b052f8cdd73a2916ca70a1af9da65543c3f46509093cdee8b156ef"
+          "ast_sha256": "d038bf9335b052f8cdd73a2916ca70a1af9da65543c3f46509093cdee8b156ef",
+          "release_ast_sha256": "73ff55fc3de786ae211d7458ad5530ff1c059b324ac048924f8b640d038f2351",
+          "release_change": "Restrict penalty outcomes to complete source years 2009-2023; patent specifications and samples are unchanged."
         }
       ],
       "class_definitions": [],
@@ -1439,6 +1441,45 @@
         },
         "console_messages": {}
       }
+    },
+    {
+      "module": "penalties",
+      "source": "03_code/21_major_revision_10_08/penalty_coverage_correction.py",
+      "source_sha256": "0b6d4e8a11e9159efacb11afb6b7b6acd3d9bb280638d81f7caeeda7325411ec",
+      "functions": [
+        {
+          "function": "covered_sample",
+          "source_line": 26,
+          "ast_sha256": "dca2eb8a958e0b84ba29b2d2dec92472684b214ff0816095f41b7654ae8a7302"
+        },
+        {
+          "function": "sample_key",
+          "source_line": 31,
+          "ast_sha256": "7a53171f04557ada4c4163a2234dffca5f47ff0f1605e119965a324ca9dd819d"
+        },
+        {
+          "function": "fit",
+          "source_line": 36,
+          "ast_sha256": "544d3dd2250b3b42808ef0d2983952327c46285d59f00aad6d62ed66e46cf24d"
+        },
+        {
+          "function": "baseline_specs",
+          "source_line": 60,
+          "ast_sha256": "bd7b0de96623e3667e4cd6f59309e11f931c315907beb90eab8e3f629cc7b278"
+        },
+        {
+          "function": "prepare_baseline",
+          "source_line": 78,
+          "ast_sha256": "7dc8027ed64544f308a4e250acc8672b7b6deeaae0d26f3a2e3b34bffb77240f"
+        },
+        {
+          "function": "estimate",
+          "source_line": 90,
+          "ast_sha256": "60f3b31c318e7e96d64736148e155e59d4a8440e2e1f66b743fe5194db4830f7"
+        }
+      ],
+      "class_definitions": [],
+      "restricted_rule_inputs": []
     }
   ],
   "adaptations": [
