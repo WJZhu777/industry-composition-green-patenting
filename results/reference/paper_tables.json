@@ -2,7 +2,7 @@
   "interpretation": "Displayed tables copied from current Word files, not recomputed results.",
   "manuscript": {
     "source_file": "Manuscript.docx",
-    "source_sha256": "c6595087be36d058d6b6bc53ac3afb460d94f165d2e447e307de0e780e071097",
+    "source_sha256": "35a9f857ad6ba18d4ba6ceb7bc9593268ab90b85855c5c623634ac4adbdc461d",
     "tables": [
       {
         "table_object": 1,
@@ -506,7 +506,7 @@
   },
   "supplement": {
     "source_file": "ESM_1.docx",
-    "source_sha256": "c2594cda0d8ca5604833a8db6eb4489150a3ec655441db2219d7250488033913",
+    "source_sha256": "3355ea288a09784455fa1c382ea94bef5b09c17f06b79ff2923e8d972309fbd0",
     "tables": [
       {
         "table_object": 1,
@@ -4157,7 +4157,7 @@
             "Coverage is lower for agricultural observations and non-disclosure is not zero"
           ]
         ],
-        "notes": "Notes: The R&D environment is a general innovation-input benchmark and is not green-specific. Its monetary measure is lagged ln(1 + disclosed R&D in CNY per non-agricultural firm). The green-investment source is a 1999-2024 disclosure dataset compiled from listed-company annual reports, with the relevant firm scope identified using the Ministry of Ecology and Environment of China's industry-classification list for environmental verification of listed companies. Its measure is the lagged industry-year mean of ln(1 + capitalized green investment) among at least three non-agricultural disclosers; non-disclosure is missing rather than zero. Monetary amounts are used as reported and are not price-deflated. Time-adjusted estimates use equal-weight industry-year regressions with year effects and detailed-industry-clustered standard errors; within-year rank correlations use annual percentile ranks. Supported time-adjusted cells span 2008-2024 for R&D and 2009-2024 for green investment. These checks reduce common annual-trend concerns but do not resolve industry sorting. The comparisons provide convergent measurement evidence only and do not establish exogenous technological opportunity or causal validity."
+        "notes": "Notes: The R&D environment is a general innovation-input benchmark and is not green-specific. Its monetary measure is lagged ln(1 + disclosed R&D in CNY per non-agricultural firm). Macrodatas compiled the 1999-2024 firm-level capitalized green investment amounts from listed companies' annual reports. The compilation uses the Ministry of Ecology and Environment of China's industry-classification list for environmental verification of listed companies. The source field is labeled as the sum of period-end carrying values. We match the records to our panel by firm and year. We calculate the prior-year industry mean of ln(1 + capitalized green investment) among at least three non-agricultural firms that disclosed amounts. Non-disclosure is missing, not zero. Monetary amounts are used as reported and are not price-deflated. Time-adjusted estimates use equal-weight industry-year regressions with year effects and detailed-industry-clustered standard errors; within-year rank correlations use annual percentile ranks. Supported time-adjusted cells span 2008-2024 for R&D and 2009-2024 for green investment. These checks reduce common annual-trend concerns but do not resolve industry sorting. The comparisons provide convergent measurement evidence only and do not establish exogenous technological opportunity or causal validity."
       },
       {
         "table_object": 57,

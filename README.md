@@ -43,9 +43,9 @@ Use `penalties` for Appendix Table A5. It restricts the contextual penalty compa
 
 ## Data
 
-Commercial records from CNRDS (patents), CCAD (agricultural-firm membership), CSMAR (company attributes, R&D and environmental records) and CCER (penalties) are not included. The earlier annual-report green-investment compilation is also withheld.
+The repository does not include commercial records from CNRDS (patents), CCAD (agricultural-firm membership), CSMAR (company attributes, R&D and environmental records) or CCER (penalties). It also excludes the Macrodatas compilation of green investment amounts from listed companies' annual reports (D03). We matched those amounts to the firm-year panel and constructed the industry measure.
 
-The code starts from a prepared firm-year analysis panel, which is not distributed. It does not recreate that panel from raw database exports. Reproduction requires authorized access to the exact inputs and matching rules described in the [input schema](docs/INPUT_SCHEMA.md); a database subscription alone does not supply the author-specific panel or frozen project-title labels. See [data access](docs/DATA_ACCESS.md) for sources and restrictions.
+The code starts from a prepared firm-year panel. The panel is not included because it incorporates commercial database records. The code does not rebuild it from raw exports. The [input schema](docs/INPUT_SCHEMA.md) lists the files and fields needed to run the analyses, including the authors' project-title labels linked to CSMAR records. See [data access](docs/DATA_ACCESS.md) for sources and what the repository provides.
 
 `data/public/` contains author-created classifications of seven official 2017 R&D guides and links to their sources. Original PDFs are not bundled. `results/reference/` contains the paper's displayed tables for comparison, not input data for re-estimation.
 
@@ -58,4 +58,4 @@ The code starts from a prepared firm-year analysis panel, which is not distribut
 
 `provenance.json` records the retained functions and source checksums. `release_manifest.json` lists the reviewed files and their hashes.
 
-The repository is currently private. Public access is planned before submission of the revised manuscript. Distribution will be through GitHub only; no Zenodo deposit is planned. No public license has been selected.
+The repository will be made public when the revised manuscript is submitted.

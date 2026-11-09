@@ -18,7 +18,7 @@
 
 ## GitHub distribution
 
-The code and author-created public-source classifications are hosted in the [GitHub repository](https://github.com/WJZhu777/industry-composition-green-patenting). The repository remains private. Make it public and verify access without signing in before submitting the revised manuscript. The submission-ready availability statement assumes this step has been completed. No Zenodo deposit is planned. Only the reviewed manifest files belong in the repository; restricted inputs are excluded. No public license has been selected.
+The code and author-created public-source classifications are hosted in the [GitHub repository](https://github.com/WJZhu777/industry-composition-green-patenting). As part of submitting the revised manuscript, make the repository public and verify access without signing in. Only the reviewed manifest files belong in the repository; restricted inputs are excluded. No public license has been selected.
 
 Keep generated empirical outputs outside this folder. Only deliberately reviewed aggregate publication reference results should be considered for a future release.
 
