@@ -16,7 +16,7 @@ The package includes retained numerical functions from the final analytical sour
 | A5 contextual penalty comparisons | `penalties`; `penalties` | Complete source years 2009-2023; specification-specific samples in Panel A and 42,332 original common-sample rows in Panels B-C |
 | A2 multicollinearity, FWL, coefficient paths | `sign_diagnostics`; VIF/condition-index part in `core`, remaining functions via API | Fits are not cached across calls or samples; repeated order specifications reuse fits only within one call |
 | A2 alternative controls and industry-FE role | `controls`; `supplementary` | Original revenue/employment fields and R&D export required; preparation follows original calendar lag and control caps |
-| A2 classification-source sensitivity | `industry_sources`; `supplementary` | Original dual-source fields required; no alternate classifications invented |
+| A7 Panel F industry-code source sensitivity | `industry_sources`; `supplementary` | Primary CSMAR field and fallback field from the green credit compilation |
 | A2 bootstrap uncertainty (P3) | `accounting`; `bootstrap` | 2,000 firm draws, seed 20261008; no redraw of failed samples; proxies held fixed |
 | A2 jointly estimated NB2 (P4) | `nb2`; `nb2` | Original starts, optimizer tolerances, likelihood and cluster-score implementation |
 | A2 own-history comparison (P8) | `history`, `rd`; `history` | Exact calendar own lag; same R&D/history intersection |
@@ -24,7 +24,7 @@ The package includes retained numerical functions from the final analytical sour
 | A2 Panel N finite-cluster inference | `wild_cluster`; `wild-cluster` | Fourteen fixed coefficient tests; original common, positive-count, R&D/history and guide samples; requires panel, R&D export and bundled guide coding |
 | A4 alternative clustering / late window | `diagnostics`; `core` | Firm, industry and two-way schemes from original routines |
 | A6-A8 reference/support/tail diagnostics | `descriptive_alignment`, `reference_decomposition`, `sparse_cells`, `diagnostics`; `descriptive`, `supplementary`, `tails` | Final A7 tail caps are 16/32/83, not recomputed within the valid-code subset; high-regime bootstrap uses its original group-specific seed 20260728 |
-| A9 new R&D/personnel comparison (P2) | `rd`; `rd` | Separate private CSMAR input |
+| A9 R&D intensity and personnel comparisons | `rd`; `rd` | Requires the CSMAR R&D export |
 | A9 earlier R&D/investment construct comparisons | `rd_triangulation`, `investment_triangulation`; `supplementary` | Original source schemas required; zero/missing and denominator rules retained |
 | A9 expense/capital comparison (P11) | `investment`, `environment`; `investment` | Two original reported ratios, separate samples |
 | A9 subsidy title share / detail title shares (P18/P20) | `subsidy`, `projects`, `investment`, `rd`, `history`; corresponding commands | Construct/audit/compare; frozen labels remain restricted |

@@ -2,7 +2,7 @@
   "interpretation": "Displayed tables copied from current Word files, not recomputed results.",
   "manuscript": {
     "source_file": "Manuscript.docx",
-    "source_sha256": "35a9f857ad6ba18d4ba6ceb7bc9593268ab90b85855c5c623634ac4adbdc461d",
+    "source_sha256": "7e0d348d21df49cd42da64af847200665610330210bec898736f138240a170d5",
     "tables": [
       {
         "table_object": 1,
@@ -506,7 +506,7 @@
   },
   "supplement": {
     "source_file": "ESM_1.docx",
-    "source_sha256": "3355ea288a09784455fa1c382ea94bef5b09c17f06b79ff2923e8d972309fbd0",
+    "source_sha256": "547447f4b5fbc936dd03a1e5d89cc834dee6ebb8d50b2c1a7082468224579ed2",
     "tables": [
       {
         "table_object": 1,
@@ -541,7 +541,8 @@
             "Common estimation sample firms",
             "4,290"
           ]
-        ]
+        ],
+        "notes": "Notes: The firm-year list and fallback industry codes come from the Listed Company Green Credit Data (2007-2024) compilation. We do not use its credit measures in the analysis."
       },
       {
         "table_object": 2,
@@ -687,9 +688,9 @@
           ],
           [
             "Standardized industry classification",
-            "Initial source field: existing-panel fallback",
+            "Initial source field: green credit compilation",
             "22.0%",
-            "Share of all firm-year observations drawing the initial industry-code field from the existing-panel fallback before standardization and validity checks"
+            "Share of firm-year observations using the industry field in the green credit compilation before standardization and validity checks"
           ],
           [
             "Standardized industry classification",
@@ -816,7 +817,7 @@
           [
             "Opportunity intensity",
             "Industry-year",
-            "Natural log of one plus prior-calendar-year green invention applications of non-agricultural firms divided by the number of non-agricultural firms.",
+            "Among non-agricultural firms in the industry in the prior calendar year, divide total green invention applications by the number of firms. Take ln(1 + the ratio).",
             "Constructed from CNRDS patent records",
             "Strict one-calendar-year lag; zero when prior-year non-agricultural firms exist but record no application; missing when the prior-year benchmark is unavailable or contains no non-agricultural firms."
           ],
@@ -873,28 +874,28 @@
             "State ownership",
             "Firm-year",
             "Binary SOE field reported in the annual ownership dataset.",
-            "CSMAR listed-company ownership-status data, 2003-2024",
+            "Annual listed-company ownership table, 2003-2024",
             "Year-varying; complete-case in the main accounting sample."
           ],
           [
             "Listing age",
             "Firm-year",
             "Current year minus listing year plus one.",
-            "CSMAR listed-company profile and registered-location data, 1991-2023",
+            "Company register (1991-2023; CSMAR and annual reports)",
             "Values less than or equal to zero are set to missing."
           ],
           [
             "Province effects",
             "Firm",
             "Registered province.",
-            "CSMAR listed-company profile and registered-location data, 1991-2023",
+            "Company register (1991-2023; CSMAR and annual reports)",
             "Time-invariant in the analysis panel; missing observations are excluded from the common sample."
           ],
           [
             "Detailed industry",
             "Firm-year",
             "Detailed CSRC 2012 industry code (one letter and two digits).",
-            "CSMAR IndustryCode field, documented as CSRC 2012, with existing-panel fallback",
+            "CSMAR IndustryCode (CSRC 2012); fallback: industry field in the green credit compilation",
             "Invalid or unknown codes are excluded from standardized-code decompositions and the common accounting sample."
           ]
         ],
@@ -956,7 +957,7 @@
             "43,991"
           ]
         ],
-        "notes": "Notes: Sector A means valid CSRC codes A01-A05; 1,410 unknown/invalid full-panel observations are not assigned to the other group. Firm counts across dynamic groups are not additive. The primary annual IndustryCode series is available locally through 2022; all 4,582 records in each of 2023 and 2024 use the existing-panel fallback. Of 65 A/non-A transitions across consecutive valid years, 35 have primary codes at both endpoints and 30 involve a source change; all 26 transitions in 2023 involve a source change. These are stored classification changes, not verified business transitions. Where both sources are valid, sector A membership disagrees for 287 observations. Codes and names are not used to overwrite one another. CCAD measures a broader, static supply-chain population. Sector A is a deterministic function of detailed industry: no industry-year cell has both A and non-A observations, and industry effects absorb its indicator. The existing GTOS benchmark excludes CCAD members, not all sector A firms. Under a sector A exclusion rule, no non-A benchmark firm exists in an A industry. This is a descriptive definition boundary, not an alternative regression or decomposition."
+        "notes": "Notes: Sector A means valid CSRC codes A01-A05; 1,410 unknown/invalid full-panel observations are not assigned to the other group. Firm counts across dynamic groups are not additive. The primary annual IndustryCode series is available locally through 2022; all 4,582 records in each of 2023 and 2024 use codes from the green credit compilation. Of 65 A/non-A transitions across consecutive valid years, 35 have primary codes at both endpoints and 30 involve a source change; all 26 transitions in 2023 involve a source change. These are stored classification changes, not verified business transitions. Where both sources are valid, sector A membership disagrees for 287 observations. Codes and names are not used to overwrite one another. CCAD measures a broader, static supply-chain population. Sector A is a deterministic function of detailed industry: no industry-year cell has both A and non-A observations, and industry effects absorb its indicator. The existing GTOS benchmark excludes CCAD members, not all sector A firms. Under a sector A exclusion rule, no non-A benchmark firm exists in an A industry. This is a descriptive definition boundary, not an alternative regression or decomposition."
       },
       {
         "table_object": 8,
@@ -1627,7 +1628,7 @@
             "38,730"
           ]
         ],
-        "notes": "Notes: Panel A uses standardized detailed CSRC industry codes. Observations without a valid standardized code are retained as a separate unknown-industry category only in these full-panel fixed-effect specifications. Baseline regressions and the original accounting specifications use firm-clustered standard errors. Financial controls comprise firm size, return on assets, leverage, and operating cash flow relative to assets. Full controls additionally include state ownership, listing age, and province effects. Panel E uses a fixed 47,731-observation sensitivity sample and changes only lagged opportunity intensity and diffusion by excluding each non-agricultural firm's own prior-calendar-year patent contribution. Relative to the common sample, this check excludes 42 non-agricultural firm-years in which the focal firm is the only non-agricultural firm in its lagged industry-year cell, leaving no benchmark after own-firm exclusion. Panel F keeps coefficients and samples fixed. Tests use t(G-1) under single-way clustering and a normal reference under two-way clustering. G counts clusters; joint GTOS tests use chi-squared. Detailed-industry inference uses 73 clusters. The joint GTOS tests remain statistically significant, but industry-based clustering increases the standard errors of the agricultural coefficients. Panel G restricts the sample to 2013-2024, after the 2007-2012 window used to classify baseline high-intensity industries. It removes the early-window look-ahead feature without redefining the baseline high-intensity indicator. The diagnostics assess overlap, suppression, timing, and inference sensitivity. They do not rule out endogenous sorting, over-adjustment, collider-type conditioning, or omitted opportunity conditions. * p < 0.10, ** p < 0.05, *** p < 0.01. An em dash in Panel F indicates that a joint GTOS-block test is not applicable to the control-adjusted model, which contains no GTOS variables."
+        "notes": "Notes: Panel A uses standardized detailed CSRC industry codes. Observations without a valid standardized code are retained as a separate unknown-industry category only in these full-panel fixed-effect specifications. Baseline regressions and the original accounting specifications use firm-clustered standard errors. Financial controls comprise firm size, return on assets, leverage, and operating cash flow relative to assets. Full controls additionally include state ownership, listing age, and province effects. Panel E uses a fixed sample of 47,731 observations and changes only OI and OD. If a non-agricultural firm was in the prior-calendar-year benchmark for its current industry, we remove its patent contribution and count one fewer firm in both denominators. Relative to the common sample, this check excludes 42 non-agricultural firm-years in which the focal firm is the only non-agricultural firm in its lagged industry-year cell, leaving no benchmark after own-firm exclusion. Panel F keeps coefficients and samples fixed. Tests use t(G-1) under single-way clustering and a normal reference under two-way clustering. G counts clusters; joint GTOS tests use chi-squared. Detailed-industry inference uses 73 clusters. The joint GTOS tests remain statistically significant, but industry-based clustering increases the standard errors of the agricultural coefficients. Panel G restricts the sample to 2013-2024, after the 2007-2012 window used to classify baseline high-intensity industries. It removes the early-window look-ahead feature without redefining the baseline high-intensity indicator. The diagnostics assess overlap, suppression, timing, and inference sensitivity. They do not rule out endogenous sorting, over-adjustment, collider-type conditioning, or omitted opportunity conditions. * p < 0.10, ** p < 0.05, *** p < 0.01. An em dash in Panel F indicates that a joint GTOS-block test is not applicable to the control-adjusted model, which contains no GTOS variables."
       },
       {
         "table_object": 20,
@@ -1786,7 +1787,7 @@
             "87.8% (4.7%)[80.1%, 98.5%]"
           ]
         ],
-        "notes": "Notes: Cells report point estimates followed by bootstrap standard errors and 95% percentile intervals. Shares are reported as percentages and their standard errors as percentage points. The baseline contains 47,773 firm-years from 4,290 firms. Each of 2,000 unstratified pairs-bootstrap draws samples 4,290 firms with replacement and retains each firm's complete common-sample history; repeated firms receive integer multiplicities. Firm-year N may vary across draws. The same draw is used for all outcomes and sparse, full, pooled, and auxiliary fits, with coefficients and group means recalculated. Seed 20261008 uses numpy default_rng/PCG64. Intervals are the 2.5th and 97.5th percentiles with linear interpolation; SEs use ddof=1. All 2,000 draws are estimable. Failed draws would be recorded without redraw or replacement. GTOS values, industry codes, and sample membership remain fixed; these intervals exclude proxy-construction, classification-source, and missing-support uncertainty and do not replace industry-based inference. Gelbach contributions sum to sparse minus full; Oaxaca gap = GTOS + other observed + remainder. Shares use the stated denominators, not the raw gap or explanatory power. No share denominator changes sign or falls below 1% of its original absolute point value in these draws; no ratios are trimmed. Wide offsetting individual components should not be interpreted as separate mechanisms. Values may not sum exactly because of rounding."
+        "notes": "Notes: Cells report point estimates followed by bootstrap standard errors and 95% percentile intervals. Shares are reported as percentages and their standard errors as percentage points. The baseline contains 47,773 firm-years from 4,290 firms. Each of 2,000 unstratified pairs-bootstrap draws samples 4,290 firms with replacement and retains each firm's complete common-sample history; repeated firms receive integer multiplicities. Firm-year N may vary across draws. The same draw is used for all outcomes and sparse, full, pooled, and auxiliary fits, with coefficients and group means recalculated. Seed 20261008 uses numpy default_rng/PCG64. Intervals are the 2.5th and 97.5th percentiles with linear interpolation; SEs use ddof=1. All 2,000 draws are estimable. Failed draws would be recorded without redraw or replacement."
       },
       {
         "table_object": 22,
@@ -1839,7 +1840,7 @@
             "1.349[0.862, 2.111]"
           ]
         ],
-        "notes": "Notes: All models use the same 47,773 common-sample observations, 4,290 firm clusters, and 73 detailed-industry clusters. Sparse includes the agricultural indicator and year effects; control-adjusted adds six firm controls and province indicators; the next specification adds OI/OD; full adds FI. NB2 has a log link, no exposure offset or industry effects, and conditional variance mu + alpha times mu squared. The fixed alpha of 52.993677 is an unconditional moment heuristic, not a conditional dispersion MLE. Joint models estimate beta and log(alpha) by maximum likelihood. Cluster covariances use the complete score/Hessian including dispersion, with the finite-sample factor G/(G-1) times (N-1)/(N-K), where K includes alpha; intervals and significance use a normal reference. Exp(beta) is a conditional expected application-count ratio, not a probability, causal effect, or accounting share. Full-model firm-based ratio CI is [1.009, 1.804]; the industry interval includes one. All four retained BFGS fits satisfy convergence, finite-parameter, information-rank, and gradient checks. L-BFGS agrees for three; the control-adjusted L-BFGS fit fails a pre-set gradient criterion and is not substituted. Algebraically equivalent loggamma/log1p evaluation avoids underflow at tiny fitted means without deleting observations or changing NB2. * p < 0.10, ** p < 0.05, *** p < 0.01."
+        "notes": "Notes: All models use the same 47,773 common-sample observations, 4,290 firm clusters, and 73 detailed-industry clusters. Sparse includes the agricultural indicator and year effects; control-adjusted adds six firm controls and province indicators; the next specification adds OI/OD; full adds FI. NB2 has a log link, no exposure offset or industry effects, and conditional variance mu + alpha times mu squared. The fixed alpha of 52.993677 is an unconditional moment heuristic, not a conditional dispersion MLE. Joint models estimate beta and log(alpha) by maximum likelihood."
       },
       {
         "table_object": 23,
@@ -1994,7 +1995,7 @@
             "0.0197(0.0223)[-0.0240, 0.0634]"
           ]
         ],
-        "notes": "Notes: All models use OLS with the agricultural indicator, six firm controls, and year and province indicators; no firm or industry fixed effects are added. Patent GTOS comprises the unchanged OI, OD, and FI variables. Model labels list additions to these controls. Panel K1 reports agricultural coefficients (firm-clustered SEs); Panel K2 reports the same coefficients (industry-clustered SEs) and industry-clustered 95% intervals. There are 4,219 firm and 64 industry clusters. Cluster covariances use G/(G-1) times (N-1)/(N-K), with K counting all fitted coefficients; intervals use a normal reference. In both history-plus-GTOS models, all three firm-based as well as industry-based intervals span zero. These intervals describe individual coefficients; they do not test coefficient changes between models. Prior patent counts do not capture all aspects of firm capability. Controlling for them may also absorb associations with the industry environment. The diagnostic does not identify independent opportunity, eliminate sorting, or quantify overlap removed. The selected auxiliary sample does not replace the main common sample. No empirical randomization or new seed is involved; software versions are the same as for the R&D regressions in Table A9."
+        "notes": "Notes: All models use OLS with the agricultural indicator, six firm controls, and year and province indicators; no firm or industry fixed effects are added. Patent GTOS comprises the unchanged OI, OD, and FI variables. Model labels list additions to these controls. Panel K1 reports agricultural coefficients (firm-clustered SEs); Panel K2 reports the same coefficients (industry-clustered SEs) and industry-clustered 95% intervals. There are 4,219 firm and 64 industry clusters. We multiply the unadjusted cluster-robust covariance matrix by (G)/(G-1)×(N-1)/(N-K), where G counts clusters, N counts observations, and K counts fitted coefficients, including the intercept. Confidence intervals use a normal reference. In both history-plus-GTOS models, all three firm-based as well as industry-based intervals span zero. These intervals describe individual coefficients; they do not test coefficient changes between models. Prior patent counts do not capture all aspects of firm capability. Controlling for them may also absorb associations with the industry environment. The diagnostic does not identify independent opportunity, eliminate sorting, or quantify overlap removed. The selected auxiliary sample does not replace the main common sample. No empirical randomization or new seed is involved; software versions are the same as for the R&D regressions in Table A9."
       },
       {
         "table_object": 26,
@@ -2320,7 +2321,7 @@
       {
         "table_object": 30,
         "caption": "Table A3. Common-estimation-sample construction and attrition",
-        "panel": "Panel B. Common sample versus post-2007 static-control-eligible observations excluded for unavailable GTOS",
+        "panel": "Panel B. Common sample versus observations with complete static controls but missing GTOS after 2007",
         "rows": [
           [
             "Metric",
@@ -3113,7 +3114,7 @@
             "47,773"
           ]
         ],
-        "notes": "Notes: Panel A reports descriptive period-split models. Panel B keeps interaction coefficients and samples fixed. Test reference distributions follow Panel F of Table A2. The control-adjusted model includes the agricultural indicator, firm controls, province effects, and year effects. The full accounting model additionally includes the three GTOS variables. The 2015 split describes the later green-transition period and is not a policy-treatment design. * p < 0.10, ** p < 0.05, *** p < 0.01."
+        "notes": "Notes: Panel A reports descriptive period-split models. Panel B keeps interaction coefficients and samples fixed. Test reference distributions follow Panel F of Table A2. The control-adjusted model includes the agricultural indicator, firm controls, province effects, and year effects. The full accounting model additionally includes the three GTOS variables. The later period covers 2015-2024. The split is descriptive, not a policy treatment. * p < 0.10, ** p < 0.05, *** p < 0.01."
       },
       {
         "table_object": 38,
@@ -3247,7 +3248,7 @@
             "0.114"
           ]
         ],
-        "notes": "Notes: Models use 2009-2023; the source ends on 30 April 2024. Panel A uses specification-specific samples and original full-panel winsorization cutoffs. Panels B-C use 42,332 original common-sample observations within 2009-2023 and the control/GTOS specifications in Table A4. Firm-clustered standard errors include finite-sample correction; coefficient tests use a normal reference. The 2015 split is descriptive. Penalty announcements provide context only. * p < 0.10, ** p < 0.05, *** p < 0.01."
+        "notes": "Notes: Models use 2009-2023; the source ends on 30 April 2024. Panel A uses specification-specific samples and original full-panel winsorization cutoffs. Panels B-C use 42,332 original common-sample observations within 2009-2023 and the control/GTOS specifications in Table A4. Firm-clustered standard errors include finite-sample correction; coefficient tests use a normal reference. The later period covers 2015-2023. The split is descriptive. Penalty announcements provide context only. * p < 0.10, ** p < 0.05, *** p < 0.01."
       },
       {
         "table_object": 41,
@@ -3743,7 +3744,7 @@
             "2.953*** (1.130)"
           ],
           [
-            "Existing-panel source only",
+            "Green credit compilation only",
             "54,178",
             "544",
             "91.9%",
@@ -4093,7 +4094,7 @@
             "62.4%"
           ]
         ],
-        "notes": "Notes: The primary GTOS patent-activity grouping uses all 47,773 common-sample observations. The high-activity group contains 801 agricultural firm-years from 100 firms across 24 industries. Industry-year cells are ranked by an equal-weight mean of standardized lagged opportunity intensity and diffusion, split into pooled tertiles, and baseline high-intensity industries are assigned to the high-activity group. Bootstrap intervals use 2,000 firm-cluster replications and preserve firm-year weighting within sampled firms. Panel C replaces counts above each stated percentile of the combined high-activity group with that percentile. All other values are unchanged. Panel D recalculates group-membership cutoffs across unique industry-year cells in the common sample. FI does not override these alternative classifications. The baseline-intensity alternatives therefore use a different reference distribution from FI, whose cutoff is calculated across eligible baseline industries. Alternative definitions generally preserve a negative raw mean gap in the high-activity group, but upper-tail capping shows that its magnitude remains sensitive to extreme patent counts. Panel E restricts both firm groups to industries with at least the stated number of agricultural observations in the high-activity group. It therefore excludes non-agricultural observations from industries with no agricultural observations in that group. These comparisons are descriptive. The negative raw mean gap is not evidence of stable agricultural underperformance: the agricultural median exceeds the non-agricultural median, and p95 capping changes the mean gap to +0.098. The central conclusion concerns lower representation, not lower outcomes within this group."
+        "notes": "Notes: The primary GTOS patent-activity grouping uses all 47,773 common-sample observations. The high-activity group contains 801 agricultural firm-years from 100 firms across 24 industries. Industry-year cells are ranked by an equal-weight mean of standardized lagged opportunity intensity and diffusion, split into pooled tertiles, and baseline high-intensity industries are assigned to the high-activity group. Bootstrap intervals use 2,000 firm-cluster replications and preserve firm-year weighting within sampled firms."
       },
       {
         "table_object": 56,
@@ -4157,7 +4158,7 @@
             "Coverage is lower for agricultural observations and non-disclosure is not zero"
           ]
         ],
-        "notes": "Notes: The R&D environment is a general innovation-input benchmark and is not green-specific. Its monetary measure is lagged ln(1 + disclosed R&D in CNY per non-agricultural firm). Macrodatas compiled the 1999-2024 firm-level capitalized green investment amounts from listed companies' annual reports. The compilation uses the Ministry of Ecology and Environment of China's industry-classification list for environmental verification of listed companies. The source field is labeled as the sum of period-end carrying values. We match the records to our panel by firm and year. We calculate the prior-year industry mean of ln(1 + capitalized green investment) among at least three non-agricultural firms that disclosed amounts. Non-disclosure is missing, not zero. Monetary amounts are used as reported and are not price-deflated. Time-adjusted estimates use equal-weight industry-year regressions with year effects and detailed-industry-clustered standard errors; within-year rank correlations use annual percentile ranks. Supported time-adjusted cells span 2008-2024 for R&D and 2009-2024 for green investment. These checks reduce common annual-trend concerns but do not resolve industry sorting. The comparisons provide convergent measurement evidence only and do not establish exogenous technological opportunity or causal validity."
+        "notes": "Notes: The R&D environment is a general innovation-input benchmark and is not green-specific. In each prior-year industry cell, we divide total R&D spending (CNY) disclosed by non-agricultural firms by the total number of non-agricultural firms, then take ln(1 + the ratio). Macrodatas compiled the 1999-2024 firm-level capitalized green investment amounts from listed companies' annual reports. The compilation uses the Ministry of Ecology and Environment of China's industry-classification list for environmental verification of listed companies. The source field is labeled as the sum of period-end carrying values. We match the records to our panel by firm and year. We calculate the prior-year industry mean of ln(1 + capitalized green investment) among at least three non-agricultural firms that disclosed amounts. Non-disclosure is missing, not zero. Monetary amounts are used as reported and are not price-deflated. Time-adjusted estimates use equal-weight industry-year regressions with year effects and detailed-industry-clustered standard errors; within-year rank correlations use annual percentile ranks. Supported time-adjusted cells span 2008-2024 for R&D and 2009-2024 for green investment. These checks reduce common annual-trend concerns but do not resolve industry sorting. The comparisons provide convergent measurement evidence only and do not establish exogenous technological opportunity or causal validity."
       },
       {
         "table_object": 57,
@@ -4457,7 +4458,7 @@
             "30,658"
           ]
         ],
-        "notes": "Notes: Panels B-D are additional regression comparisons, distinct from Panel A's monetary R&D correlations and coverage. Regular consolidated reports dated 31 December supply R&D-to-revenue percentages and R&D personnel shares. The benchmark uses firms from the full panel that are not included in the CCAD agricultural list and have valid same-year detailed codes, not only control-complete firms. The mean is the unweighted average of firm-level disclosed ratios in percentage points, not a ratio of industry totals. At least three valid disclosers are required per industry-year. The median sensitivity uses the same records and support. Source year s is matched to outcome year s+1 without carrying values across gaps; public release dates are not verified. Non-disclosure and unsupported cells remain missing; disclosed zero is retained. One negative R&D/revenue ratio is ineligible and not recoded to zero; ratios above 100% remain valid, without caps. Personnel shares must lie in [0,100]. All models include six firm controls and province/year indicators, but no industry effects. Patent GTOS includes OI/OD/FI; non-patent models replace all three with R&D intensity, or with R&D intensity plus personnel share. Each set holds its sample fixed. Primary N=42,261 (4,221 firms; 64 industry clusters); personnel N=30,658 (4,175 firms; 63 industry clusters), restricted to 2016-2024 because regular personnel disclosure expands from 2015. Differences between these sets cannot be attributed only to personnel controls. Retention from the original common sample is 78.6% for agricultural and 89.3% for non-agricultural observations in the primary comparison. Observations excluded from the R&D-matched sample are less patent-active than retained observations (Panel B). The disclosure requirement therefore introduces additional sample selection. Standard errors use firm or industry clustering with finite-sample correction and normal-reference inference. Coefficient movements are point comparisons, not tests of their differences. General R&D is not green-specific or exogenous; these comparisons do not independently replicate the patent-based reversal. * p < 0.10, ** p < 0.05, *** p < 0.01."
+        "notes": "Notes: Panels B-D are additional regression comparisons, distinct from Panel A's monetary R&D correlations and coverage. Regular consolidated reports dated 31 December supply R&D-to-revenue percentages and R&D personnel shares. The benchmark uses firms from the full panel that are not included in the CCAD agricultural list and have valid same-year detailed codes, not only control-complete firms. The mean is the unweighted average of firm-level disclosed ratios in percentage points, not a ratio of industry totals. At least three valid disclosers are required per industry-year. The median sensitivity uses the same records and support. Source year s is matched to outcome year s+1 without carrying values across gaps; public release dates are not verified. Non-disclosure and unsupported cells remain missing; disclosed zero is retained. One negative R&D/revenue ratio is ineligible and not recoded to zero; ratios above 100% remain valid, without caps. Personnel shares must lie in [0,100]."
       },
       {
         "table_object": 60,
@@ -5469,6 +5470,158 @@
       {
         "table_object": 68,
         "caption": "Table A9. Non-patent triangulation of the GTOS proxies",
+        "panel": "Panel H1. Construction and role-specific samples for official-guide comparisons",
+        "rows": [
+          [
+            "Technical role",
+            "Profile",
+            "Industry codes"
+          ],
+          [
+            "Production methods",
+            "P01 (reference)",
+            "D45"
+          ],
+          [
+            "Production methods",
+            "P02",
+            "C20, C21"
+          ],
+          [
+            "Production methods",
+            "P03",
+            "C30, C31, C32"
+          ],
+          [
+            "Production methods",
+            "P04",
+            "A01"
+          ],
+          [
+            "Production methods",
+            "P05",
+            "D46"
+          ],
+          [
+            "Production methods",
+            "P06",
+            "C27"
+          ],
+          [
+            "Production methods",
+            "P07",
+            "C22"
+          ],
+          [
+            "Production methods",
+            "P08",
+            "C15"
+          ],
+          [
+            "Production methods",
+            "P09",
+            "A05, G59"
+          ],
+          [
+            "Production methods",
+            "P10",
+            "C26"
+          ],
+          [
+            "Production methods",
+            "P11",
+            "A03"
+          ],
+          [
+            "Production methods",
+            "P12",
+            "E48"
+          ],
+          [
+            "Production methods",
+            "P13",
+            "D44"
+          ],
+          [
+            "Production methods",
+            "P14",
+            "C29"
+          ],
+          [
+            "Production methods",
+            "P15",
+            "C14"
+          ],
+          [
+            "Production methods",
+            "P16",
+            "C13"
+          ],
+          [
+            "Technology suppliers",
+            "S01 (reference)",
+            "C20, C21"
+          ],
+          [
+            "Technology suppliers",
+            "S02",
+            "C27"
+          ],
+          [
+            "Technology suppliers",
+            "S03",
+            "C22"
+          ],
+          [
+            "Technology suppliers",
+            "S04",
+            "C26"
+          ],
+          [
+            "Technology suppliers",
+            "S05",
+            "I65"
+          ],
+          [
+            "Technology suppliers",
+            "S06",
+            "C34"
+          ],
+          [
+            "Technology suppliers",
+            "S07",
+            "C36"
+          ],
+          [
+            "Technology suppliers",
+            "S08",
+            "C29"
+          ],
+          [
+            "Technology suppliers",
+            "S09",
+            "C35"
+          ],
+          [
+            "Technology suppliers",
+            "S10",
+            "C40"
+          ],
+          [
+            "Technology suppliers",
+            "S11",
+            "C38"
+          ],
+          [
+            "Technology suppliers",
+            "S12",
+            "C13"
+          ]
+        ]
+      },
+      {
+        "table_object": 69,
+        "caption": "Table A9. Non-patent triangulation of the GTOS proxies",
         "panel": "Panel H2. Agricultural coefficients in fixed-sample official-guide comparisons",
         "rows": [
           [
@@ -5535,7 +5688,7 @@
             "0.161"
           ]
         ],
-        "notes": "Notes: Each cell reports the agricultural coefficient followed by the firm-clustered and detailed-industry-clustered standard errors, in that order. Count is green invention applications, log count is ln(1 + count) including zeros, and entry is the positive-count indicator. The Controls model includes the original six firm controls, intercept, and year/province indicators. Patent GTOS adds lagged OI, OD, and FI. The Guide profiles model instead adds all complete nominal profiles, without patent GTOS. Count/log count use OLS; entry uses LPM; no firm or industry fixed effects are added. Within each role-specific sample, all models and outcomes use the same observations. Cluster covariances use G/(G-1)*(N-1)/(N-K). The last two columns use industry t(G-1), with 19 and 12 degrees of freedom for production methods and suppliers, respectively. Firm inference uses the normal reference. Wild cluster bootstrap tests for the Guide profiles model appear in Table A2, Panel N. Intervals condition on constructed classifications and do not cover coding uncertainty. Changes are point comparisons, not paired tests. Static profiles add no separately identifiable variation beyond detailed industry indicators; 20/13 industry clusters and selected domains limit inference. Positive coefficients do not establish an agricultural advantage or independent opportunity validation."
+        "notes": "Notes: Each cell reports the agricultural coefficient followed by the firm-clustered and detailed-industry-clustered standard errors, in that order. Count is green invention applications, log count is ln(1 + count) including zeros, and entry is the positive-count indicator. The Controls model includes the original six firm controls, intercept, and year/province indicators. Patent GTOS adds lagged OI, OD, and FI. The Guide profiles model instead adds all complete nominal profiles, without patent GTOS. Count/log count use OLS; entry uses LPM; no firm or industry fixed effects are added. Within each role-specific sample, all models and outcomes use the same observations."
       }
     ]
   }

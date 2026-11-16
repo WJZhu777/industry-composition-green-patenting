@@ -150,7 +150,7 @@ def support_diagnostics(frame: pd.DataFrame) -> dict:
                                "industry_year_decomposition": "There are no industry-year cells with both alternative groups. The original agricultural-reference within-cell comparison cannot be reproduced for this definition; an all-between label would be definitional, not new evidence.",
                                "gtos_benchmark": "Stored GTOS excludes CCAD agricultural firms, not all sector-A firms. Reclassifying alone does not change that benchmark. Excluding all sector-A observations from a same-industry benchmark leaves no alternative non-agricultural observations in A01-A05, so benchmark values are unavailable, not zero.",
                                "source_and_period": "Primary annual financial codes and fallback codes are kept separate. Source changes must not be interpreted as verified annual revenue composition changes.",
-                               "decision": "GO for a descriptive alternative-definition comparison with explicit provenance. HOLD for any new model, pending author approval and a fixed period/benchmark specification. NO-GO for mechanical replacement of CCAD in the original industry-FE/decomposition/GTOS pipeline."}}
+                               "decision": "Sector A is used for a descriptive comparison. It does not replace the CCAD definition in the main analysis."}}
 
 def self_test() -> None:
     codes = pd.Series(["A01", "A05", "C13", "J66", "A", "A1", "UNKNOWN", None, " A01", "a01"])

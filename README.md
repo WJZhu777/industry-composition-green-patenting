@@ -54,8 +54,6 @@ The code starts from a prepared firm-year panel. The panel is not included becau
 - [Analysis map](docs/ANALYSIS_MAP.md): commands, paper-to-code links and display-label differences.
 - [Input schema](docs/INPUT_SCHEMA.md): required fields and the public classification dictionary.
 - [Data access](docs/DATA_ACCESS.md): commercial sources and redistribution boundaries.
-- [Release checklist](docs/RELEASE_CHECKLIST.md): reproduction notes and remaining publication decisions.
+- [Reproduction notes](docs/RELEASE_CHECKLIST.md): checks performed and numerical differences to expect.
 
-`provenance.json` records the retained functions and source checksums. `release_manifest.json` lists the reviewed files and their hashes.
-
-The repository will be made public when the revised manuscript is submitted.
+`provenance.json` records the retained functions and source checksums. `release_manifest.json` lists the files and their hashes.

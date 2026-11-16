@@ -695,7 +695,18 @@ class PackageTests(unittest.TestCase):
     def test_tables_are_aggregate_snapshots(self):
         tables = json.loads((ROOT / "results/reference/paper_tables.json").read_text(encoding="utf-8"))
         self.assertEqual(len(tables["manuscript"]["tables"]), 13)
-        self.assertEqual(len(tables["supplement"]["tables"]), 68)
+        self.assertEqual(len(tables["supplement"]["tables"]), 69)
+        profile_tables = [
+            table for table in tables["supplement"]["tables"]
+            if table["rows"][0] == ["Technical role", "Profile", "Industry codes"]
+        ]
+        self.assertEqual(len(profile_tables), 1)
+        self.assertTrue(profile_tables[0]["caption"].startswith("Table A9."))
+        self.assertTrue(profile_tables[0]["panel"].startswith("Panel H1."))
+        rows = profile_tables[0]["rows"][1:]
+        self.assertEqual([row[0] for row in rows], ["Production methods"] * 16 + ["Technology suppliers"] * 12)
+        self.assertEqual([row[:2] for row in rows if row[1].endswith("(reference)")],
+                         [["Production methods", "P01 (reference)"], ["Technology suppliers", "S01 (reference)"]])
         for section in ["manuscript", "supplement"]:
             for table in tables[section]["tables"]:
                 self.assertTrue(table["rows"])

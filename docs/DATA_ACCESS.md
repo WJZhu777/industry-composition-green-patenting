@@ -1,12 +1,13 @@
 # Data access and redistribution boundary
 
-The public candidate contains analysis code, author-created guide classifications and the paper's displayed aggregate results. It contains no company-level database records. The table below identifies the commercial inputs and other materials not included.
+This repository contains analysis code, author-created guide classifications and the aggregate results shown in the manuscript and supplement. It does not contain company-level database records.
 
 ## Which data are restricted?
 
 | Category | Data used in this study | Release treatment |
 |---|---|---|
-| Commercial provider inputs | CNRDS green invention patent records; CCAD agricultural-listed-firm membership (Zhejiang University-Qiyan); CSMAR financial, ownership, registered-location, industry, R&D, environmental-investment and green-subsidy inputs; CCER (Xenophon) environmental-penalty inputs | Not included. Obtain the required records through authorized provider access. |
+| Commercial provider inputs | CNRDS green invention patent records; CCAD agricultural-listed-firm membership (Zhejiang University-Qiyan); CSMAR financial statements, primary industry codes, R&D, environmental-investment and green-subsidy records; CCER (Xenophon) environmental-penalty records | Not included. Obtain the required records through authorized provider access. |
+| Other inputs to the firm-year panel | The Listed Company Green Credit Data (2007-2024) compilation supplies the firm-year list and fallback industry codes. The analysis does not use its credit measures. An annual ownership table supplies state ownership. A company register compiled from CSMAR and annual reports supplies listing years and registered locations. | Not included. |
 | Macrodatas green investment compilation | D03: firm-level amounts compiled by Macrodatas from listed-company annual reports for 1999-2024. The authors match the records to their firm-year panel and construct the lagged industry measure for Table A9, Panel A. | Not included. This dataset is separate from CSMAR inputs D04-D06. |
 | Restricted-source derived data | The canonical firm-year panel, matching and classification records, patent-based GTOS series, R&D/investment/subsidy industry-year series, and row-linked title classifications | Not included. |
 | Author-created public-source classifications | Conditional technology-branch, industry and role coding of seven official 2017 R&D guides | Included in `data/public/`; no company records, monetary amounts or patent outcomes. Source documents are linked, not bundled. |
@@ -32,6 +33,6 @@ The [CNRDS access page](https://www.cnrds.com/Home/Login) provides registration 
 
 ## Reproduction boundary
 
-The analysis functions require the canonical processed panel described in `INPUT_SCHEMA.md`. It is not generated from commercial sources by this release candidate. Readers must also reproduce or obtain the author-specific stock-code/year matching, industry priority, static CCAD grouping and missing-value decisions.
+The analysis code starts from the prepared firm-year panel described in `INPUT_SCHEMA.md`. This repository does not rebuild that panel from raw files. To construct it, readers need the source files and the study's rules for matching firms and years, selecting industry codes, assigning CCAD status and handling missing values.
 
 For the title-record analyses, access to CSMAR alone does not supply the author-reviewed frozen row labels. The package deliberately fails rather than silently replacing those labels with empty rules or a new classifier. The public guide comparison does not have this particular dependency: its author-created guide coding is bundled, while the firm panel remains restricted.

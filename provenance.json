@@ -1,5 +1,5 @@
 {
-  "status": "Private GitHub repository; public release planned before revised-manuscript submission; no public license selected; no Zenodo deposit planned.",
+  "status": "Public research code and author-created guide classifications.",
   "title": "Industry Composition and the Green Invention Patenting Gap between Agricultural and Other Listed Firms in China",
   "modules": [
     {
@@ -301,7 +301,9 @@
         {
           "function": "support_diagnostics",
           "source_line": 191,
-          "ast_sha256": "c17501f764c5d1e37b27b42a73de1a1b2d5c46040e7476603100c57bec08460f"
+          "ast_sha256": "c17501f764c5d1e37b27b42a73de1a1b2d5c46040e7476603100c57bec08460f",
+          "release_ast_sha256": "0f7cbf279607820bfbe8dd72105bcd37caa5ca83afe32523da184a2ca35c8394",
+          "release_change": "Reword the interpretation returned by the Sector A diagnostic; all calculations are unchanged."
         },
         {
           "function": "self_test",
