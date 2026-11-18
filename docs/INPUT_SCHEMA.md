@@ -1,8 +1,8 @@
 # Required analysis inputs
 
-## Data inventory for the reported revision
+## Data inventory
 
-This inventory covers the direct inputs to the reported analyses, including the existing canonical panel. Source coverage describes the supplied export or document edition; outcome years describe the observations actually used. Dates below were checked against export metadata and saved sample summaries, not inferred solely from folder names. Records dated 2025 do not extend the paper beyond 2024.
+Source coverage describes the export or document edition. Outcome years describe the observations used in the analysis, which ends in 2024.
 
 ### Empirical input files
 
@@ -17,20 +17,9 @@ This inventory covers the direct inputs to the reported analyses, including the 
 
 For D01, the Listed Company Green Credit Data (2007-2024) compilation (`上市公司绿色信贷数据（2007-2024）.xlsx`) supplies the firm-year list and fallback industry field. The analysis does not use its credit measures. CSMAR supplies the primary industry field; the 2023 and 2024 codes use the fallback. CNRDS supplies patent records, CCAD supplies agricultural-firm membership, and CSMAR supplies financial statements. State ownership comes from an annual ownership table. Listing years and registered locations come from a company register compiled from CSMAR and annual reports (1991-2023). See Appendix Table A1.
 
-For the D01 penalty indicator, Table A5 and the `penalties` command use only 2009-2023. The underlying CCER export, `01_raw_data/上市公司环保处罚2009-2024/上市公司环保处罚总表xlsx.xlsx`, contains announcements from 12 January 2009 to 30 April 2024. A firm-year without a matched announcement is coded zero within 2009-2023. This means no recorded announcement, not proof of no violation. Penalty models exclude years outside that window. The patent panel and common-sample membership remain unchanged.
+For the D01 penalty indicator, Table A5 and the `penalties` command use 2009-2023. The CCER export contains announcements from 12 January 2009 to 30 April 2024. Within the analysis window, zero means no matched announcement, not proof of no violation. This restriction applies only to the penalty models.
 
-The source files remain in the original research workspace, not inside this release directory. Their local locators are:
-
-| ID | Locator in the original workspace |
-|---|---|
-| D01 | `02_processed_data/analysis_panel_submission_ready_v2_strict_calendar_gtos.csv` |
-| D02 | `01_raw_data/上市公司研发投入情况表2000-2024/PT_LCRDSPENDING.xlsx` |
-| D03 | `01_raw_data/上市公司绿色投资数据（1999-2024年）/上市公司绿色投资数据（1999-2024年）.dta` |
-| D04 | `01_raw_data/绿色投资/绿色环保/上市公司绿色环保投资总体表/GI_EnvInvestTotal.xlsx` |
-| D05 | `01_raw_data/绿色投资/绿色环保/上市公司绿色环保投资明细表/GI_EnvInvestDetail.xlsx` |
-| D06 | `01_raw_data/绿色投资/绿色补助/上市公司政府绿色补助信息表/GI_LstdGovGrnSubLetter.xlsx` |
-
-For CSMAR exports, the companion `[DES][xlsx].txt` field description and the first two metadata rows distinguish names, units and categories. The original workspace also retains `绿色投资 数据库说明书.pdf`. The new CSMAR investment/subsidy inputs above are distinct from D03. Author-confirmed official CSMAR access does not grant redistribution rights; see `DATA_ACCESS.md`.
+Use the paths to your own inputs when running the commands. Keep CSMAR's two metadata rows after the header when preparing the Excel exports.
 
 ### Frozen classification inputs
 
@@ -39,7 +28,7 @@ For CSMAR exports, the companion `[DES][xlsx].txt` field description and the fir
 | `p17_green_rd_subsidy_feasibility.json` | Frozen title-purpose categories linked to source rows and literal titles; selected consolidated records from 2007-2024. D06 and the frozen labels must agree. | `subsidy --labels`; A9 subsidy comparison | No: external restricted classification ledger |
 | `p19_green_rd_project_feasibility.json` | `analysis.title_ledger` for the selected source-code 2/5 investment records; recorded categories, row IDs, accounting-adjustment flags and source-specific scope. D05 and the frozen labels must agree. | `projects --labels`; A9 project-record comparisons | No: external restricted classification ledger |
 
-These two files are retained under `09_major_revision_10_08/01_analysis_and_results/` in the original workspace. They are required analytical inputs, not interchangeable with the database exports or new keyword classifications. Their title/category fields have no monetary units.
+The database exports do not include these classifications. Reproducing the reported title-share comparisons requires the original labels matched to the source rows, not a new keyword classification. The labels contain no monetary amounts.
 
 ### Bundled guide data and underlying documents
 

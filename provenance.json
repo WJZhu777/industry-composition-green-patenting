@@ -1,6 +1,7 @@
 {
   "status": "Public research code and author-created guide classifications.",
   "title": "Industry Composition and the Green Invention Patenting Gap between Agricultural and Other Listed Firms in China",
+  "source_note": "Source names identify the original analysis scripts. The released functions are in code/research_release/.",
   "modules": [
     {
       "module": "sample",
@@ -10,7 +11,7 @@
           "P1 synthetic checks passed: nesting, partition, missingness, group scope, overlapping firms, concentration, and invalid inputs.": "Sample-selection synthetic checks passed: nesting, partition, missingness, group scope, overlapping firms, concentration, and invalid inputs."
         }
       },
-      "source": "03_code/21_major_revision_10_08/p1_sample_selection_and_clusters.py",
+      "source": "p1_sample_selection_and_clusters.py",
       "source_sha256": "9c801785e855c79901d6ea4dfa78e9eafd3c6023aa7f535117bc8a3c6d5e281c",
       "functions": [
         {
@@ -87,7 +88,7 @@
           "P2 synthetic checks passed.": "R&D synthetic checks passed."
         }
       },
-      "source": "03_code/21_major_revision_10_08/p2_nonpatent_rd_comparison.py",
+      "source": "p2_nonpatent_rd_comparison.py",
       "source_sha256": "ba9fd93d6ffddd93ae705ff8bb52ef2d3d733f739e9992d0d99023e274c97ba5",
       "functions": [
         {
@@ -149,7 +150,7 @@
           "P3 synthetic checks passed: cluster multiplicities, explicit duplication, rescaling, identities and invalid draws.": "Accounting synthetic checks passed: cluster multiplicities, explicit duplication, rescaling, identities and invalid draws."
         }
       },
-      "source": "03_code/21_major_revision_10_08/p3_component_bootstrap.py",
+      "source": "p3_component_bootstrap.py",
       "source_sha256": "c944f33231d141896a65d82b59a854110b41f64bde7bd131d64df24e49929158",
       "functions": [
         {
@@ -212,7 +213,7 @@
           "P4 synthetic checks passed: joint alpha, design rescaling, tiny-mean likelihood/scores, two algorithms and cluster covariance.": "NB2 synthetic checks passed: joint alpha, design rescaling, tiny-mean likelihood/scores, two algorithms and cluster covariance."
         }
       },
-      "source": "03_code/21_major_revision_10_08/p4_joint_nb2_sensitivity.py",
+      "source": "p4_joint_nb2_sensitivity.py",
       "source_sha256": "034419be45ff4c033e646859f394ac8b2c627a473032b983a2c83bb08031520a",
       "functions": [
         {
@@ -270,7 +271,7 @@
           "P4 sector-A synthetic checks passed: unknown codes, strict calendar transitions, source switches and deterministic industry support.": "Sector-A synthetic checks passed: unknown codes, strict calendar transitions, source switches and deterministic industry support."
         }
       },
-      "source": "03_code/21_major_revision_10_08/p4_sector_a_feasibility.py",
+      "source": "p4_sector_a_feasibility.py",
       "source_sha256": "5d4f02def80e827d7cceb9a59245804680ef7887b78d9a351cfde8c82446b631",
       "functions": [
         {
@@ -326,7 +327,7 @@
           "P8 synthetic calendar-lag, missingness, key and regression checks passed.": "Patent-history synthetic calendar-lag, missingness, key and regression checks passed."
         }
       },
-      "source": "03_code/21_major_revision_10_08/p8_patent_history_diagnostic.py",
+      "source": "p8_patent_history_diagnostic.py",
       "source_sha256": "1b8931b6fa884d2beb5d42c7a7833f9b7c5a697de44cfaef14d3f852034fc969",
       "functions": [
         {
@@ -357,7 +358,7 @@
         },
         "console_messages": {}
       },
-      "source": "03_code/21_major_revision_10_08/p10_green_investment_diagnostic.py",
+      "source": "p10_green_investment_diagnostic.py",
       "source_sha256": "acb581939684d6ff9eba3ab529d75e1edfb97f0654b20f184613a0e0cfc0c825",
       "functions": [
         {
@@ -393,7 +394,7 @@
           "P11 ": "Environmental-investment "
         }
       },
-      "source": "03_code/21_major_revision_10_08/p11_csmar_green_investment_comparison.py",
+      "source": "p11_csmar_green_investment_comparison.py",
       "source_sha256": "a9f06f0c123a8c1db26d4f9ddd68de31fba711da25ce5ef246c871f8642bd903",
       "functions": [
         {
@@ -426,7 +427,7 @@
           "P13 synthetic checks passed: shared sample, fixed proxies, disappearing categories, QR checks and identities.": "Industry-influence synthetic checks passed: shared sample, fixed proxies, disappearing categories, QR checks and identities."
         }
       },
-      "source": "03_code/21_major_revision_10_08/p13_leave_industry_out_accounting.py",
+      "source": "p13_leave_industry_out_accounting.py",
       "source_sha256": "91fc77c8781e466e547085d86b20c18b292d2bc9a88cfcb7ac310e916374271f",
       "functions": [
         {
@@ -469,7 +470,7 @@
           "P15 synthetic selection, row preservation, distinct cell support and accounting checks passed.": "Shared-industry synthetic selection, row preservation, distinct cell support and accounting checks passed."
         }
       },
-      "source": "03_code/21_major_revision_10_08/p15_shared_industry_accounting.py",
+      "source": "p15_shared_industry_accounting.py",
       "source_sha256": "7bb4078a49b3ee1ee6da8d9ed2997c46c868dc6ad630b532e981e305f963f214",
       "functions": [
         {
@@ -498,7 +499,7 @@
     },
     {
       "module": "subsidy_titles",
-      "source": "03_code/21_major_revision_10_08/p17_green_rd_subsidy_feasibility.py",
+      "source": "p17_green_rd_subsidy_feasibility.py",
       "source_sha256": "ba770d5f98c2ef5ab53c5fab12f557a78de24749e71e774a3a5d1469d1109917",
       "functions": [
         {
@@ -533,7 +534,7 @@
         },
         "console_messages": {}
       },
-      "source": "03_code/21_major_revision_10_08/p18_green_rd_subsidy_share_comparison.py",
+      "source": "p18_green_rd_subsidy_share_comparison.py",
       "source_sha256": "dc0b3dd0c1da03119e7af8806cbf5167f2e6e2dc1fbde86732d5c9a1727f5be4",
       "functions": [
         {
@@ -557,7 +558,7 @@
     },
     {
       "module": "project_titles",
-      "source": "03_code/21_major_revision_10_08/p19_green_rd_project_feasibility.py",
+      "source": "p19_green_rd_project_feasibility.py",
       "source_sha256": "c940ef1a656951b39e3d69ef38a8eaee0eba4c34619b311778727ba21ae2accc",
       "functions": [
         {
@@ -625,7 +626,7 @@
           "P20 self-tests passed: distinct firms, separate sources, unknown/blank titles, amount independence, agriculture/focal exclusion, exact lag and support.": "Project-record self-tests passed: distinct firms, separate sources, unknown/blank titles, amount independence, agriculture/focal exclusion, exact lag and support."
         }
       },
-      "source": "03_code/21_major_revision_10_08/p20_green_rd_project_share_comparison.py",
+      "source": "p20_green_rd_project_share_comparison.py",
       "source_sha256": "3834910a265390dd0941548f08f6213e0964f79b03c8fdbdad2d918cc9f89a4d",
       "functions": [
         {
@@ -660,7 +661,7 @@
           "P32 synthetic checks passed: aliases, exact absorption, span preservation and group nonidentifiability; no outcomes or fits.": "Guide-design synthetic checks passed: aliases, exact absorption, span preservation and group nonidentifiability; no outcomes or fits."
         }
       },
-      "source": "03_code/21_major_revision_10_08/p32_rd_guide_design_preflight.py",
+      "source": "p32_rd_guide_design_preflight.py",
       "source_sha256": "05ccb6a3073a55ae9f609f703181fd8472c538bad43156477d25ae099df37bdb",
       "functions": [
         {
@@ -735,7 +736,7 @@
           "P33 ": "Guide-comparison "
         }
       },
-      "source": "03_code/21_major_revision_10_08/p33_rd_guide_profile_comparison.py",
+      "source": "p33_rd_guide_profile_comparison.py",
       "source_sha256": "50913da3835d65a0b8680cba6388ce99550c9c2380a2f361960ff1c75854c231",
       "functions": [
         {
@@ -759,7 +760,7 @@
     },
     {
       "module": "structural_utils",
-      "source": "07_structural_modeling_extension/01_scripts/structural_extension_utils.py",
+      "source": "structural_extension_utils.py",
       "source_sha256": "f45c396d8646826f9fd3baebc4ff29764184504546b30423fdf56568d7678de7",
       "functions": [
         {
@@ -793,7 +794,7 @@
     },
     {
       "module": "decomposition",
-      "source": "07_structural_modeling_extension/01_scripts/02_structural_decomposition.py",
+      "source": "02_structural_decomposition.py",
       "source_sha256": "bb4d89baf767162f1cb9f777e30ad581c83b7856b20c20a58fab67eadca8f325",
       "functions": [
         {
@@ -827,7 +828,7 @@
     },
     {
       "module": "count_models",
-      "source": "07_structural_modeling_extension/01_scripts/03_count_models_and_gtos.py",
+      "source": "03_count_models_and_gtos.py",
       "source_sha256": "2e81b5a8b48a0f475ee7a00e507253ef8542af2627ad2c366f2b48edc021b448",
       "functions": [
         {
@@ -870,7 +871,7 @@
     },
     {
       "module": "support",
-      "source": "07_structural_modeling_extension/01_scripts/04_multilevel_and_support_checks.py",
+      "source": "04_multilevel_and_support_checks.py",
       "source_sha256": "151430a71e3cfd4730dad1fa653954652db71d7958c36c058bef5aacf5c6d973",
       "functions": [
         {
@@ -884,7 +885,7 @@
     },
     {
       "module": "baseline",
-      "source": "03_code/20_gtos_calendar_lag_correction/run_gtos_calendar_lag_correction.py",
+      "source": "run_gtos_calendar_lag_correction.py",
       "source_sha256": "7b58efaaa97f2bde8a712feba2ca0a5680cfcc0eca6a82c4eacdb38d9502cf93",
       "functions": [
         {
@@ -953,7 +954,7 @@
     },
     {
       "module": "diagnostics",
-      "source": "03_code/15_final_technical_corrections/rebuild_final_diagnostics.py",
+      "source": "rebuild_final_diagnostics.py",
       "source_sha256": "61ec7c675d6e82b38428e38454b08abf5527ffdaf0f799e03ac02996ba5c2814",
       "functions": [
         {
@@ -1042,7 +1043,7 @@
     },
     {
       "module": "reference_decomposition",
-      "source": "03_code/12_revision_diagnostics/analyze_decomposition_and_frontier_support.py",
+      "source": "analyze_decomposition_and_frontier_support.py",
       "source_sha256": "6ca85b89b93dd79ec4aee19443d3ab01ffb189a7124b182062ca50aab27c070d",
       "functions": [
         {
@@ -1066,7 +1067,7 @@
     },
     {
       "module": "sparse_cells",
-      "source": "03_code/17_sparse_cell_decomposition_sensitivity/run_sparse_cell_decomposition_sensitivity.py",
+      "source": "run_sparse_cell_decomposition_sensitivity.py",
       "source_sha256": "8f56e6e0abf7234aaea26ae2d1c1d733ddb9a54105d1e040d33810a9793d9025",
       "functions": [
         {
@@ -1095,7 +1096,7 @@
     },
     {
       "module": "industry_sources",
-      "source": "03_code/18_industry_code_source_sensitivity/run_industry_code_source_sensitivity.py",
+      "source": "run_industry_code_source_sensitivity.py",
       "source_sha256": "5d52c11577fe768c6584df59033705fef7a19f7f69593c8db09472b0ef28a3b8",
       "functions": [
         {
@@ -1129,7 +1130,7 @@
     },
     {
       "module": "controls",
-      "source": "03_code/12_revision_diagnostics/audit_controls_and_model_roles.py",
+      "source": "audit_controls_and_model_roles.py",
       "source_sha256": "13ea4d43b567c62290b2a7fa3abc419c1c41c2f2dcb5ee0b5cbfb2a6f773c507",
       "functions": [
         {
@@ -1178,7 +1179,7 @@
     },
     {
       "module": "sign_diagnostics",
-      "source": "03_code/12_revision_diagnostics/diagnose_gtos_sign_reversal.py",
+      "source": "diagnose_gtos_sign_reversal.py",
       "source_sha256": "1a558d20a8049fc60701d3aac4eb5698f7c3e49e945cfe51e5cfcb48f1a19962",
       "functions": [
         {
@@ -1252,7 +1253,7 @@
     },
     {
       "module": "rd_triangulation",
-      "source": "03_code/12_revision_diagnostics/audit_rd_investment_data.py",
+      "source": "audit_rd_investment_data.py",
       "source_sha256": "5d2c9a5e6f78f0fcac5c3cb41b47efade054ec7fb4a0a97fe2b43672332a9f0d",
       "functions": [
         {
@@ -1291,7 +1292,7 @@
     },
     {
       "module": "investment_triangulation",
-      "source": "03_code/12_revision_diagnostics/audit_green_investment_data.py",
+      "source": "audit_green_investment_data.py",
       "source_sha256": "5d14b7d8b707cf0a1252151620d833346328b4b2a2c6a345478a448aa0df3831",
       "functions": [
         {
@@ -1325,7 +1326,7 @@
     },
     {
       "module": "industry_baseline_models",
-      "source": "03_code/06_static_controls/run_model_d_with_static_controls.py",
+      "source": "run_model_d_with_static_controls.py",
       "source_sha256": "132805319a4aed838ea09d8eed886e64fcf9057ff12a41427bf1c84518523b57",
       "functions": [
         {
@@ -1351,7 +1352,7 @@
     },
     {
       "module": "descriptive_alignment",
-      "source": "03_code/12_revision_diagnostics/build_major_revision_tables_and_online_resource.py",
+      "source": "build_major_revision_tables_and_online_resource.py",
       "source_sha256": "4ea57464534620efadc65f3b44b866fda100af62ff207d723eb6cfce70571a46",
       "functions": [
         {
@@ -1375,7 +1376,7 @@
     },
     {
       "module": "sample_bridge",
-      "source": "03_code/21_major_revision_10_08/sample_selection_accounting_bridge.py",
+      "source": "sample_selection_accounting_bridge.py",
       "source_sha256": "9b34281471d8ec0b00c4b6e8106d54f0436832c934de3ab59884e10569a92e9c",
       "functions": [
         {
@@ -1401,7 +1402,7 @@
     },
     {
       "module": "wild_cluster",
-      "source": "03_code/21_major_revision_10_08/industry_wild_cluster_check.py",
+      "source": "industry_wild_cluster_check.py",
       "source_sha256": "8d55db32da9a3b70b8b7302b46b78b0a412b28e4599dad3fb7c7f44f7c9a819e",
       "functions": [
         {
@@ -1446,7 +1447,7 @@
     },
     {
       "module": "penalties",
-      "source": "03_code/21_major_revision_10_08/penalty_coverage_correction.py",
+      "source": "penalty_coverage_correction.py",
       "source_sha256": "0b6d4e8a11e9159efacb11afb6b7b6acd3d9bb280638d81f7caeeda7325411ec",
       "functions": [
         {

@@ -43,7 +43,7 @@ Use `penalties` for Appendix Table A5. It restricts the contextual penalty compa
 
 ## Data
 
-The repository does not include commercial records from CNRDS (patents), CCAD (agricultural-firm membership), CSMAR (company attributes, R&D and environmental records) or CCER (penalties). It also excludes the Macrodatas compilation of green investment amounts from listed companies' annual reports (D03). We matched those amounts to the firm-year panel and constructed the industry measure.
+The repository does not include restricted records from CNRDS, CCAD, CSMAR, CCER or Macrodatas.
 
 The code starts from a prepared firm-year panel. The panel is not included because it incorporates commercial database records. The code does not rebuild it from raw exports. The [input schema](docs/INPUT_SCHEMA.md) lists the files and fields needed to run the analyses, including the authors' project-title labels linked to CSMAR records. See [data access](docs/DATA_ACCESS.md) for sources and what the repository provides.
 
@@ -56,4 +56,4 @@ The code starts from a prepared firm-year panel. The panel is not included becau
 - [Data access](docs/DATA_ACCESS.md): commercial sources and redistribution boundaries.
 - [Reproduction notes](docs/RELEASE_CHECKLIST.md): checks performed and numerical differences to expect.
 
-`provenance.json` records the retained functions and source checksums. `release_manifest.json` lists the files and their hashes.
+`provenance.json` records checksums for the retained analysis functions. `release_manifest.json` lists the files included in this repository and their hashes.

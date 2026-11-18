@@ -6,30 +6,21 @@ This repository contains analysis code, author-created guide classifications and
 
 | Category | Data used in this study | Release treatment |
 |---|---|---|
-| Commercial provider inputs | CNRDS green invention patent records; CCAD agricultural-listed-firm membership (Zhejiang University-Qiyan); CSMAR financial statements, primary industry codes, R&D, environmental-investment and green-subsidy records; CCER (Xenophon) environmental-penalty records | Not included. Obtain the required records through authorized provider access. |
+| Restricted database inputs | CNRDS green invention patent records; CCAD agricultural-listed-firm membership; CSMAR financial statements, primary industry codes, R&D, environmental-investment and green-subsidy records; CCER (Xenophon) environmental-penalty records; Macrodatas firm-level green investment amounts | Not included. Request access from the relevant provider. |
 | Other inputs to the firm-year panel | The Listed Company Green Credit Data (2007-2024) compilation supplies the firm-year list and fallback industry codes. The analysis does not use its credit measures. An annual ownership table supplies state ownership. A company register compiled from CSMAR and annual reports supplies listing years and registered locations. | Not included. |
-| Macrodatas green investment compilation | D03: firm-level amounts compiled by Macrodatas from listed-company annual reports for 1999-2024. The authors match the records to their firm-year panel and construct the lagged industry measure for Table A9, Panel A. | Not included. This dataset is separate from CSMAR inputs D04-D06. |
 | Restricted-source derived data | The canonical firm-year panel, matching and classification records, patent-based GTOS series, R&D/investment/subsidy industry-year series, and row-linked title classifications | Not included. |
 | Author-created public-source classifications | Conditional technology-branch, industry and role coding of seven official 2017 R&D guides | Included in `data/public/`; no company records, monetary amounts or patent outcomes. Source documents are linked, not bundled. |
 | Publication reference results | Tables already displayed in the manuscript and supplement | Included in `results/reference/paper_tables.json`. These are publication summaries, not reusable company or industry-year datasets. |
 
 The [input schema](INPUT_SCHEMA.md) lists the file names, years, fields and uses for D01-D06. For D05-D06, CSMAR supplies the original project titles. The authors classify those titles and use the labels to calculate the industry shares; neither the original records nor the row-linked labels are included.
 
-## Source documentation retained locally
+## Data sources and access
 
-On 14 October 2026, the author confirmed that the patent input comes from CNRDS, not Qiyan. The numerical input files and analysis are unchanged. Qiyan remains part of the CCAD agricultural-firm source name; the two datasets must not be conflated.
+Green invention patent records come from the [CNRDS Green Patent Research Database](https://www.cnrds.com/Home/Login). CNRDS uses the WIPO green patent classification. The provider documentation does not specify the detailed procedure used to match applicants to listed firms.
 
-| Input | Local evidence | What this establishes |
-|---|---|---|
-| Green invention patent records | `01_raw_data/绿色发明专利/绿色专利研究数据库说明书.pdf`, the companion copyright/source notice, and the `绿色发明专利引用基本信息.xlsx` file read by the patent builder | CNRDS Green Patent Research Database; green coding follows the WIPO classification basis stated in its manual. The detailed applicant-to-listed-firm matching procedure is not supplied. |
-| Agricultural-listed-firm membership | `01_raw_data/涉农上市公司数据库/中国涉农上市公司研究数据库字段说明.docx` | Required attribution: China Academy for Rural Development-Qiyan China Agri-research Database (CCAD), Zhejiang University. This is not the patent provider. |
-| Registered location and listing information | `01_raw_data/326.上市公司注册地所在地数据（1991-2023年）/数据说明.txt` | The source note identifies CSMAR and listed-company annual reports. |
-| Financial and ownership inputs | The financial field description and the financial/ownership workbooks' field-name and definition rows | Fields and definitions in the supplied exports. |
-| R&D, environmental investment and green subsidies | CSMAR field descriptions and copyright notices in the R&D and new green-investment directories | Database identity, exported units and categories. |
-| Environmental penalties | `01_raw_data/上市公司环保处罚2009-2024/数据来源说明.txt` and `上市公司环保处罚总表xlsx.xlsx` | CCER (Xenophon). Recorded announcements span 12 January 2009 to 30 April 2024; penalty regressions use 2009-2023, not the full patent-panel period. |
-| Macrodatas green investment compilation, D03 | [Macrodatas dataset page](https://www.macrodatas.cn/article/1147473728), the local Stata dataset label and accompanying source note | Macrodatas compiled the dataset from listed-company annual reports and used the environmental-verification industry list. The source page identifies the compilation, not the authors' download route or redistribution rights. |
+Agricultural-listed-firm membership comes from the China Academy for Rural Development-Qiyan China Agri-research Database (CCAD) at Zhejiang University. For Table A9, Panel A, the authors match [green investment amounts compiled by Macrodatas](https://www.macrodatas.cn/article/1147473728) from listed-company annual reports to the firm-year panel and construct the lagged industry measure. The [input schema](INPUT_SCHEMA.md) identifies the other provider tables and their analytical coverage.
 
-The [CNRDS access page](https://www.cnrds.com/Home/Login) provides registration and data-use-agreement procedures. Researchers need authorized access to the required provider modules. Source documentation identifies the datasets but does not establish account-specific access or redistribution permission, including for compilations and derived data. Restricted inputs are not offered on request.
+Request access to restricted records from the relevant providers under their terms. The authors do not distribute restricted inputs or derived firm-level data.
 
 ## Reproduction boundary
 
