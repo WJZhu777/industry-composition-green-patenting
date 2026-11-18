@@ -35,7 +35,7 @@ def prepare(x, y, groups, target):
     if n <= k or not np.isfinite(x).all() or not np.isfinite(y).all():
         raise ValueError("Invalid finite-sample design.")
     if np.linalg.matrix_rank(x) != k:
-        raise ValueError("Rank-deficient design; do not silently remove regressors.")
+        raise ValueError("The bootstrap design matrix is rank deficient.")
     codes, levels = pd.factorize(groups, sort=True)
     g = len(levels)
     if g < 2 or (codes < 0).any():

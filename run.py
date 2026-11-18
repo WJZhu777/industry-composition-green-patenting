@@ -1,4 +1,4 @@
-"""Run checks or a selected analysis using inputs supplied outside this directory."""
+"""Run the replication checks or analyze a prepared firm-year panel."""
 
 from __future__ import annotations
 
@@ -42,28 +42,29 @@ def check():
     result = unittest.TextTestRunner(verbosity=2).run(suite)
     if not result.wasSuccessful():
         raise SystemExit(1)
-    print(f"Imported {len(modules)} modules. Tests used synthetic fixtures and public coding only.")
+    print(f"Imported {len(modules)} modules. No licensed data used.")
 
 
 def canonical_sample(path):
     from research_release import sample
     panel = sample.load_panel(Path(path))
-    # The retained leave-one-out helper uses row shifts for own-firm history.
+    # A row lag represents the prior year only if each firm's years are consecutive.
     ordered = panel.sort_values([sample.FIRM, "year"])
     year_steps = ordered.groupby(sample.FIRM).year.diff().dropna()
     if not year_steps.eq(1).all():
-        raise ValueError("Legacy leave-one-out own-history shifts require review for this nonconsecutive panel.")
+        raise ValueError("Leave-one-out GTOS requires consecutive years within each firm.")
     masks, excluded = sample.build_masks(panel)
     counts = [int(mask.sum()) for mask in masks.values()]
     if counts != sample.EXPECTED_COUNTS:
-        raise ValueError(f"Canonical sample flow differs: {counts}; stop rather than select another sample.")
+        raise ValueError(f"Sample counts {counts} do not match {sample.EXPECTED_COUNTS}.")
     common = panel.loc[masks["Common estimation sample"]].copy()
     if common[sample.FIRM].nunique() != 4290:
-        raise ValueError("The common-sample firm count differs from the published baseline.")
+        raise ValueError("The common sample must contain 4,290 firms.")
     return panel, common, masks, excluded
 
 
 def guide_frames(common):
+    import numpy as np
     import pandas as pd
     import patsy
     from research_release import guide_design as gd, rd, sample
@@ -78,7 +79,6 @@ def guide_frames(common):
         frame = pd.concat([frame, indicators], axis=1)
         nuisance = patsy.dmatrix(gd.NUISANCE, frame, return_type="dataframe", NA_action="raise")
         pairs = frame[gd.block_columns(table, "family_functions")].to_numpy(float)
-        import numpy as np
         matrices = [np.column_stack([nuisance, indicators]), np.column_stack([nuisance, pairs]),
                     np.column_stack([nuisance, pairs, indicators])]
         ranks = [gd.rank_info(m)["rank"] for m in matrices]
@@ -112,7 +112,7 @@ def validate_inputs(path):
     validate_core_fields(panel)
     rebuilt, threshold = industry_sources.build_gtos(panel, sample.INDUSTRY)
     industry_sources.verify_hybrid_rebuild(panel, rebuilt)
-    frames, guide = guide_frames(common)
+    frames, _ = guide_frames(common)
     ordered = panel.sort_values([sample.FIRM, "year"])
     gaps = ordered.groupby(sample.FIRM).year.diff().dropna()
     return {"sample_flow": [int(mask.sum()) for mask in masks.values()],
@@ -128,7 +128,7 @@ def rd_input(panel, path):
     from research_release import rd
     raw = pd.read_excel(path, header=0, skiprows=[1, 2], dtype={"Symbol": str})
     annual = rd.strict_annual(raw)
-    merged, cells, audit = rd.construct_environment(panel, annual)
+    merged, _, audit = rd.construct_environment(panel, annual)
     selected = rd.samples(merged)
     return merged, selected, {"sample_diagnostics": rd.sample_details(selected)}, audit
 
@@ -153,14 +153,14 @@ def supplementary(panel, common, rd_path, green_path):
     rd_raw["rd_field_completeness"] = rd_raw[rt.RD_NUMERIC_COLUMNS].notna().sum(axis=1)
     strict = rt.select_strict_annual(rd_raw)
     merged = rt.merge_rd(prepared, strict, "strict")
-    cells, lagged = rt.build_industry_rd_environment(prepared, merged)
+    _, lagged = rt.build_industry_rd_environment(prepared, merged)
     rd_tables = {"coverage": rt.industry_environment_coverage(prepared, common, lagged),
                  "correlations": rt.gtos_correlations(prepared, lagged)[0], "exposure": rt.group_exposure(prepared, lagged)}
     green = pd.read_stata(green_path, convert_categoricals=False, preserve_dtypes=False)
     green[sample.FIRM] = green["股票代码"].astype("Int64").astype(str).str.zfill(6)
     green["year"] = pd.to_numeric(green["年份"], errors="raise").astype(int)
-    green_window, matched = gt.build_matched_data(green, prepared)
-    cells, lagged = gt.build_industry_year_investment(prepared, matched)
+    _, matched = gt.build_matched_data(green, prepared)
+    _, lagged = gt.build_industry_year_investment(prepared, matched)
     green_tables = {"coverage": gt.cell_coverage(prepared, common, lagged),
                     "correlations": gt.gtos_correlations(prepared, lagged),
                     "exposure": gt.group_exposure_summary(common, lagged)}
@@ -511,13 +511,14 @@ def analysis(args):
         cells = panel.drop_duplicates([sample.INDUSTRY, "year"])
         valid = panel.loc[panel[sample.INDUSTRY].str.fullmatch(r"[A-Z]\d{2}")].copy()
         valid["broad_industry_sector"] = valid[sample.INDUSTRY].astype(str).str.slice(0, 1)
-        return {"nested_coefficients": baseline.nested_coefficients(panel, utils, "Strict-calendar corrected construction"),
+        construction = "Strict-calendar GTOS"
+        return {"nested_coefficients": baseline.nested_coefficients(panel, utils, construction),
                 "reference_decomposition": reference.build_decomposition_diagnostics(valid),
-                "exposures": baseline.exposure_tables(panel, cells, common, "Strict-calendar corrected construction")[:2],
-                "partitions": baseline.decomposition_tables(common, decomposition, "Strict-calendar corrected construction"),
+                "exposures": baseline.exposure_tables(panel, cells, common, construction)[:2],
+                "partitions": baseline.decomposition_tables(common, decomposition, construction),
                 "two_part": count_models.run_two_part(panel), "ppml": count_models.run_ppml(panel),
                 "fixed_nb2": count_models.run_negative_binomial(panel),
-                "overlap": baseline.support_summary(panel, support, "Strict-calendar corrected construction")[0],
+                "overlap": baseline.support_summary(panel, support, construction)[0],
                 "clustering": diagnostics.clustering_sensitivity(common, utils),
                 "post2015_clustering": diagnostics.post2015_clustering_sensitivity(common, utils),
                 "late_window": diagnostics.frontier_2013_sensitivity(common, utils),
@@ -554,24 +555,24 @@ def serializable(value):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest="command", required=True)
-    sub.add_parser("check", help="Import and synthetic checks only; no licensed data or paper models.")
-    validation = sub.add_parser("validate-inputs", help="Read-only core-field, sample, GTOS and guide checks; no estimates.")
+    sub.add_parser("check", help="Run tests without licensed data.")
+    validation = sub.add_parser("validate-inputs", help="Check the panel, sample, GTOS and guide design without fitting models.")
     validation.add_argument("--panel", required=True)
     for command in ["sample", "core", "guide", "rd", "history", "investment", "subsidy", "projects",
                     "bootstrap", "nb2", "influence", "shared", "reassignment", "tails", "supplementary", "descriptive",
                     "sample-bridge", "wild-cluster", "penalties"]:
-        p = sub.add_parser(command)
-        p.add_argument("--panel", required=True)
-        p.add_argument("--output", required=True, help="A new JSON file OUTSIDE the release directory.")
+        command_parser = sub.add_parser(command)
+        command_parser.add_argument("--panel", required=True)
+        command_parser.add_argument("--output", required=True, help="New JSON file outside the repository.")
         if command in ["rd", "history", "supplementary", "wild-cluster"]:
-            p.add_argument("--rd", required=True)
+            command_parser.add_argument("--rd", required=True)
         if command == "supplementary":
-            p.add_argument("--legacy-investment", required=True, help="Macrodatas green investment Stata file (D03).")
+            command_parser.add_argument("--legacy-investment", required=True, help="Macrodatas green investment Stata file (D03).")
         if command == "investment":
-            p.add_argument("--investment-total", required=True)
+            command_parser.add_argument("--investment-total", required=True)
         if command in ["subsidy", "projects"]:
-            p.add_argument("--labels", required=True, help="Restricted frozen classification ledger; not included.")
-            p.add_argument("--subsidy" if command == "subsidy" else "--investment-detail", required=True)
+            command_parser.add_argument("--labels", required=True, help="Original restricted title classifications (JSON).")
+            command_parser.add_argument("--subsidy" if command == "subsidy" else "--investment-detail", required=True)
     args = parser.parse_args()
     if args.command == "check":
         check()
@@ -581,7 +582,7 @@ def main():
         return
     output = Path(args.output).resolve()
     if output == ROOT or ROOT in output.parents:
-        raise ValueError("Keep local, potentially restricted outputs outside the release directory.")
+        raise ValueError("Choose an output path outside the repository.")
     if output.exists():
         raise FileExistsError(f"Refusing to overwrite: {output}")
     inputs = [Path(v).resolve() for k, v in vars(args).items() if k not in ["command", "output"] and v]
@@ -593,7 +594,7 @@ def main():
     output.parent.mkdir(parents=True, exist_ok=True)
     with output.open("x", encoding="utf-8") as handle:
         handle.write(text + "\n")
-    print(f"Saved {args.command} results to {output}; input files were not modified.")
+    print(f"Saved {args.command} results to {output}")
 
 
 if __name__ == "__main__":

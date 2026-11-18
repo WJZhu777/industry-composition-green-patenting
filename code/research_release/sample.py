@@ -96,7 +96,7 @@ def load_panel(path: Path) -> pd.DataFrame:
     frame = pd.read_csv(path, encoding="utf-8-sig", dtype={FIRM: str, INDUSTRY: str, "province": str})
     for column in NUMERIC:
         frame[column] = pd.to_numeric(frame[column], errors="raise")
-    # Match the final loader and wrapper, without calling their builders.
+    # Use one category for missing industry codes.
     frame[INDUSTRY] = frame[INDUSTRY].fillna("UNKNOWN")
     validate_panel(frame)
     return frame
@@ -122,7 +122,7 @@ def build_masks(frame: pd.DataFrame) -> tuple[dict, dict]:
         "Post-2007 GTOS-missing within static-complete sample": static & ~common & frame["year"].gt(2007),
     }
     if common.any() and not frame.loc[common, INDUSTRY].str.fullmatch(r"[A-Z]\d{2}").all():
-        raise ValueError("Common sample contains invalid detailed industry codes; review rather than silently trim.")
+        raise ValueError("The common sample contains invalid detailed industry codes.")
     return masks, excluded
 
 def sample_flow(frame: pd.DataFrame, masks: dict) -> pd.DataFrame:

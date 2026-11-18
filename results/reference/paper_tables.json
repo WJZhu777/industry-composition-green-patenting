@@ -1,7 +1,6 @@
 {
   "interpretation": "Displayed tables copied from current Word files, not recomputed results.",
   "manuscript": {
-    "source_file": "Manuscript.docx",
     "source_sha256": "7e0d348d21df49cd42da64af847200665610330210bec898736f138240a170d5",
     "tables": [
       {
@@ -505,7 +504,6 @@
     ]
   },
   "supplement": {
-    "source_file": "ESM_1.docx",
     "source_sha256": "547447f4b5fbc936dd03a1e5d89cc834dee6ebb8d50b2c1a7082468224579ed2",
     "tables": [
       {

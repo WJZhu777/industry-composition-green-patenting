@@ -12,7 +12,7 @@ def read_export(path: Path) -> pd.DataFrame:
     workbook = openpyxl.load_workbook(path, read_only=True, data_only=True)
     try:
         sheet = workbook.active
-        # Exported dimensions incorrectly declare column A only; do not repair the raw file.
+        # Some Excel exports list only column A in the stored dimensions.
         sheet.reset_dimensions()
         rows = sheet.iter_rows(values_only=True)
         fields = next(rows)
@@ -27,7 +27,7 @@ def read_export(path: Path) -> pd.DataFrame:
         raise ValueError("Missing stock-code identifier.")
     codes = frame.Symbol.astype(str)
     if not codes.str.fullmatch(r"\d{1,6}").all():
-        raise ValueError("Unexpected stock-code format; do not infer identifiers.")
+        raise ValueError("Stock codes must contain one to six digits.")
     frame[sample.FIRM] = codes.str.zfill(6)
     dates = pd.to_datetime(frame.EndDate, errors="raise")
     if not (dates.dt.month.eq(12) & dates.dt.day.eq(31)).all():

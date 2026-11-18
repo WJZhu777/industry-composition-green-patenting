@@ -115,7 +115,7 @@ def preserved_space(nuisance, block):
     n, _ = normalized(nuisance)
     g, _ = normalized(block)
     if not rank_info(n)["full_column_rank"]:
-        raise ValueError("Nuisance design is deficient; do not drop controls to manufacture estimability.")
+        raise ValueError("The design for the control variables is rank deficient.")
     qn, _ = np.linalg.qr(n, mode="reduced")
     residual = g - qn @ (qn.T @ g)
     u, singular, _ = np.linalg.svd(residual, full_matrices=False)

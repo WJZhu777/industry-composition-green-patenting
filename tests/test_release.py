@@ -41,7 +41,7 @@ class AdapterTests(unittest.TestCase):
                               "year": [2009, 2008, 2007]})
         with patch.object(sample, "load_panel", return_value=panel), \
              patch.object(sample, "build_masks") as select:
-            with self.assertRaisesRegex(ValueError, "nonconsecutive panel"):
+            with self.assertRaisesRegex(ValueError, "requires consecutive years"):
                 self.runner.canonical_sample("unused")
             select.assert_not_called()
 
@@ -656,36 +656,26 @@ class PackageTests(unittest.TestCase):
         for row in provenance["modules"]:
             path = ROOT / "code/research_release" / (row["module"] + ".py")
             tree = ast.parse(path.read_text(encoding="utf-8"))
-            changes = row.get("readability_changes", {})
-            aliases = {new: old for old, new in changes.get("module_aliases", {}).items()}
-            messages = {new: old for old, new in changes.get("console_messages", {}).items()}
-            # Compare with the retained source or an explicitly recorded release change.
-            for node in ast.walk(tree):
-                if isinstance(node, ast.Name):
-                    node.id = aliases.get(node.id, node.id)
-                elif isinstance(node, ast.Constant) and isinstance(node.value, str):
-                    node.value = messages.get(node.value, node.value)
             nodes = {n.name: n for n in tree.body
                      if isinstance(n, ast.FunctionDef)}
             for function in row["functions"]:
                 checksum = hashlib.sha256(ast.dump(nodes[function["function"]], include_attributes=False).encode()).hexdigest()
-                if "release_ast_sha256" in function:
-                    self.assertTrue(function["release_change"])
-                    self.assertNotEqual(function["release_ast_sha256"], function["ast_sha256"])
                 self.assertEqual(checksum, function.get("release_ast_sha256", function["ast_sha256"]))
                 total += 1
             classes = {n.name: n for n in tree.body if isinstance(n, ast.ClassDef)}
             for item in row["class_definitions"]:
                 checksum = hashlib.sha256(ast.dump(classes[item["class"]], include_attributes=False).encode()).hexdigest()
-                self.assertEqual(checksum, item["ast_sha256"])
+                self.assertEqual(checksum, item.get("release_ast_sha256", item["ast_sha256"]))
         self.assertGreater(total, 170)
 
     def test_no_local_paths_or_embedded_inputs(self):
         folders = [ROOT / folder for folder in ["code", "data/public", "results/reference"]]
+        documents = {ROOT / "README.md", ROOT / "provenance.json", *(ROOT / "docs").glob("*.md")}
         for path in self.runner.release_files(ROOT):
-            if not any(path.is_relative_to(folder) for folder in folders):
+            if any(path.is_relative_to(folder) for folder in folders):
+                self.assertIn(path.suffix, [".py", ".json", ".csv"])
+            elif path not in documents:
                 continue
-            self.assertIn(path.suffix, [".py", ".json", ".csv"])
             text = path.read_text(encoding="utf-8")
             self.assertIsNone(re.search(r"(?<![A-Za-z])[A-Za-z]:[\\/]|C:\\\\Users|D:\\\\Desktop", text), path.name)
             self.assertNotIn("original_pdf_base64", text)

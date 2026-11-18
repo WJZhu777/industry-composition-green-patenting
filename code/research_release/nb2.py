@@ -75,7 +75,7 @@ def likelihood_and_scores(y: np.ndarray, x: np.ndarray, beta: np.ndarray, alpha:
     alpha_score = -(digamma(y + size) - digamma(size) + np.log(size) - log_denom - (y - mu) / (size + mu)) / alpha**2
     scores = np.column_stack([beta_score, alpha_score])
     if not np.isfinite(likelihood).all() or not np.isfinite(scores).all():
-        raise ArithmeticError("The NB2 likelihood or score is nonfinite; do not alter the data.")
+        raise ArithmeticError("The NB2 likelihood or score is not finite.")
     return likelihood, scores
 
 def fit_diagnostics(result, *, joint: bool) -> dict:
@@ -206,7 +206,7 @@ def joint_fit(frame: pd.DataFrame, design: dict, fixed_result, alpha: float) -> 
                           "agricultural_coefficient_difference": float(difference[design["columns"].index("agri")])})
         agreement["passes_locked_tolerances"] = bool(difference[:-1].max() <= 1e-3 and agreement["alpha_relative_difference"] <= 1e-4 and agreement["mean_log_likelihood_difference"] <= 1e-8)
         if not agreement["passes_locked_tolerances"]:
-            return {"usable": False, "reason": "Algorithms pass individual checks but disagree; do not choose a favorable result.",
+            return {"usable": False, "reason": "The two optimizers disagree beyond the comparison tolerances.",
                     "attempts": candidates, "algorithm_agreement": agreement, "likelihood_implementation": likelihood_implementation}
     if not objects:
         return {"usable": False, "reason": "No joint fit passed convergence, score and observed-information checks.",

@@ -129,4 +129,3 @@ def self_test() -> None:
         pass
     else:
         raise AssertionError("Duplicate firm-year flags were accepted.")
-    print("PASS: unique firms, denominator/numerator, agricultural exclusion, focal removal, zero versus missing, exact calendar, industry changes and minimum reporters.")

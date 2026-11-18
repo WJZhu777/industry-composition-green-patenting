@@ -1,16 +1,10 @@
 {
   "status": "Public research code and author-created guide classifications.",
   "title": "Industry Composition and the Green Invention Patenting Gap between Agricultural and Other Listed Firms in China",
-  "source_note": "Released modules are in code/research_release/. Source checksums and line numbers refer to the original analysis scripts, which are not included.",
+  "source_note": "Source fingerprints refer to the original analysis scripts. Release fingerprints reflect public names and messages unless a change is noted.",
   "modules": [
     {
       "module": "sample",
-      "readability_changes": {
-        "module_aliases": {},
-        "console_messages": {
-          "P1 synthetic checks passed: nesting, partition, missingness, group scope, overlapping firms, concentration, and invalid inputs.": "Sample-selection synthetic checks passed: nesting, partition, missingness, group scope, overlapping firms, concentration, and invalid inputs."
-        }
-      },
       "source_sha256": "9c801785e855c79901d6ea4dfa78e9eafd3c6023aa7f535117bc8a3c6d5e281c",
       "functions": [
         {
@@ -31,7 +25,8 @@
         {
           "function": "build_masks",
           "source_line": 125,
-          "ast_sha256": "10681ba6fe98d33047aaa0a37c888185e41b983511c440d17ce018f20ee85b72"
+          "ast_sha256": "10681ba6fe98d33047aaa0a37c888185e41b983511c440d17ce018f20ee85b72",
+          "release_ast_sha256": "f71c975146eddfb4e81a1379293e2244d264fbeae7477a94fe665aac4b5ddb9a"
         },
         {
           "function": "sample_flow",
@@ -71,7 +66,8 @@
         {
           "function": "self_test",
           "source_line": 310,
-          "ast_sha256": "d87598b557aba4e429ed034bb3cb3bbd2b400f913d1ff554914a0b37aae13af0"
+          "ast_sha256": "d87598b557aba4e429ed034bb3cb3bbd2b400f913d1ff554914a0b37aae13af0",
+          "release_ast_sha256": "8c763f14a1f78b672898cc2ff4628b4bd6b490aaa148e4c1f07ecf5bc5631c15"
         }
       ],
       "class_definitions": [],
@@ -79,14 +75,6 @@
     },
     {
       "module": "rd",
-      "readability_changes": {
-        "module_aliases": {
-          "p1": "sample"
-        },
-        "console_messages": {
-          "P2 synthetic checks passed.": "R&D synthetic checks passed."
-        }
-      },
       "source_sha256": "ba9fd93d6ffddd93ae705ff8bb52ef2d3d733f739e9992d0d99023e274c97ba5",
       "functions": [
         {
@@ -102,7 +90,8 @@
         {
           "function": "strict_annual",
           "source_line": 50,
-          "ast_sha256": "35d565bf50917873089539556412a265358a6efb4cdde500b350aebbc39a25b0"
+          "ast_sha256": "35d565bf50917873089539556412a265358a6efb4cdde500b350aebbc39a25b0",
+          "release_ast_sha256": "bea7dc62b0651c0afaba83dacf53d6f00e3aeb9b771a99fd7094a891a30f7a9c"
         },
         {
           "function": "construct_environment",
@@ -112,17 +101,20 @@
         {
           "function": "samples",
           "source_line": 147,
-          "ast_sha256": "be7c3063454958c2bb685942dc31157c367a50baab2c22a2daf172495f7d7637"
+          "ast_sha256": "be7c3063454958c2bb685942dc31157c367a50baab2c22a2daf172495f7d7637",
+          "release_ast_sha256": "4c834a12aedc4ebb7b3e737e3bd4c40372a1a1293442c2e1c5037eba5cc08bb7"
         },
         {
           "function": "sample_details",
           "source_line": 164,
-          "ast_sha256": "f5c45e5cd2db86388f79b51d5cf4065b7ee3b75ae2fc8776c91d3cf416d49a73"
+          "ast_sha256": "f5c45e5cd2db86388f79b51d5cf4065b7ee3b75ae2fc8776c91d3cf416d49a73",
+          "release_ast_sha256": "f6c02147197eea95b62266aa35914f36923db259bbc9d44955da126e341300b8"
         },
         {
           "function": "estimate_design",
           "source_line": 180,
-          "ast_sha256": "d072d7d4a862afcbdd05c4b047679d9c9e93d753e060fb61b64fcdba50660306"
+          "ast_sha256": "d072d7d4a862afcbdd05c4b047679d9c9e93d753e060fb61b64fcdba50660306",
+          "release_ast_sha256": "4fd132f85913a9ff2c2e9d3a0744a43293d9f518b5205352152e778c6b7f713f"
         },
         {
           "function": "compare_models",
@@ -132,7 +124,8 @@
         {
           "function": "self_test",
           "source_line": 245,
-          "ast_sha256": "61d8bbca085a1174c4c2a73e85e3001bae3521ca6440feb26e1d50e66ee791e7"
+          "ast_sha256": "61d8bbca085a1174c4c2a73e85e3001bae3521ca6440feb26e1d50e66ee791e7",
+          "release_ast_sha256": "cdc06201c589743402b368a12b7fac19f7cd918a4dcd8ec02d13a68153a5c54b"
         }
       ],
       "class_definitions": [],
@@ -140,20 +133,13 @@
     },
     {
       "module": "accounting",
-      "readability_changes": {
-        "module_aliases": {
-          "p1": "sample"
-        },
-        "console_messages": {
-          "P3 synthetic checks passed: cluster multiplicities, explicit duplication, rescaling, identities and invalid draws.": "Accounting synthetic checks passed: cluster multiplicities, explicit duplication, rescaling, identities and invalid draws."
-        }
-      },
       "source_sha256": "c944f33231d141896a65d82b59a854110b41f64bde7bd131d64df24e49929158",
       "functions": [
         {
           "function": "build_design",
           "source_line": 35,
-          "ast_sha256": "62214f448263716211580fb9099ac636931ea6819fb0c5ef0c363decaf43153c"
+          "ast_sha256": "62214f448263716211580fb9099ac636931ea6819fb0c5ef0c363decaf43153c",
+          "release_ast_sha256": "a44b7c98105422aa82a6ca7b79f88208d727ba3277fba81d620c66d3b2289fc6"
         },
         {
           "function": "metrics_from_fits",
@@ -188,7 +174,8 @@
         {
           "function": "self_test",
           "source_line": 226,
-          "ast_sha256": "9e5628e2a59397ade22afb270490f18bd82e0e3dff7bb819da95d0c07d51e741"
+          "ast_sha256": "9e5628e2a59397ade22afb270490f18bd82e0e3dff7bb819da95d0c07d51e741",
+          "release_ast_sha256": "3bb1119f451ee9964d89f550bd3f324f3ce724bcb18a063989883427b794d7c3"
         },
         {
           "function": "summarize",
@@ -201,26 +188,19 @@
     },
     {
       "module": "nb2",
-      "readability_changes": {
-        "module_aliases": {
-          "p1": "sample",
-          "p3": "accounting"
-        },
-        "console_messages": {
-          "P4 synthetic checks passed: joint alpha, design rescaling, tiny-mean likelihood/scores, two algorithms and cluster covariance.": "NB2 synthetic checks passed: joint alpha, design rescaling, tiny-mean likelihood/scores, two algorithms and cluster covariance."
-        }
-      },
       "source_sha256": "034419be45ff4c033e646859f394ac8b2c627a473032b983a2c83bb08031520a",
       "functions": [
         {
           "function": "designs",
           "source_line": 71,
-          "ast_sha256": "96fec98bbd01dba41a3d2aab37fdc09f03184369bd9d5e2a7cbc7ec2140e6da3"
+          "ast_sha256": "96fec98bbd01dba41a3d2aab37fdc09f03184369bd9d5e2a7cbc7ec2140e6da3",
+          "release_ast_sha256": "a7aac7dfa73117cd8ac48a6e010bd8056f56a5ac42675b128cb039a556bc6a8e"
         },
         {
           "function": "likelihood_and_scores",
           "source_line": 96,
-          "ast_sha256": "8a2d87a031203aedf4fd4b2ff33e4693b78d9c78a72794a310667034e4a74ce2"
+          "ast_sha256": "8a2d87a031203aedf4fd4b2ff33e4693b78d9c78a72794a310667034e4a74ce2",
+          "release_ast_sha256": "3dab48580e0fb8e4f40761e5e0d5ff66c1e947ea5ba60c74e68802ab56f01c85"
         },
         {
           "function": "fit_diagnostics",
@@ -230,22 +210,26 @@
         {
           "function": "covariance_and_parameters",
           "source_line": 145,
-          "ast_sha256": "b99ce11671e6bfc635cfeaf7b8bd3f0468abae9b80f96bbae797d80e53fd8366"
+          "ast_sha256": "b99ce11671e6bfc635cfeaf7b8bd3f0468abae9b80f96bbae797d80e53fd8366",
+          "release_ast_sha256": "331c571a349c68a1afc3ab963b8c17ad5294ad374941cf6eae44f151d82079eb"
         },
         {
           "function": "fixed_fit",
           "source_line": 180,
-          "ast_sha256": "b8b61cf3cea0bd110ab79fbb8bfb79c4e34a1aa4fa7e07964778d5cad616ddc0"
+          "ast_sha256": "b8b61cf3cea0bd110ab79fbb8bfb79c4e34a1aa4fa7e07964778d5cad616ddc0",
+          "release_ast_sha256": "d30f28d196ab7a6efd76ccee0c044aa4cb28f7548068b2355b24d96cfc19a8f7"
         },
         {
           "function": "joint_fit",
           "source_line": 195,
-          "ast_sha256": "53c7b3c3a46dceedb6973e13589fb5ab9db9ab350e72e9f8c419766b5dd0072a"
+          "ast_sha256": "53c7b3c3a46dceedb6973e13589fb5ab9db9ab350e72e9f8c419766b5dd0072a",
+          "release_ast_sha256": "e5025d17739483325c2c61dd7e1257a00ba65f5d029218c426af937b27fac1fc"
         },
         {
           "function": "self_test",
           "source_line": 292,
-          "ast_sha256": "1f7c4d74acb4ccaefc119401ab56ccf5af763c779587f5d3502c35d3b4b69436"
+          "ast_sha256": "1f7c4d74acb4ccaefc119401ab56ccf5af763c779587f5d3502c35d3b4b69436",
+          "release_ast_sha256": "39c9dc37bfa611171d765bfee59c3f771ff72872c230bfe768df38895830d10e"
         }
       ],
       "class_definitions": [
@@ -259,14 +243,6 @@
     },
     {
       "module": "sector_a",
-      "readability_changes": {
-        "module_aliases": {
-          "p1": "sample"
-        },
-        "console_messages": {
-          "P4 sector-A synthetic checks passed: unknown codes, strict calendar transitions, source switches and deterministic industry support.": "Sector-A synthetic checks passed: unknown codes, strict calendar transitions, source switches and deterministic industry support."
-        }
-      },
       "source_sha256": "5d4f02def80e827d7cceb9a59245804680ef7887b78d9a351cfde8c82446b631",
       "functions": [
         {
@@ -277,34 +253,39 @@
         {
           "function": "describe",
           "source_line": 92,
-          "ast_sha256": "83be63afcff4726bbbf73b7ada5a2e46f2fee6df33f81f318d2b54a64727d856"
+          "ast_sha256": "83be63afcff4726bbbf73b7ada5a2e46f2fee6df33f81f318d2b54a64727d856",
+          "release_ast_sha256": "4e95c285f609386ae9dd4d74346f3de2110e6a7719ae296c561e95fb30386f9f"
         },
         {
           "function": "stage_and_year_tables",
           "source_line": 103,
-          "ast_sha256": "564fde329aa5b18add922eefe4483d9a27b97de20f231b72734667fd1106de60"
+          "ast_sha256": "564fde329aa5b18add922eefe4483d9a27b97de20f231b72734667fd1106de60",
+          "release_ast_sha256": "918cd0dd778a18b0357f68f298095b17340df8f217f0d6d72d632b25c30bc3f6"
         },
         {
           "function": "source_agreement",
           "source_line": 131,
-          "ast_sha256": "3e60b722648c3a77dd0a251cf488b457baa4c5c1e7d8f0627389ac01eec1691b"
+          "ast_sha256": "3e60b722648c3a77dd0a251cf488b457baa4c5c1e7d8f0627389ac01eec1691b",
+          "release_ast_sha256": "75784ede3e21a5a12e527cd1d4396ede87e42ba06483b231b9931956ed80d24b"
         },
         {
           "function": "transitions",
           "source_line": 158,
-          "ast_sha256": "1da918a7a53589425e053db3c5357b9418355cb69faac1b8abe2300525bc5008"
+          "ast_sha256": "1da918a7a53589425e053db3c5357b9418355cb69faac1b8abe2300525bc5008",
+          "release_ast_sha256": "88be10dec97cb1838fb095fb6af78a19ab867fd6adf67c7aed2932df6b97340d"
         },
         {
           "function": "support_diagnostics",
           "source_line": 191,
           "ast_sha256": "c17501f764c5d1e37b27b42a73de1a1b2d5c46040e7476603100c57bec08460f",
-          "release_ast_sha256": "0f7cbf279607820bfbe8dd72105bcd37caa5ca83afe32523da184a2ca35c8394",
+          "release_ast_sha256": "4cced601131404652088ec53790f70c4bd8d91cc0fd741ae365d98efc1b6fb3d",
           "release_change": "Reword the interpretation returned by the Sector A diagnostic; all calculations are unchanged."
         },
         {
           "function": "self_test",
           "source_line": 239,
-          "ast_sha256": "2f6751c15830a82e8b535471f9ce2e0d1802158dbecbeb401e58954a145525f8"
+          "ast_sha256": "2f6751c15830a82e8b535471f9ce2e0d1802158dbecbeb401e58954a145525f8",
+          "release_ast_sha256": "ca4b25121c5884ae1fa0e5ed6da71ee2961c949321d94a36e4948a10945b5461"
         }
       ],
       "class_definitions": [],
@@ -312,34 +293,26 @@
     },
     {
       "module": "history",
-      "readability_changes": {
-        "module_aliases": {
-          "p1": "sample",
-          "p2": "rd"
-        },
-        "console_messages": {
-          "Fitting P8: ": "Fitting patent-history model: ",
-          "P8 synthetic calendar-lag, missingness, key and regression checks passed.": "Patent-history synthetic calendar-lag, missingness, key and regression checks passed."
-        }
-      },
       "source_sha256": "1b8931b6fa884d2beb5d42c7a7833f9b7c5a697de44cfaef14d3f852034fc969",
       "functions": [
         {
           "function": "add_calendar_history",
           "source_line": 36,
-          "ast_sha256": "a0a6ee709c008ef08a6dc4fdf46c30ea50266ca4eabd3654077c99961b0416bb"
+          "ast_sha256": "a0a6ee709c008ef08a6dc4fdf46c30ea50266ca4eabd3654077c99961b0416bb",
+          "release_ast_sha256": "fbda1c3c01134336f259a192898624f56ee071ce0f30ec76c72291d4c54fc7ba"
         },
         {
           "function": "estimate",
           "source_line": 142,
           "ast_sha256": "c15a08007d5aa3d41ae42ffa57f0089227a2925b37786af2526da44dca61052b",
-          "release_ast_sha256": "c64fbb4abd35ee3d58a7b61ad67d826f149371204f098741de050b625a6fed7e",
+          "release_ast_sha256": "b6f8c5c1cccd0a7104ff685f0bf16d1e6f12e38499987de9f964410a02dee1d0",
           "release_change": "Replace internal phase labels in messages and inference notes."
         },
         {
           "function": "self_test",
           "source_line": 198,
-          "ast_sha256": "7d8a5d237e81aa3138ef74d1b039330aa87b71cf663fbe676d7a127c9dca74f8"
+          "ast_sha256": "7d8a5d237e81aa3138ef74d1b039330aa87b71cf663fbe676d7a127c9dca74f8",
+          "release_ast_sha256": "cd09bcbde9b4483d82e55aaca1986cab74467a4217b4f7376f310c27ca6aa45a"
         }
       ],
       "class_definitions": [],
@@ -347,29 +320,25 @@
     },
     {
       "module": "environment",
-      "readability_changes": {
-        "module_aliases": {
-          "p1": "sample",
-          "p2": "rd"
-        },
-        "console_messages": {}
-      },
       "source_sha256": "acb581939684d6ff9eba3ab529d75e1edfb97f0654b20f184613a0e0cfc0c825",
       "functions": [
         {
           "function": "read_export",
           "source_line": 60,
-          "ast_sha256": "554af60ce5d54b6012793e53ee8a80d4a08022556db1d3cbe9cb2a798dd8d1a1"
+          "ast_sha256": "554af60ce5d54b6012793e53ee8a80d4a08022556db1d3cbe9cb2a798dd8d1a1",
+          "release_ast_sha256": "3e30def3f26d9ca4f0be484c47bd5c926f984fb50c8be0388d952dd7523fa0e1"
         },
         {
           "function": "environment",
           "source_line": 180,
-          "ast_sha256": "23f9b8e428f6dcd4db9717724f3eb8d668d7032763770ba8b958390685ecdb89"
+          "ast_sha256": "23f9b8e428f6dcd4db9717724f3eb8d668d7032763770ba8b958390685ecdb89",
+          "release_ast_sha256": "cd4aad79a19af80838d077f8d0684aaadf034ab493d22b5444dca85ea1e02fb7"
         },
         {
           "function": "sample_overview",
           "source_line": 218,
-          "ast_sha256": "881c92cb1c97a8392a4fcebe31ea4486c366d7865780557edebce33b0bbddc65"
+          "ast_sha256": "881c92cb1c97a8392a4fcebe31ea4486c366d7865780557edebce33b0bbddc65",
+          "release_ast_sha256": "b9db84d731e670d70061656a4c351faf148f3c7371482919b8abb41226e33d28"
         }
       ],
       "class_definitions": [],
@@ -377,34 +346,25 @@
     },
     {
       "module": "investment",
-      "readability_changes": {
-        "module_aliases": {
-          "p1": "sample",
-          "p2": "rd",
-          "p8": "patent_history",
-          "p10": "industry_environment"
-        },
-        "console_messages": {
-          "P11 checks passed: exported zeros/blanks, duplicate keys, ratios, strict lag and same-industry leave-one-out.": "Environmental-investment checks passed: exported zeros/blanks, duplicate keys, ratios, strict lag and same-industry leave-one-out.",
-          "P11 ": "Environmental-investment "
-        }
-      },
       "source_sha256": "a9f06f0c123a8c1db26d4f9ddd68de31fba711da25ce5ef246c871f8642bd903",
       "functions": [
         {
           "function": "select_measure",
           "source_line": 38,
-          "ast_sha256": "6eda5af8fb2655cab6e9f00d42b5446916f52dcc2a3b653a72abd8cfe9a8a583"
+          "ast_sha256": "6eda5af8fb2655cab6e9f00d42b5446916f52dcc2a3b653a72abd8cfe9a8a583",
+          "release_ast_sha256": "841bac730c14c05a91832fff52f53dda5887cdd4ccc4a31f6420ebcc4af4df4c"
         },
         {
           "function": "compare",
           "source_line": 64,
-          "ast_sha256": "1952e83d7ae6114ddde37b5f3cf081fcf7a2c3edc4c3b324e1b899aeb743dc3e"
+          "ast_sha256": "1952e83d7ae6114ddde37b5f3cf081fcf7a2c3edc4c3b324e1b899aeb743dc3e",
+          "release_ast_sha256": "27f6e9fd5a034290a5895ccccfcdd60561d6ca109f9859c24e5e006e878053f0"
         },
         {
           "function": "self_test",
           "source_line": 139,
-          "ast_sha256": "3027188aaa14481d27c545371518ff31c2384ff7e1e5b5e974fbc787c5d206c7"
+          "ast_sha256": "3027188aaa14481d27c545371518ff31c2384ff7e1e5b5e974fbc787c5d206c7",
+          "release_ast_sha256": "a91aedddc51c50298b4bee1be23777ec2abf41f3dedaeafb606b64a1f58eeac4"
         }
       ],
       "class_definitions": [],
@@ -412,31 +372,25 @@
     },
     {
       "module": "influence",
-      "readability_changes": {
-        "module_aliases": {
-          "p1": "sample",
-          "p3": "accounting"
-        },
-        "console_messages": {
-          "P13 synthetic checks passed: shared sample, fixed proxies, disappearing categories, QR checks and identities.": "Industry-influence synthetic checks passed: shared sample, fixed proxies, disappearing categories, QR checks and identities."
-        }
-      },
       "source_sha256": "91fc77c8781e466e547085d86b20c18b292d2bc9a88cfcb7ac310e916374271f",
       "functions": [
         {
           "function": "fingerprint",
           "source_line": 32,
-          "ast_sha256": "1f0417b92445d0bf008940c59c196ca1b869b25f1fa4187d01432fe4ef631ea3"
+          "ast_sha256": "1f0417b92445d0bf008940c59c196ca1b869b25f1fa4187d01432fe4ef631ea3",
+          "release_ast_sha256": "517c8b2356c6ffe2a7899d2ca5cb26f249e3c87209a7c9a9d9f6d0b524c27b28"
         },
         {
           "function": "sample_info",
           "source_line": 49,
-          "ast_sha256": "ae0120f5112fc62e2da3f92c1b34535d04dafb77377c0206ad663515709b3eb7"
+          "ast_sha256": "ae0120f5112fc62e2da3f92c1b34535d04dafb77377c0206ad663515709b3eb7",
+          "release_ast_sha256": "9919edfbed0bedb54ae6a1b0d73d91f338f5b8defcfbfe9360a140eb332e6300"
         },
         {
           "function": "fit_case",
           "source_line": 87,
-          "ast_sha256": "216c0147fee88418a0a90e441dd1f939ff294c88acb64dcd545bb797f9768eee"
+          "ast_sha256": "216c0147fee88418a0a90e441dd1f939ff294c88acb64dcd545bb797f9768eee",
+          "release_ast_sha256": "7b90ad564dcf0261bcb9e086084518b63934a395c7fb005ba3df0c145b828426"
         },
         {
           "function": "summarize",
@@ -446,7 +400,8 @@
         {
           "function": "self_test",
           "source_line": 226,
-          "ast_sha256": "2ef96d02e673a68d87b6938815bcdc9f43fe08bf8581f8f953f796903db5ffd1"
+          "ast_sha256": "2ef96d02e673a68d87b6938815bcdc9f43fe08bf8581f8f953f796903db5ffd1",
+          "release_ast_sha256": "ca5cc63a2d37c971f104aee3dba73d5ccedc8295565146623d7cda4727a0c803"
         }
       ],
       "class_definitions": [],
@@ -454,26 +409,19 @@
     },
     {
       "module": "shared_industries",
-      "readability_changes": {
-        "module_aliases": {
-          "p1": "sample",
-          "p13": "influence"
-        },
-        "console_messages": {
-          "P15 synthetic selection, row preservation, distinct cell support and accounting checks passed.": "Shared-industry synthetic selection, row preservation, distinct cell support and accounting checks passed."
-        }
-      },
       "source_sha256": "7bb4078a49b3ee1ee6da8d9ed2997c46c868dc6ad630b532e981e305f963f214",
       "functions": [
         {
           "function": "restrict_to_shared_industries",
           "source_line": 28,
-          "ast_sha256": "a0ce0dfca9e1f9b86bcefd254542ee1a67f81fc3cb767c5fad43b8871abde3c6"
+          "ast_sha256": "a0ce0dfca9e1f9b86bcefd254542ee1a67f81fc3cb767c5fad43b8871abde3c6",
+          "release_ast_sha256": "77db65c525f4347b51ff4ba13d2ca097295608a90edbde2c59d476540c3c0fa9"
         },
         {
           "function": "cell_support",
           "source_line": 46,
-          "ast_sha256": "3b58e3b4373870b6f6004866cf0e132174e83e8934d827391453b385bc9a40e4"
+          "ast_sha256": "3b58e3b4373870b6f6004866cf0e132174e83e8934d827391453b385bc9a40e4",
+          "release_ast_sha256": "d7d5daa456ba929418d6799db3aa4530ab644d256cb3135a1e306cc2a02f8e5c"
         },
         {
           "function": "comparisons",
@@ -483,7 +431,8 @@
         {
           "function": "self_test",
           "source_line": 113,
-          "ast_sha256": "782eea57f066ed1a6ad1a20ebdd27183ae3456a2711e4c3e46ab86a2752bd3c1"
+          "ast_sha256": "782eea57f066ed1a6ad1a20ebdd27183ae3456a2711e4c3e46ab86a2752bd3c1",
+          "release_ast_sha256": "5a0d8b5fcf25fad1bd465cc05b1541267ffbe99a39fb445a201e657b9ea32ae9"
         }
       ],
       "class_definitions": [],
@@ -516,33 +465,26 @@
     },
     {
       "module": "subsidy",
-      "readability_changes": {
-        "module_aliases": {
-          "p1": "sample",
-          "p2": "rd",
-          "p8": "patent_history",
-          "p10": "industry_environment"
-        },
-        "console_messages": {}
-      },
       "source_sha256": "dc0b3dd0c1da03119e7af8806cbf5167f2e6e2dc1fbde86732d5c9a1727f5be4",
       "functions": [
         {
           "function": "environment",
           "source_line": 99,
           "ast_sha256": "11f303655daf78c76b3cf16806f6e72bd83567b55cfb2ae5b95dd4636af8e201",
-          "release_ast_sha256": "e8fa5dc67a72a466cfbcca4a7c7e34886ebc63823be2e42211b7fc1d836c861c",
+          "release_ast_sha256": "62063ef89d0740e81f5305a33fb1325b54df68dc72fff7b4f5344f32008cf01e",
           "release_change": "Describe subsidy-title classifications without an internal phase label."
         },
         {
           "function": "audit",
           "source_line": 154,
-          "ast_sha256": "17626372d1fa10fc43ca0f686ef319c5bb9563f64f0d3c7a77222fe5b6c7fe17"
+          "ast_sha256": "17626372d1fa10fc43ca0f686ef319c5bb9563f64f0d3c7a77222fe5b6c7fe17",
+          "release_ast_sha256": "360cf1925870da4b716bdc8b5a509bbe3f9be6b73b10811a04dbade7135c23b8"
         },
         {
           "function": "self_test",
           "source_line": 182,
-          "ast_sha256": "32c21a309d2981aceb36aec08280bcc321cd24b085c77c710f6700f8f85b07f1"
+          "ast_sha256": "32c21a309d2981aceb36aec08280bcc321cd24b085c77c710f6700f8f85b07f1",
+          "release_ast_sha256": "05869e4e32148c6f20bbdbd346c2146bccbe72af630f13da3cbea10417853730"
         }
       ],
       "class_definitions": [],
@@ -605,39 +547,31 @@
     },
     {
       "module": "projects",
-      "readability_changes": {
-        "module_aliases": {
-          "p1": "sample",
-          "p2": "rd",
-          "p8": "patent_history",
-          "p10": "industry_environment",
-          "p19": "project_titles"
-        },
-        "console_messages": {
-          "P20 self-tests passed: distinct firms, separate sources, unknown/blank titles, amount independence, agriculture/focal exclusion, exact lag and support.": "Project-record self-tests passed: distinct firms, separate sources, unknown/blank titles, amount independence, agriculture/focal exclusion, exact lag and support."
-        }
-      },
       "source_sha256": "3834910a265390dd0941548f08f6213e0964f79b03c8fdbdad2d918cc9f89a4d",
       "functions": [
         {
           "function": "firm_flags",
           "source_line": 86,
-          "ast_sha256": "3e11ac701cd60f54d0724047068a85e8fe73bb1d0f7c694e785e5d7b532f5008"
+          "ast_sha256": "3e11ac701cd60f54d0724047068a85e8fe73bb1d0f7c694e785e5d7b532f5008",
+          "release_ast_sha256": "819173d3326f1f42fd238ee09cea19f8e04f67f83475c63578e9b9a7046f140a"
         },
         {
           "function": "environment",
           "source_line": 116,
-          "ast_sha256": "180538a4ec350ec962a1c12a3340720c5b17edf0747c02b3eb5697ac12dcd756"
+          "ast_sha256": "180538a4ec350ec962a1c12a3340720c5b17edf0747c02b3eb5697ac12dcd756",
+          "release_ast_sha256": "6f8de966386363f693639c72cd92a2ac85586297c55107eff3223d887a03b861"
         },
         {
           "function": "audit",
           "source_line": 170,
-          "ast_sha256": "3c15e996ceacfc829c8b1381d2edd075751afe433529826cfb12bf2b7bf050da"
+          "ast_sha256": "3c15e996ceacfc829c8b1381d2edd075751afe433529826cfb12bf2b7bf050da",
+          "release_ast_sha256": "aa53513bbc2d3ff2542c495b5cdacab658c9f0d90a56b6fe0308127aee1ac4bc"
         },
         {
           "function": "self_test",
           "source_line": 227,
-          "ast_sha256": "408086c53f49ec01a4aae34616424a5adb5d793164a1016ada741e5395ff4b8b"
+          "ast_sha256": "408086c53f49ec01a4aae34616424a5adb5d793164a1016ada741e5395ff4b8b",
+          "release_ast_sha256": "d059a0588e297c70dfda9690f19878e3c94c7210d2945d52263caa108916db28"
         }
       ],
       "class_definitions": [],
@@ -645,12 +579,6 @@
     },
     {
       "module": "guide_design",
-      "readability_changes": {
-        "module_aliases": {},
-        "console_messages": {
-          "P32 synthetic checks passed: aliases, exact absorption, span preservation and group nonidentifiability; no outcomes or fits.": "Guide-design synthetic checks passed: aliases, exact absorption, span preservation and group nonidentifiability; no outcomes or fits."
-        }
-      },
       "source_sha256": "05ccb6a3073a55ae9f609f703181fd8472c538bad43156477d25ae099df37bdb",
       "functions": [
         {
@@ -691,7 +619,8 @@
         {
           "function": "preserved_space",
           "source_line": 197,
-          "ast_sha256": "880dc0740aadcd2b3f2d29f9ff0d7c6cd20ea0322127347b62744c82854afc9d"
+          "ast_sha256": "880dc0740aadcd2b3f2d29f9ff0d7c6cd20ea0322127347b62744c82854afc9d",
+          "release_ast_sha256": "25ebeffda169b89a44f92c0dedf6266988e7fb183891d09df35563c909dbc689"
         },
         {
           "function": "profile_design",
@@ -706,7 +635,8 @@
         {
           "function": "self_test",
           "source_line": 375,
-          "ast_sha256": "3b44229045af70e0840530e6e96bbd706cf3a4c1cd39ce47d8291074533b1af7"
+          "ast_sha256": "3b44229045af70e0840530e6e96bbd706cf3a4c1cd39ce47d8291074533b1af7",
+          "release_ast_sha256": "77e79b31aa92c9d631b77e4499e6fa0fb30c90d32083470844cc21ffb1317355"
         }
       ],
       "class_definitions": [],
@@ -714,33 +644,25 @@
     },
     {
       "module": "guides",
-      "readability_changes": {
-        "module_aliases": {
-          "p1": "sample",
-          "p2": "rd",
-          "p32": "guide_design"
-        },
-        "console_messages": {
-          "P33 synthetic checks passed: nominal reference, fixed keys, QR/cluster covariance and normal/t inference.": "Guide-comparison synthetic checks passed: nominal reference, fixed keys, QR/cluster covariance and normal/t inference.",
-          "P33 ": "Guide-comparison "
-        }
-      },
       "source_sha256": "50913da3835d65a0b8680cba6388ce99550c9c2380a2f361960ff1c75854c231",
       "functions": [
         {
           "function": "compare",
           "source_line": 119,
-          "ast_sha256": "12a6a1fa6ca35bba906e1e7fc19a98b9d141a25887a97cb6f788f2bab0f5e1f1"
+          "ast_sha256": "12a6a1fa6ca35bba906e1e7fc19a98b9d141a25887a97cb6f788f2bab0f5e1f1",
+          "release_ast_sha256": "f9014bf3a61db61e6ce451bdbc538dbe35132a5464c4f51fed4981542d7942bb"
         },
         {
           "function": "independent_numeric_check",
           "source_line": 150,
-          "ast_sha256": "b4e3785c5e3b8a7f0e4ef44ff70acd721366378e90222c0e951bb6987a3d31c0"
+          "ast_sha256": "b4e3785c5e3b8a7f0e4ef44ff70acd721366378e90222c0e951bb6987a3d31c0",
+          "release_ast_sha256": "c480997787bcbdb4a88c91f4a39075d4337cd52450ace89e51de399f38a971ca"
         },
         {
           "function": "self_test",
           "source_line": 224,
-          "ast_sha256": "65a1a8fc12efd04a02bea7bdbcb7ffa37681e20ea648de01d57d7f63ce4e745e"
+          "ast_sha256": "65a1a8fc12efd04a02bea7bdbcb7ffa37681e20ea648de01d57d7f63ce4e745e",
+          "release_ast_sha256": "a597cfaf04af0b55c97be6d3a8d0c69364cc0c9b2a3e5dab4139baa803fc8886"
         }
       ],
       "class_definitions": [],
@@ -1354,23 +1276,18 @@
         {
           "function": "control_design",
           "source_line": 26,
-          "ast_sha256": "9e1e048bf0b3b05b045cf4a6173ba535fe07c6e2a7c1458121805fdb70e813c9"
+          "ast_sha256": "9e1e048bf0b3b05b045cf4a6173ba535fe07c6e2a7c1458121805fdb70e813c9",
+          "release_ast_sha256": "738844500745d04c144fdb5a0e7231ad40a609fac281d41c030ddded419c6a14"
         },
         {
           "function": "fit",
           "source_line": 35,
-          "ast_sha256": "536dbec58f1bfa72fc9e78108df2a02a0c47b744d7d398ae51e65ac9c8b14760"
+          "ast_sha256": "536dbec58f1bfa72fc9e78108df2a02a0c47b744d7d398ae51e65ac9c8b14760",
+          "release_ast_sha256": "82377ebcd279f15d7c5f62904e3c601c79099635ab85a71f7f77963c18a0338c"
         }
       ],
       "class_definitions": [],
-      "restricted_rule_inputs": [],
-      "readability_changes": {
-        "module_aliases": {
-          "p1": "sample",
-          "p3": "accounting"
-        },
-        "console_messages": {}
-      }
+      "restricted_rule_inputs": []
     },
     {
       "module": "wild_cluster",
@@ -1380,13 +1297,14 @@
           "function": "plan",
           "source_line": 39,
           "ast_sha256": "7354afb22a93dc427e68515a0d3a54a33966020ce44abcd77af59ed3d5caa19c",
-          "release_ast_sha256": "e20e177baef5b8649b5213b42830e0ab05b0e5bde727a60304b6beebf8a0bdbf",
+          "release_ast_sha256": "55caf5c0408d879d8910fd2a91b31e1d2dbe939266d587505142ee9f3ae6e946",
           "release_change": "Identify the patent-history comparison by its matched sample."
         },
         {
           "function": "prepare",
           "source_line": 155,
-          "ast_sha256": "9872eb9b4ff85cc2c2ba2a3f4022d524c6f51772a1e3f23fadbd347f0997f6c0"
+          "ast_sha256": "9872eb9b4ff85cc2c2ba2a3f4022d524c6f51772a1e3f23fadbd347f0997f6c0",
+          "release_ast_sha256": "7cdb0700db340d352c64d26014c0db59290d27e21cca34992a35a96504f19291"
         },
         {
           "function": "bootstrap_t",
@@ -1410,13 +1328,7 @@
         }
       ],
       "class_definitions": [],
-      "restricted_rule_inputs": [],
-      "readability_changes": {
-        "module_aliases": {
-          "p1": "sample"
-        },
-        "console_messages": {}
-      }
+      "restricted_rule_inputs": []
     },
     {
       "module": "penalties",

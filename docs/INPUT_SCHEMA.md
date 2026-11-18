@@ -85,13 +85,11 @@ For each industry and development role, the code collects the complete set of `(
 
 The two CSV files are readable projections of the JSON, not additional observations. List/dictionary cells use JSON text. `guide_coding.json` retains the full source lineage and unresolved decisions; use it for the analysis and audit rather than interpreting CSV blanks as observed zeros.
 
-This inventory documents the reported input boundary. It does not supply the commercial raw-export-to-canonical-panel build or promise access to restricted labels.
-
 `sample-bridge` needs only D01. The 14-test `wild-cluster` command uses D01, D02 and the bundled guide coding to reconstruct the common, positive-count, own-history and guide samples. Both commands use the original patent-based GTOS construction.
 
 ## Canonical panel
 
-One row per stock code and calendar year; UTF-8 CSV. Stock codes are six-character strings with leading zeros. The selected paper panel covers 2007-2024 and has 55,588 rows / 4,582 firms. The original stage counts are 55,588, 55,588, 51,696, 49,982, 48,519 and 47,773; the common sample has 4,290 firms. These are validation anchors, not instructions to force a different dataset into the same counts.
+Use a UTF-8 CSV with one row per stock code and calendar year. Stock codes are six-digit strings with leading zeros. The 2007-2024 panel has 55,588 rows and 4,582 firms. The sample checks report 55,588, 55,588, 51,696, 49,982, 48,519 and 47,773 rows at successive stages; the common sample has 4,290 firms.
 
 | Columns | Definition / contract |
 |---|---|
@@ -122,7 +120,7 @@ Keep year-end annual consolidated records (`Source == 0`, `StateTypeCode == 1`, 
 
 ## CSMAR environmental-investment and subsidy exports
 
-The original Excel export readers preserve metadata-row handling and source-row IDs. Inputs used in the paper include `GI_EnvInvestTotal.xlsx`, `GI_EnvInvestDetail.xlsx` and `GI_LstdGovGrnSubLetter.xlsx`. Required field names are checked by the reader functions; do not rename amount, ratio or source-code fields by intuition.
+Supply the original Excel headers and row order for `GI_EnvInvestTotal.xlsx`, `GI_EnvInvestDetail.xlsx` and `GI_LstdGovGrnSubLetter.xlsx`. The title classifications refer to source row numbers.
 
 - Overall investment: `ExpenseToGrossRevenue` and `CapitalToTotalAssets`, as reported. Missing is not zero; a reported zero is preserved.
 - Detail records: `Symbol`, `EndDate`, `InvestSourceCode`, `Item`, and amount-related fields used by the original reader. Source 2 and source 5 are analyzed separately, not summed into annual investment.

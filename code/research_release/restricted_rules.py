@@ -1,4 +1,4 @@
-"""Keep commercial-export title overrides outside the release directory."""
+"""Report missing restricted title classifications."""
 
 
 class MissingRules(dict):
@@ -6,10 +6,7 @@ class MissingRules(dict):
         self.name = name
 
     def __contains__(self, key):
-        raise RuntimeError(
-            f"{self.name} requires the original restricted title overrides. "
-            "Do not silently substitute an empty dictionary or reclassify the published sample."
-        )
+        raise RuntimeError(f"{self.name} requires the original restricted title overrides.")
 
     def items(self):
         raise RuntimeError(f"{self.name} requires the original restricted title overrides.")

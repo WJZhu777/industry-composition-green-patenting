@@ -53,7 +53,7 @@ def strict_annual(raw: pd.DataFrame) -> pd.DataFrame:
     frame[FIRM] = codes.str.zfill(6)
     frame["year"] = pd.to_datetime(frame.EndDate).dt.year
     if frame.duplicated([FIRM, "year"]).any():
-        raise ValueError("Ambiguous strict annual R&D keys; do not choose a record by completeness.")
+        raise ValueError("The annual consolidated R&D export has duplicate firm-year rows.")
     for field in RD_FIELDS:
         frame[field] = pd.to_numeric(frame[field], errors="raise")
         if np.isinf(frame[field].to_numpy(dtype=float)).any():
@@ -126,7 +126,7 @@ def samples(merged: pd.DataFrame) -> dict[str, pd.DataFrame]:
                 "Personnel supplement matched sample, 2016-2024": merged.loc[personnel].copy(),
                 "Common sample excluded from R&D primary": merged.loc[common & ~primary].copy()}
     if len(selected["Original common sample"]) != 47773 or len(selected["R&D primary matched sample"]) != 42261:
-        raise ValueError("Sample counts differ from the audited setup; stop rather than adjust the design.")
+        raise ValueError("R&D matching did not yield 47,773 common and 42,261 matched observations.")
     for name, frame in list(selected.items())[1:3]:
         if frame[[*CONTROLS, *PATENT, *OUTCOMES.values(), RD_MEAN, RD_MEDIAN]].isna().any().any():
             raise ValueError(f"Incomplete model fields: {name}")
@@ -152,7 +152,7 @@ def estimate_design(frame: pd.DataFrame, rhs: str, additions: list[str]) -> tupl
     matrix = design.to_numpy(dtype=float)
     rank = np.linalg.matrix_rank(matrix)
     if rank != matrix.shape[1]:
-        raise ValueError("Non-full-rank design: report the problem instead of silently changing controls.")
+        raise ValueError("The R&D design matrix is rank deficient.")
     if len(design) != len(frame) or not design.index.equals(frame.index):
         raise AssertionError("Design construction changed the fixed sample.")
     rows = []
