@@ -10,7 +10,7 @@ This repository contains analysis code, author-created guide classifications and
 | Other inputs to the firm-year panel | The Listed Company Green Credit Data (2007-2024) compilation supplies the firm-year list and fallback industry codes. The analysis does not use its credit measures. An annual ownership table supplies state ownership. A company register compiled from CSMAR and annual reports supplies listing years and registered locations. | Not included. |
 | Restricted-source derived data | The canonical firm-year panel, matching and classification records, patent-based GTOS series, R&D/investment/subsidy industry-year series, and row-linked title classifications | Not included. |
 | Author-created public-source classifications | Conditional technology-branch, industry and role coding of seven official 2017 R&D guides | Included in `data/public/`; no company records, monetary amounts or patent outcomes. Source documents are linked, not bundled. |
-| Publication reference results | Tables already displayed in the manuscript and supplement | Included in `results/reference/paper_tables.json`. These are publication summaries, not reusable company or industry-year datasets. |
+| Reference tables | Aggregate tables reported in the manuscript and supplement | Included in `results/reference/paper_tables.json`. The manuscript and supplement files are not included. |
 
 The [input schema](INPUT_SCHEMA.md) lists the file names, years, fields and uses for D01-D06. For D05-D06, CSMAR supplies the original project titles. The authors classify those titles and use the labels to calculate the industry shares; neither the original records nor the row-linked labels are included.
 
@@ -26,4 +26,4 @@ Request access to restricted records from the relevant providers under their ter
 
 The analysis code starts from the prepared firm-year panel described in `INPUT_SCHEMA.md`. This repository does not rebuild that panel from raw files. To construct it, readers need the source files and the study's rules for matching firms and years, selecting industry codes, assigning CCAD status and handling missing values.
 
-For the title-record analyses, access to CSMAR alone does not supply the author-reviewed frozen row labels. The package deliberately fails rather than silently replacing those labels with empty rules or a new classifier. The public guide comparison does not have this particular dependency: its author-created guide coding is bundled, while the firm panel remains restricted.
+The title-record analyses require both the CSMAR exports and the authors' row-linked classifications. The guide classifications are included, but the guide regressions still require the restricted firm-year panel.

@@ -87,18 +87,18 @@ def estimate(frame: pd.DataFrame, saved: dict) -> dict:
                     & saved_rows.model.eq(original) & saved_rows.outcome.eq(row["outcome"])
                     & saved_rows.term.eq(row["term"])]
                 if len(match) != 1:
-                    raise ValueError("Saved P2 result is absent or ambiguous for a baseline term.")
+                    raise ValueError("The reference R&D result is missing or ambiguous for a baseline term.")
                 for field in ["coefficient", "firm_cluster_se", "industry_cluster_se"]:
                     old = float(match.iloc[0][field])
                     if not np.isclose(row[field], old, rtol=1e-8, atol=1e-10):
-                        raise AssertionError(f"P2 baseline did not reproduce: {label}, {row['outcome']}, {field}")
+                        raise AssertionError(f"R&D baseline did not reproduce: {label}, {row['outcome']}, {field}")
                 reproduction.append({"model": label, "outcome": row["outcome"], "term": row["term"],
                                      "coefficient_difference": row["coefficient"] - float(match.iloc[0].coefficient)})
     return {"coefficients": rd.records(coefficients), "agricultural_coefficients": rd.records(agricultural),
             "coefficient_movements": movements, "designs": designs,
             "p2_reproduction": {"same_sample": bool(reproduction), "checked_terms": len(reproduction),
                                 "details": reproduction},
-            "inference": "OLS with the original six firm controls, year and province indicators; no industry or firm effects. Firm and industry cluster covariances use the existing P2 finite-sample correction and normal-reference intervals. Endpoint intervals do not test paired coefficient changes. Movements are descriptive point comparisons, not mediation or identified opportunity effects."}
+            "inference": "OLS with the six firm controls, year and province indicators; no industry or firm effects. Firm and industry cluster covariances use a finite-sample correction and normal-reference intervals. Intervals for individual coefficients do not test changes between models. Coefficient changes are descriptive comparisons, not mediation or identified opportunity effects."}
 
 def self_test() -> None:
     fixture = pd.DataFrame({sample.FIRM: ["000001", "000001", "000001", "000002", "000002"],

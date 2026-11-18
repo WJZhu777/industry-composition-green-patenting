@@ -566,7 +566,7 @@ def main():
         if command in ["rd", "history", "supplementary", "wild-cluster"]:
             p.add_argument("--rd", required=True)
         if command == "supplementary":
-            p.add_argument("--legacy-investment", required=True)
+            p.add_argument("--legacy-investment", required=True, help="Macrodatas green investment Stata file (D03).")
         if command == "investment":
             p.add_argument("--investment-total", required=True)
         if command in ["subsidy", "projects"]:

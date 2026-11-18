@@ -16,7 +16,7 @@ def plan():
         "tests": ["Full accounting: count, log1p count, entry",
                   "Industry FE plus OI/OD: count, log1p count, entry",
                   "Full accounting: log(count) among positive counts",
-                  "Own history plus patent GTOS: count on the fixed P8 sample",
+                  "Own history plus patent GTOS: count on the matched R&D and patent-history sample",
                   "Guide-only complete profiles: three outcomes for each of two roles"],
         "null": "Agricultural coefficient equals zero; two-sided, pointwise tests.",
         "method": "WCR11 (classic restricted wild cluster bootstrap-t); unadjusted restricted residuals; CV1 studentization in the original fit and every draw.",

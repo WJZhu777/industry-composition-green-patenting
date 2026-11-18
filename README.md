@@ -1,6 +1,6 @@
 # Industry composition and green invention patenting
 
-Research code and public-source classifications accompanying **Industry Composition and the Green Invention Patenting Gap between Agricultural and Other Listed Firms in China**, submitted to *Environment, Development and Sustainability*.
+Research code and public-source classifications for **Industry Composition and the Green Invention Patenting Gap between Agricultural and Other Listed Firms in China**.
 
 The study examines how industry composition relates to differences in green invention patent applications between agricultural and other Chinese listed firms. The analyses are descriptive: industry-year comparisons, accounting decompositions and supplementary models.
 
@@ -47,7 +47,7 @@ The repository does not include restricted records from CNRDS, CCAD, CSMAR, CCER
 
 The code starts from a prepared firm-year panel. The panel is not included because it incorporates commercial database records. The code does not rebuild it from raw exports. The [input schema](docs/INPUT_SCHEMA.md) lists the files and fields needed to run the analyses, including the authors' project-title labels linked to CSMAR records. See [data access](docs/DATA_ACCESS.md) for sources and what the repository provides.
 
-`data/public/` contains author-created classifications of seven official 2017 R&D guides and links to their sources. Original PDFs are not bundled. `results/reference/` contains the paper's displayed tables for comparison, not input data for re-estimation.
+`data/public/` contains author-created classifications of seven official 2017 R&D guides and links to their sources. The source PDFs and manuscript files are not included. `results/reference/` contains the reported tables for comparison, not input data for re-estimation.
 
 ## Documentation
 

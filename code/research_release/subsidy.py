@@ -62,7 +62,7 @@ def environment(panel: pd.DataFrame, flags: pd.DataFrame) -> tuple[pd.DataFrame,
         "current_panel_supported_exposures": int(supported.sum()),
         "current_panel_supported_zero_title_shares": int((supported & merged[VARIABLE].eq(0)).sum()),
         "denominator": "Distinct non-agricultural firms with at least one usable consolidated subsidy title in this export and a valid current source-year detailed industry; at least three remain after focal removal.",
-        "numerator": "Distinct firms in that denominator with at least one title classified clear_title by the fixed P17 ledger, regardless of recorded amount.",
+        "numerator": "Distinct firms in that denominator with at least one title coded clear_title in the original subsidy classifications, regardless of recorded amount.",
         "zero": "Zero is an observed absence of identified clear-title records among the recorded benchmark firms, not proof of no green R&D or subsidy receipt. Missing firm-year records are not filled.",
     }
     return merged, cells, construction

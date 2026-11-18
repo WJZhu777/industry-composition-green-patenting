@@ -14,12 +14,12 @@
     "user": "Possible use of the technology; not automatically a development role"
   },
   "coding_protocol": {
-    "review_trigger": "P30 was already observed; these are post-result measurement-audit corrections, not a blinded original design. No outcome value, coefficient or significance is read to choose a branch.",
+    "review_trigger": "Coding was revised after an earlier comparison. The review was not blinded. Branch decisions were based on the technical descriptions and industry definitions, not on outcome values, coefficients or significance.",
     "role_rule": "A named new product/equipment/software gives a conditional supplier role; a named new operating/manufacturing method gives a conditional process-R&D role. Adoption, raw-material supply or demonstration-site presence alone gives neither. Codes describe possible activity domains, not the project's actual applicants or verified firm R&D.",
     "category_rule": "Official basic/applied/demonstration headings are retained but do not veto explicit qualifying technical outputs. Mere mechanisms, generic green labels, yield/quality and existing integration remain insufficient.",
     "representation": "Keep separate supplier, process-R&D and user evidence with nominal technology-family labels and original six functions. No primary supplier/process union, raw task count, weighted family count, budget, prospective patent target or opportunity score.",
     "zero_and_unknown": "A within-linked-role zero only means no qualifying branch in this fixed ledger. An unlinked/unresolved role remains unknown. Uncollected programs, years and actual firm business eligibility are not zero-filled.",
-    "completeness": "All 139 direction identities and branch anchors checked; only the recorded targeted roles/activity splits are corrected. Other P29 crosswalks are provisional. Pending manufacturer-subtype and function decisions remain visible, not claimed resolved.",
+    "completeness": "Source directions and branch anchors were checked for all 139 directions. Only selected role assignments and activity splits received a targeted source review. Other industry links remain provisional. Unresolved decisions on manufacturer subtypes and functions are recorded.",
     "family_boundary": "Families preserve technical subject matter, differ in breadth and can overlap. They are nominal labels, not equal-sized or independently counted opportunities."
   },
   "direction_screening": [
@@ -30,7 +30,7 @@
       "official_section_heading": "基础研究",
       "page_start_1based": 3,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -40,7 +40,7 @@
       "official_section_heading": "基础研究",
       "page_start_1based": 3,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -50,7 +50,7 @@
       "official_section_heading": "基础研究",
       "page_start_1based": 4,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -60,7 +60,7 @@
       "official_section_heading": "基础研究",
       "page_start_1based": 4,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "agro_2017:1.4:p31_application"
       ]
@@ -92,7 +92,7 @@
       "official_section_heading": "重大技术、产品及装备研发",
       "page_start_1based": 6,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "agro_2017:2.1:b1",
         "agro_2017:2.1:b2"
@@ -105,7 +105,7 @@
       "official_section_heading": "重大技术、产品及装备研发",
       "page_start_1based": 7,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "agro_2017:2.2:b1",
         "agro_2017:2.2:p31_field"
@@ -118,7 +118,7 @@
       "official_section_heading": "重大技术、产品及装备研发",
       "page_start_1based": 8,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "agro_2017:2.3:b1",
         "agro_2017:2.3:b2"
@@ -131,7 +131,7 @@
       "official_section_heading": "重大技术、产品及装备研发",
       "page_start_1based": 9,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "agro_2017:2.4:b1"
       ]
@@ -143,7 +143,7 @@
       "official_section_heading": "重大技术、产品及装备研发",
       "page_start_1based": 9,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "agro_2017:2.5:b1"
       ]
@@ -155,7 +155,7 @@
       "official_section_heading": "重大技术、产品及装备研发",
       "page_start_1based": 10,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "agro_2017:2.6:b1"
       ]
@@ -167,7 +167,7 @@
       "official_section_heading": "重大技术、产品及装备研发",
       "page_start_1based": 11,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "agro_2017:2.7:b1"
       ]
@@ -179,7 +179,7 @@
       "official_section_heading": "重大技术、产品及装备研发",
       "page_start_1based": 11,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "agro_2017:2.8:b1"
       ]
@@ -191,7 +191,7 @@
       "official_section_heading": "重大技术、产品及装备研发",
       "page_start_1based": 12,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "agro_2017:2.9:b1",
         "agro_2017:2.9:b2",
@@ -205,7 +205,7 @@
       "official_section_heading": "重大技术、产品及装备研发",
       "page_start_1based": 13,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "agro_2017:2.10:b1",
         "agro_2017:2.10:b2"
@@ -218,7 +218,7 @@
       "official_section_heading": "技术集成与示范",
       "page_start_1based": 14,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -228,7 +228,7 @@
       "official_section_heading": "技术集成与示范",
       "page_start_1based": 15,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -238,7 +238,7 @@
       "official_section_heading": "技术集成与示范",
       "page_start_1based": 16,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -248,7 +248,7 @@
       "official_section_heading": "技术集成与示范",
       "page_start_1based": 17,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -258,7 +258,7 @@
       "official_section_heading": "技术集成与示范",
       "page_start_1based": 17,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -268,7 +268,7 @@
       "official_section_heading": "监测预报预警技术",
       "page_start_1based": 2,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "air_2017:1.1:b1"
       ]
@@ -280,7 +280,7 @@
       "official_section_heading": "监测预报预警技术",
       "page_start_1based": 3,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "air_2017:1.2:b1"
       ]
@@ -292,7 +292,7 @@
       "official_section_heading": "监测预报预警技术",
       "page_start_1based": 3,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "air_2017:1.3:b1",
         "air_2017:1.3:b2"
@@ -305,7 +305,7 @@
       "official_section_heading": "监测预报预警技术",
       "page_start_1based": 4,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "air_2017:1.4:b1"
       ]
@@ -317,7 +317,7 @@
       "official_section_heading": "监测预报预警技术",
       "page_start_1based": 4,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "air_2017:1.5:b1"
       ]
@@ -329,7 +329,7 @@
       "official_section_heading": "雾霾和光化学烟雾形成机制",
       "page_start_1based": 5,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -339,7 +339,7 @@
       "official_section_heading": "雾霾和光化学烟雾形成机制",
       "page_start_1based": 5,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -349,7 +349,7 @@
       "official_section_heading": "污染源全过程控制技术",
       "page_start_1based": 5,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "air_2017:3.1:b1"
       ]
@@ -361,7 +361,7 @@
       "official_section_heading": "污染源全过程控制技术",
       "page_start_1based": 6,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "air_2017:3.2:b1"
       ]
@@ -373,7 +373,7 @@
       "official_section_heading": "污染源全过程控制技术",
       "page_start_1based": 7,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "air_2017:3.3:b1"
       ]
@@ -385,7 +385,7 @@
       "official_section_heading": "污染源全过程控制技术",
       "page_start_1based": 8,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "air_2017:3.4:b1"
       ]
@@ -397,7 +397,7 @@
       "official_section_heading": "污染源全过程控制技术",
       "page_start_1based": 8,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "air_2017:3.5:b1"
       ]
@@ -409,7 +409,7 @@
       "official_section_heading": "污染源全过程控制技术",
       "page_start_1based": 8,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "air_2017:3.6:b1"
       ]
@@ -421,7 +421,7 @@
       "official_section_heading": "污染源全过程控制技术",
       "page_start_1based": 9,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "air_2017:3.7:p31_engine",
         "air_2017:3.7:p31_machinery"
@@ -434,7 +434,7 @@
       "official_section_heading": "污染源全过程控制技术",
       "page_start_1based": 9,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "air_2017:3.8:b1"
       ]
@@ -446,7 +446,7 @@
       "official_section_heading": "污染源全过程控制技术",
       "page_start_1based": 9,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "air_2017:3.9:b1"
       ]
@@ -458,7 +458,7 @@
       "official_section_heading": "大气污染对人群健康的影响",
       "page_start_1based": 10,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -468,7 +468,7 @@
       "official_section_heading": "大气污染对人群健康的影响",
       "page_start_1based": 10,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -490,7 +490,7 @@
       "official_section_heading": "空气质量改善管理支持技术",
       "page_start_1based": 11,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -500,7 +500,7 @@
       "official_section_heading": "空气质量改善管理支持技术",
       "page_start_1based": 11,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -510,7 +510,7 @@
       "official_section_heading": "空气质量改善管理支持技术",
       "page_start_1based": 11,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -520,7 +520,7 @@
       "official_section_heading": "大气污染联防联控技术示范",
       "page_start_1based": 12,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "air_2017:6.1:b1"
       ]
@@ -532,7 +532,7 @@
       "official_section_heading": "大气污染联防联控技术示范",
       "page_start_1based": 12,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -542,7 +542,7 @@
       "official_section_heading": "综合节水理论与关键技术设备",
       "page_start_1based": 2,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "water_2017:1.1:b1",
         "water_2017:1.1:b2"
@@ -555,7 +555,7 @@
       "official_section_heading": "综合节水理论与关键技术设备",
       "page_start_1based": 2,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "water_2017:1.2:b1"
       ]
@@ -579,7 +579,7 @@
       "official_section_heading": "非常规水资源开发利用技术与设备",
       "page_start_1based": 3,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -589,7 +589,7 @@
       "official_section_heading": "非常规水资源开发利用技术与设备",
       "page_start_1based": 3,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "water_2017:2.2:b1"
       ]
@@ -613,7 +613,7 @@
       "official_section_heading": "非常规水资源开发利用技术与设备",
       "page_start_1based": 4,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "water_2017:2.4:b1",
         "water_2017:2.4:b2"
@@ -626,7 +626,7 @@
       "official_section_heading": "流域水循环演变与国家水资源配置战略",
       "page_start_1based": 5,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -636,7 +636,7 @@
       "official_section_heading": "流域水循环演变与国家水资源配置战略",
       "page_start_1based": 5,
       "status": "uncertain_function_or_technical_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -646,7 +646,7 @@
       "official_section_heading": "流域水循环演变与国家水资源配置战略",
       "page_start_1based": 5,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "water_2017:3.3:b1"
       ]
@@ -658,7 +658,7 @@
       "official_section_heading": "流域水循环演变与国家水资源配置战略",
       "page_start_1based": 6,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -668,7 +668,7 @@
       "official_section_heading": "流域水循环演变与国家水资源配置战略",
       "page_start_1based": 6,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "water_2017:3.5:b1",
         "water_2017:3.5:b2"
@@ -681,7 +681,7 @@
       "official_section_heading": "重大水资源配置工程建设与安全运行",
       "page_start_1based": 7,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "water_2017:4.1:b1"
       ]
@@ -693,7 +693,7 @@
       "official_section_heading": "重大水资源配置工程建设与安全运行",
       "page_start_1based": 7,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -703,7 +703,7 @@
       "official_section_heading": "重大水资源配置工程建设与安全运行",
       "page_start_1based": 7,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -713,7 +713,7 @@
       "official_section_heading": "重大水资源配置工程建设与安全运行",
       "page_start_1based": 8,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -723,7 +723,7 @@
       "official_section_heading": "重大水资源配置工程建设与安全运行",
       "page_start_1based": 8,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -733,7 +733,7 @@
       "official_section_heading": "江河治理与水沙调控",
       "page_start_1based": 9,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "water_2017:5.1:b1"
       ]
@@ -745,7 +745,7 @@
       "official_section_heading": "江河治理与水沙调控",
       "page_start_1based": 9,
       "status": "uncertain_function_or_technical_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -755,7 +755,7 @@
       "official_section_heading": "江河治理与水沙调控",
       "page_start_1based": 9,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -765,7 +765,7 @@
       "official_section_heading": "江河治理与水沙调控",
       "page_start_1based": 10,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -775,7 +775,7 @@
       "official_section_heading": "江河治理与水沙调控",
       "page_start_1based": 10,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -785,7 +785,7 @@
       "official_section_heading": "水资源智能调度与精细化管理",
       "page_start_1based": 11,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "water_2017:6.1:b1"
       ]
@@ -797,7 +797,7 @@
       "official_section_heading": "水资源智能调度与精细化管理",
       "page_start_1based": 11,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "water_2017:6.2:b1"
       ]
@@ -809,7 +809,7 @@
       "official_section_heading": "水资源智能调度与精细化管理",
       "page_start_1based": 11,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "water_2017:6.3:b1"
       ]
@@ -821,7 +821,7 @@
       "official_section_heading": "水资源智能调度与精细化管理",
       "page_start_1based": 12,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "water_2017:6.4:b1"
       ]
@@ -833,7 +833,7 @@
       "official_section_heading": "水资源智能调度与精细化管理",
       "page_start_1based": 12,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "water_2017:6.5:b1"
       ]
@@ -845,7 +845,7 @@
       "official_section_heading": "基础研究",
       "page_start_1based": 2,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -855,7 +855,7 @@
       "official_section_heading": "基础研究",
       "page_start_1based": 3,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -865,7 +865,7 @@
       "official_section_heading": "基础研究",
       "page_start_1based": 4,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -875,7 +875,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 5,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "soil_2017:2.1:b1"
       ]
@@ -887,7 +887,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 5,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "soil_2017:2.2:p31_cropping",
         "soil_2017:2.2:p31_remediation",
@@ -902,7 +902,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 6,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "soil_2017:2.3:p31_product",
         "soil_2017:2.3:p31_field"
@@ -915,7 +915,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 7,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "soil_2017:2.4:b1"
       ]
@@ -927,7 +927,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 7,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "soil_2017:2.5:b1",
         "soil_2017:2.5:b2"
@@ -940,7 +940,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 9,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "soil_2017:2.6:b1"
       ]
@@ -952,7 +952,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 10,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "soil_2017:2.7:b1"
       ]
@@ -964,7 +964,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 10,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "soil_2017:2.8:b1",
         "soil_2017:2.8:b2"
@@ -977,7 +977,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 12,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "soil_2017:2.9:b1"
       ]
@@ -989,7 +989,7 @@
       "official_section_heading": "集成示范应用",
       "page_start_1based": 13,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -999,7 +999,7 @@
       "official_section_heading": "集成示范应用",
       "page_start_1based": 14,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -1009,7 +1009,7 @@
       "official_section_heading": "集成示范应用",
       "page_start_1based": 14,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "soil_2017:3.3:b1",
         "soil_2017:3.3:b2"
@@ -1022,7 +1022,7 @@
       "official_section_heading": "食品加工应用基础研究",
       "page_start_1based": 5,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -1032,7 +1032,7 @@
       "official_section_heading": "食品加工应用基础研究",
       "page_start_1based": 6,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -1042,7 +1042,7 @@
       "official_section_heading": "食品加工应用基础研究",
       "page_start_1based": 7,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -1064,7 +1064,7 @@
       "official_section_heading": "食品加工核心技术开发与装备创制",
       "page_start_1based": 10,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -1074,7 +1074,7 @@
       "official_section_heading": "食品加工核心技术开发与装备创制",
       "page_start_1based": 11,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -1084,7 +1084,7 @@
       "official_section_heading": "食品加工核心技术开发与装备创制",
       "page_start_1based": 12,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "food_2017:2.4:b1"
       ]
@@ -1096,7 +1096,7 @@
       "official_section_heading": "食品加工核心技术开发与装备创制",
       "page_start_1based": 14,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "food_2017:2.5:b1"
       ]
@@ -1108,7 +1108,7 @@
       "official_section_heading": "食品加工核心技术开发与装备创制",
       "page_start_1based": 15,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "food_2017:2.6:b1"
       ]
@@ -1132,7 +1132,7 @@
       "official_section_heading": "食品加工核心技术开发与装备创制",
       "page_start_1based": 17,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "food_2017:2.8:b1"
       ]
@@ -1144,7 +1144,7 @@
       "official_section_heading": "食品加工工程化技术集成应用与产业化示范",
       "page_start_1based": 18,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "food_2017:3.1:b1"
       ]
@@ -1156,7 +1156,7 @@
       "official_section_heading": "食品加工工程化技术集成应用与产业化示范",
       "page_start_1based": 20,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "food_2017:3.2:b1"
       ]
@@ -1168,7 +1168,7 @@
       "official_section_heading": "食品加工工程化技术集成应用与产业化示范",
       "page_start_1based": 21,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "food_2017:3.3:b1"
       ]
@@ -1180,7 +1180,7 @@
       "official_section_heading": "食品加工工程化技术集成应用与产业化示范",
       "page_start_1based": 22,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "food_2017:3.4:p31_cooling_equipment",
         "food_2017:3.4:p31_operating"
@@ -1193,7 +1193,7 @@
       "official_section_heading": "食品加工工程化技术集成应用与产业化示范",
       "page_start_1based": 23,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "food_2017:3.5:b1"
       ]
@@ -1205,7 +1205,7 @@
       "official_section_heading": "基础研究",
       "page_start_1based": 2,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -1215,7 +1215,7 @@
       "official_section_heading": "基础研究",
       "page_start_1based": 3,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -1225,7 +1225,7 @@
       "official_section_heading": "基础研究",
       "page_start_1based": 3,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -1235,7 +1235,7 @@
       "official_section_heading": "基础研究",
       "page_start_1based": 4,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -1245,7 +1245,7 @@
       "official_section_heading": "基础研究",
       "page_start_1based": 4,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -1255,7 +1255,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 5,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -1265,7 +1265,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 6,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -1275,7 +1275,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 6,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -1285,7 +1285,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 7,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -1295,7 +1295,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 7,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -1305,7 +1305,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 8,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -1315,7 +1315,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 9,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -1325,7 +1325,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 9,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -1335,7 +1335,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 10,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -1345,7 +1345,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 11,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "livestock_2017:2.10:b1"
       ]
@@ -1357,7 +1357,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 11,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -1379,7 +1379,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 13,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -1389,7 +1389,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 13,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -1399,7 +1399,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 14,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "livestock_2017:2.15:b1"
       ]
@@ -1411,7 +1411,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 15,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "livestock_2017:2.16:b1"
       ]
@@ -1423,7 +1423,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 15,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -1433,7 +1433,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 16,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -1443,7 +1443,7 @@
       "official_section_heading": "基础研究",
       "page_start_1based": 2,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -1453,7 +1453,7 @@
       "official_section_heading": "基础研究",
       "page_start_1based": 3,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -1463,7 +1463,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 4,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "forest_2017:2.1:b1"
       ]
@@ -1475,7 +1475,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 4,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "forest_2017:2.2:b1"
       ]
@@ -1487,7 +1487,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 5,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "forest_2017:2.3:b1"
       ]
@@ -1499,7 +1499,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 6,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "forest_2017:2.4:b1"
       ]
@@ -1511,7 +1511,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 7,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -1531,7 +1531,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 9,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "forest_2017:2.7:b1"
       ]
@@ -1543,7 +1543,7 @@
       "official_section_heading": "关键技术研究",
       "page_start_1based": 10,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "forest_2017:2.8:p31_chemical",
         "forest_2017:2.8:p31_pulp",
@@ -1558,7 +1558,7 @@
       "official_section_heading": "技术集成与示范",
       "page_start_1based": 11,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "forest_2017:3.1:b1"
       ]
@@ -1570,7 +1570,7 @@
       "official_section_heading": "技术集成与示范",
       "page_start_1based": 12,
       "status": "outside_narrow_technical_scope",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": []
     },
     {
@@ -1580,7 +1580,7 @@
       "official_section_heading": "技术集成与示范",
       "page_start_1based": 13,
       "status": "has_qualified_branch",
-      "review_reason": "Targeted corrections applied where recorded; other P29 decisions retained provisionally, not recertified.",
+      "review_reason": "Only selected links received a targeted source review. Other links remain provisional.",
       "branch_ids": [
         "forest_2017:3.3:b1"
       ]
@@ -1657,7 +1657,7 @@
       "scope_and_role_conditions": "Only specified fertilizer products and their new manufacturing process; crop use is separate.",
       "page_start_1based": 6,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "fertilizer_product_and_manufacture",
       "source_id": "agro_2017",
       "direction_title": "新型缓/控释肥料与稳定肥料研制"
@@ -1683,7 +1683,7 @@
       "scope_and_role_conditions": "Only new fertilizer-coating equipment, not all machinery or ordinary fertilization.",
       "page_start_1based": 6,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "fertilizer_product_and_manufacture",
       "source_id": "agro_2017",
       "direction_title": "新型缓/控释肥料与稳定肥料研制"
@@ -1713,7 +1713,7 @@
       "scope_and_role_conditions": "Only residue-based or biological fertilizer products/processes with lower chemical-input requirements.",
       "page_start_1based": 7,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "fertilizer_product_and_manufacture",
       "source_id": "agro_2017",
       "direction_title": "生物炭基肥料及微生物肥料研制"
@@ -1741,7 +1741,7 @@
       "scope_and_role_conditions": "Only pest-control agents and their specified new production process; lower pesticide-input function.",
       "page_start_1based": 8,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "biological_and_physical_crop_pest_control",
       "source_id": "agro_2017",
       "direction_title": "作物免疫调控与物理防控技术及产品研发"
@@ -1767,7 +1767,7 @@
       "scope_and_role_conditions": "Only explicitly developed physical pest-control equipment, not all farm machinery.",
       "page_start_1based": 8,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "biological_and_physical_crop_pest_control",
       "source_id": "agro_2017",
       "direction_title": "作物免疫调控与物理防控技术及产品研发"
@@ -1793,7 +1793,7 @@
       "scope_and_role_conditions": "Only new natural-enemy application protocols for crop pest control; commercial insect-production industry remains unresolved.",
       "page_start_1based": 9,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "biological_and_physical_crop_pest_control",
       "source_id": "agro_2017",
       "direction_title": "天敌昆虫防控技术及产品研发"
@@ -1821,7 +1821,7 @@
       "scope_and_role_conditions": "Only named biological pest-control products and their new manufacturing processes; not all chemical products.",
       "page_start_1based": 9,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "biological_and_physical_crop_pest_control",
       "source_id": "agro_2017",
       "direction_title": "新型高效生物杀菌剂研发"
@@ -1850,7 +1850,7 @@
       "scope_and_role_conditions": "Only the named new biological insecticide/production branch used to reduce conventional chemical control.",
       "page_start_1based": 10,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "biological_and_physical_crop_pest_control",
       "source_id": "agro_2017",
       "direction_title": "新型高效生物杀虫剂研发"
@@ -1878,7 +1878,7 @@
       "scope_and_role_conditions": "Only the specified low-pollution pesticide production branch; application does not establish crop-sector invention.",
       "page_start_1based": 11,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "biological_and_physical_crop_pest_control",
       "source_id": "agro_2017",
       "direction_title": "新型高效植物生长调节剂和生物除草剂研发"
@@ -1906,7 +1906,7 @@
       "scope_and_role_conditions": "Only specified natural biological-pesticide synthesis and green manufacturing processes linked to lower chemical pesticide use.",
       "page_start_1based": 11,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "biological_and_physical_crop_pest_control",
       "source_id": "agro_2017",
       "direction_title": "天然生物农药的合成生物学与组合合成技术"
@@ -1933,7 +1933,7 @@
       "scope_and_role_conditions": "Only plant/soil nutrient sensing instruments supporting input control; not generic quality detection.",
       "page_start_1based": 12,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "crop_nutrient_diagnostics",
       "source_id": "agro_2017",
       "direction_title": "养分原位监测与水肥一体化施肥技术及其装备"
@@ -1962,7 +1962,7 @@
       "scope_and_role_conditions": "Only new fertigation equipment and field protocols with explicit lower fertilizer inputs; water-saving magnitude/function is not inferred from water-fertilizer terminology alone.",
       "page_start_1based": 12,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "irrigation_drainage_and_runoff_operations",
       "source_id": "agro_2017",
       "direction_title": "养分原位监测与水肥一体化施肥技术及其装备"
@@ -1988,7 +1988,7 @@
       "scope_and_role_conditions": "Only named seed/soil treatment agents for lower-input pest control; generic seed manufacturing remains unresolved.",
       "page_start_1based": 13,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "biological_and_physical_crop_pest_control",
       "source_id": "agro_2017",
       "direction_title": "种子、种苗与土壤处理技术及配套装备研发"
@@ -2016,7 +2016,7 @@
       "scope_and_role_conditions": "Only new physical seed/soil treatment equipment and operational treatment protocols.",
       "page_start_1based": 13,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "biological_and_physical_crop_pest_control",
       "source_id": "agro_2017",
       "direction_title": "种子、种苗与土壤处理技术及配套装备研发"
@@ -2042,7 +2042,7 @@
       "scope_and_role_conditions": "Only atmospheric pollutant measurement instruments; environmental monitoring services are users, not inferred manufacturers.",
       "page_start_1based": 2,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "atmospheric_measurement_and_forecasting",
       "source_id": "air_2017",
       "direction_title": "大气自由基及纳米颗粒物化学组分在线测量技术"
@@ -2068,7 +2068,7 @@
       "scope_and_role_conditions": "Only specified pollutant-source measurement instruments.",
       "page_start_1based": 3,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "atmospheric_measurement_and_forecasting",
       "source_id": "air_2017",
       "direction_title": "陆地边界层大气污染垂直探测技术"
@@ -2094,7 +2094,7 @@
       "scope_and_role_conditions": "Only the stated greenhouse-gas measurement instruments.",
       "page_start_1based": 3,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "atmospheric_measurement_and_forecasting",
       "source_id": "air_2017",
       "direction_title": "多目标温室气体测量技术"
@@ -2120,7 +2120,7 @@
       "scope_and_role_conditions": "Only explicitly developed greenhouse-gas retrieval software, not purchase of sensing equipment.",
       "page_start_1based": 3,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "atmospheric_measurement_and_forecasting",
       "source_id": "air_2017",
       "direction_title": "多目标温室气体测量技术"
@@ -2146,7 +2146,7 @@
       "scope_and_role_conditions": "Only operational atmospheric prediction/analysis software; theoretical formation-mechanism tasks are outside this technical scope.",
       "page_start_1based": 4,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "atmospheric_measurement_and_forecasting",
       "source_id": "air_2017",
       "direction_title": "全耦合多尺度空气质量预报模式系统"
@@ -2173,7 +2173,7 @@
       "scope_and_role_conditions": "Only sudden atmospheric-pollution accident measurement and dedicated technical forecasting/early-warning products.",
       "page_start_1based": 4,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "atmospheric_measurement_and_forecasting",
       "source_id": "air_2017",
       "direction_title": "突发污染事故应急预警评估技术"
@@ -2202,7 +2202,7 @@
       "scope_and_role_conditions": "Only new coal-power emission-control/resource-recovery equipment and the corresponding power-plant operating processes.",
       "page_start_1based": 5,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "stationary_industrial_emission_and_resource_control",
       "source_id": "air_2017",
       "direction_title": "燃煤电站多污染物协同控制与资源化技术及装备"
@@ -2235,7 +2235,7 @@
       "scope_and_role_conditions": "Only specified metallurgy control/resource/energy-saving systems and new integrated production protocols; general materials suppliers unresolved.",
       "page_start_1based": 6,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "stationary_industrial_emission_and_resource_control",
       "source_id": "air_2017",
       "direction_title": "冶金行业多污染物协同控制与全过程控制耦合技术"
@@ -2266,7 +2266,7 @@
       "scope_and_role_conditions": "Only named nonmetal/mineral production emission-control and energy/material-waste-saving branches.",
       "page_start_1based": 7,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "stationary_industrial_emission_and_resource_control",
       "source_id": "air_2017",
       "direction_title": "建材行业多污染物协同控制与全过程控制耦合技术"
@@ -2297,7 +2297,7 @@
       "scope_and_role_conditions": "Only specified chemical-production emission-control and energy/material-waste-saving branches.",
       "page_start_1based": 8,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "stationary_industrial_emission_and_resource_control",
       "source_id": "air_2017",
       "direction_title": "化工行业烟气治理多功能耦合技术"
@@ -2323,7 +2323,7 @@
       "scope_and_role_conditions": "Only new vehicle emission-control components/systems; no inferred new vehicle-manufacturing process.",
       "page_start_1based": 8,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "mobile_engine_emission_control",
       "source_id": "air_2017",
       "direction_title": "汽油车颗粒物捕集与清洁排放集成技术"
@@ -2349,7 +2349,7 @@
       "scope_and_role_conditions": "Only the named vehicle after-treatment branch.",
       "page_start_1based": 8,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "mobile_engine_emission_control",
       "source_id": "air_2017",
       "direction_title": "柴油车颗粒物与氮氧化物协同净化技术"
@@ -2377,7 +2377,7 @@
       "standard_activity_codes": [
         "3412"
       ],
-      "review_status": "P31_targeted_source_review",
+      "review_status": "targeted_source_review",
       "page_start_1based": 9,
       "technology_family": "mobile_engine_emission_control",
       "source_id": "air_2017",
@@ -2404,7 +2404,7 @@
       ],
       "scope_and_role_conditions": "Only integrated engineering/farm-machinery emission-control systems; crop producers remain users, not inferred developers.",
       "standard_activity_codes": [],
-      "review_status": "P31_targeted_source_review",
+      "review_status": "targeted_source_review",
       "page_start_1based": 9,
       "technology_family": "mobile_engine_emission_control",
       "source_id": "air_2017",
@@ -2429,7 +2429,7 @@
       "scope_and_role_conditions": "Only lower-emission household appliances; household use and coal-processing suppliers not assigned to listed-firm codes.",
       "page_start_1based": 9,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "household_combustion_emission_control",
       "source_id": "air_2017",
       "direction_title": "居民燃煤污染控制技术及应用示范"
@@ -2457,7 +2457,7 @@
       "scope_and_role_conditions": "Only cooking/food oil-fume equipment. Users are not given process-R&D roles without an explicit new operating protocol.",
       "page_start_1based": 9,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "cooking_fume_control",
       "source_id": "air_2017",
       "direction_title": "油烟高效分离与烟气净化关键技术与设备"
@@ -2482,7 +2482,7 @@
       "scope_and_role_conditions": "Only named low-energy indoor purification equipment; material supplier and cross-sector indoor user unresolved.",
       "page_start_1based": 10,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "indoor_air_purification",
       "source_id": "air_2017",
       "direction_title": "室内公共场所空气污染控制关键技术与装备"
@@ -2507,7 +2507,7 @@
       "scope_and_role_conditions": "Retain the new operational emission-monitoring platform only; transport policy/planning and generic decision support excluded.",
       "page_start_1based": 12,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "operational_vehicle_emission_monitoring",
       "source_id": "air_2017",
       "direction_title": "区域机动车排放综合控制和绿色交通管理技术"
@@ -2537,7 +2537,7 @@
       "scope_and_role_conditions": "Only new irrigation devices and real-time water-use operating protocols; N76 only relevant water-management services.",
       "page_start_1based": 2,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "irrigation_drainage_and_runoff_operations",
       "source_id": "water_2017",
       "direction_title": "现代灌区用水调控技术与应用"
@@ -2564,7 +2564,7 @@
       "scope_and_role_conditions": "Only the explicitly developed water-measurement branch, not every irrigation machine.",
       "page_start_1based": 2,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "hydrological_and_water_resource_measurement",
       "source_id": "water_2017",
       "direction_title": "现代灌区用水调控技术与应用"
@@ -2595,7 +2595,7 @@
       "scope_and_role_conditions": "Only specified field drainage/reuse and pollution-control engineering/processes; unspecified device suppliers unresolved.",
       "page_start_1based": 2,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "irrigation_drainage_and_runoff_operations",
       "source_id": "water_2017",
       "direction_title": "农田节水减排控盐技术及应用"
@@ -2617,7 +2617,7 @@
       "scope_and_role_conditions": "Qualified domestic water-saving R&D, but appliance types and nonhousehold firm roles cannot be identified uniquely.",
       "page_start_1based": 3,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "irrigation_drainage_and_runoff_operations",
       "source_id": "water_2017",
       "direction_title": "城镇生活用水新型实用节水技术及集成应用"
@@ -2643,7 +2643,7 @@
       "scope_and_role_conditions": "Only new headwater/arid-region runoff-use operating methods; unspecified equipment suppliers unresolved.",
       "page_start_1based": 3,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "irrigation_drainage_and_runoff_operations",
       "source_id": "water_2017",
       "direction_title": "河源区及干旱区降雨径流挖潜与高效利用技术"
@@ -2675,7 +2675,7 @@
       "scope_and_role_conditions": "Only specified low-chemical/low-energy desalination systems and desalination production processes, not ordinary water supply.",
       "page_start_1based": 4,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "desalination_materials_equipment_and_processes",
       "source_id": "water_2017",
       "direction_title": "节能降耗膜法海水淡化技术及应用"
@@ -2701,7 +2701,7 @@
       "scope_and_role_conditions": "Only new membranes/agents for the stated nonconventional water production, not all chemical manufacturing.",
       "page_start_1based": 4,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "desalination_materials_equipment_and_processes",
       "source_id": "water_2017",
       "direction_title": "海水淡化新产品、新工艺和新技术研发"
@@ -2731,7 +2731,7 @@
       "scope_and_role_conditions": "Only energy-recovery equipment and coupled water-making processes; ordinary capacity expansion excluded.",
       "page_start_1based": 4,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "desalination_materials_equipment_and_processes",
       "source_id": "water_2017",
       "direction_title": "海水淡化新产品、新工艺和新技术研发"
@@ -2757,7 +2757,7 @@
       "scope_and_role_conditions": "Only newly developed ecological-flow operating methods; ecological water allocation is not automatically water saving.",
       "page_start_1based": 5,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "water_ecosystem_and_ecological_flow_operations",
       "source_id": "water_2017",
       "direction_title": "河湖沼系统生态需水保障技术体系及应用"
@@ -2784,7 +2784,7 @@
       "scope_and_role_conditions": "Only explicit new pollution-control branches inside the mixed research/demonstration direction; engineering safety and supply capacity excluded.",
       "page_start_1based": 6,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "water_ecosystem_and_ecological_flow_operations",
       "source_id": "water_2017",
       "direction_title": "三峡库区水循环演变机制与水安全保障技术集成及应用"
@@ -2813,7 +2813,7 @@
       "scope_and_role_conditions": "Only newly developed water-ecosystem restoration operations; not general infrastructure or all water firms.",
       "page_start_1based": 6,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "water_ecosystem_and_ecological_flow_operations",
       "source_id": "water_2017",
       "direction_title": "三峡库区水循环演变机制与水安全保障技术集成及应用"
@@ -2841,7 +2841,7 @@
       "scope_and_role_conditions": "Only excavation-material reuse equipment and civil-engineering processes; dam/safety/construction-size branches excluded.",
       "page_start_1based": 7,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "excavation_and_sediment_resource_recovery",
       "source_id": "water_2017",
       "direction_title": "复杂条件下特高土石坝建设与长期安全保障关键技术"
@@ -2869,7 +2869,7 @@
       "scope_and_role_conditions": "Only new sediment-resource utilization/dredging recovery branches; general flood protection is excluded.",
       "page_start_1based": 9,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "excavation_and_sediment_resource_recovery",
       "source_id": "water_2017",
       "direction_title": "水库和湖泊淤积控制与功能恢复"
@@ -2896,7 +2896,7 @@
       "scope_and_role_conditions": "Only hydrological measurement/testing instruments; services are users rather than inferred equipment developers.",
       "page_start_1based": 11,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "hydrological_and_water_resource_measurement",
       "source_id": "water_2017",
       "direction_title": "江河湖库水文要素在线监测技术与装备"
@@ -2922,7 +2922,7 @@
       "scope_and_role_conditions": "Only operational water-resource remote-monitoring software; policy choices not classified as technical products.",
       "page_start_1based": 11,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "hydrological_and_water_resource_measurement",
       "source_id": "water_2017",
       "direction_title": "国家水资源立体监测体系与遥感技术应用"
@@ -2951,7 +2951,7 @@
       "scope_and_role_conditions": "Only operational ecological-flow/salinity management software and associated new water-management protocols; energy or water-efficiency claims not inferred.",
       "page_start_1based": 11,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "water_ecosystem_and_ecological_flow_operations",
       "source_id": "water_2017",
       "direction_title": "珠江流域水资源多目标调度技术与应用"
@@ -2982,7 +2982,7 @@
       "scope_and_role_conditions": "Only new operational water-reuse/flow-conservation platform and protocols with explicit resource/eco targets; pure regional planning excluded.",
       "page_start_1based": 12,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "water_ecosystem_and_ecological_flow_operations",
       "source_id": "water_2017",
       "direction_title": "松辽流域江河湖库综合调控技术与应用"
@@ -3011,7 +3011,7 @@
       "scope_and_role_conditions": "Only new groundwater-efficient use/protection methods, including specified water-production operations; generic equipment types unresolved.",
       "page_start_1based": 12,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "water_ecosystem_and_ecological_flow_operations",
       "source_id": "water_2017",
       "direction_title": "特殊地貌区地下水开发利用与保护"
@@ -3038,7 +3038,7 @@
       "scope_and_role_conditions": "Only new protected-vegetable nutrient-loss operating protocols; water-fertilizer coordination does not alone establish water saving. Unspecified product suppliers unresolved.",
       "page_start_1based": 5,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "cropping_nutrient_loss_control",
       "source_id": "soil_2017",
       "direction_title": "设施农业氮磷污染负荷削减技术与产品研发"
@@ -3066,7 +3066,7 @@
       ],
       "scope_and_role_conditions": "Only development of new cropping/soil-nutrient and dryland ecological-restoration operating methods; does not certify all agricultural firms perform R&D.",
       "standard_activity_codes": [],
-      "review_status": "P31_targeted_source_review",
+      "review_status": "targeted_source_review",
       "page_start_1based": 5,
       "technology_family": "soil_contamination_and_land_restoration",
       "source_id": "soil_2017",
@@ -3095,7 +3095,7 @@
       ],
       "scope_and_role_conditions": "Only new specialist ecological pollution-interception/restoration operations; not ordinary farming, increased cultivated area or yield.",
       "standard_activity_codes": [],
-      "review_status": "P31_targeted_source_review",
+      "review_status": "targeted_source_review",
       "page_start_1based": 5,
       "technology_family": "soil_contamination_and_land_restoration",
       "source_id": "soil_2017",
@@ -3123,7 +3123,7 @@
       "scope_and_role_conditions": "Only specified water-saving earthwork/land-engineering processes; not ordinary construction capacity.",
       "page_start_1based": 5,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "soil_contamination_and_land_restoration",
       "source_id": "soil_2017",
       "direction_title": "水土流失型氮磷面源污染阻截技术与产品研发"
@@ -3152,7 +3152,7 @@
       ],
       "scope_and_role_conditions": "Only residue-based/new fertilizer products and manufacture; crop use does not certify chemical-product invention.",
       "standard_activity_codes": [],
-      "review_status": "P31_targeted_source_review",
+      "review_status": "targeted_source_review",
       "page_start_1based": 6,
       "technology_family": "fertilizer_product_and_manufacture",
       "source_id": "soil_2017",
@@ -3180,7 +3180,7 @@
       ],
       "scope_and_role_conditions": "Only development of new field nutrient-loss control and residue-fertilizer operating methods; not generic fertilizer adoption.",
       "standard_activity_codes": [],
-      "review_status": "P31_targeted_source_review",
+      "review_status": "targeted_source_review",
       "page_start_1based": 6,
       "technology_family": "cropping_nutrient_loss_control",
       "source_id": "soil_2017",
@@ -3210,7 +3210,7 @@
       "scope_and_role_conditions": "Only specified biodegradation agents and contaminated-soil remediation processes; not automatically an additional ecosystem function.",
       "page_start_1based": 7,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "soil_contamination_and_land_restoration",
       "source_id": "soil_2017",
       "direction_title": "农田有毒有害化学/生物污染防控技术与产品研发"
@@ -3246,7 +3246,7 @@
       "scope_and_role_conditions": "Only digestion/deodorization/resource-recovery equipment and corresponding fertilizer/biogas/recycling processes; farms as feedstock suppliers are users only.",
       "page_start_1based": 7,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "agricultural_residue_digestion_and_recycling",
       "source_id": "soil_2017",
       "direction_title": "农业废弃物厌氧发酵及资源化成套技术与设备研发"
@@ -3275,7 +3275,7 @@
       "scope_and_role_conditions": "Only dedicated on-line environmental/resource monitoring software and devices; no blanket application to all process equipment.",
       "page_start_1based": 7,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "agricultural_residue_digestion_and_recycling",
       "source_id": "soil_2017",
       "direction_title": "农业废弃物厌氧发酵及资源化成套技术与设备研发"
@@ -3303,7 +3303,7 @@
       "scope_and_role_conditions": "Only new heavy-metal-controlled cropping/restoration protocols; ordinary variety adoption not manufacturing R&D.",
       "page_start_1based": 9,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "soil_contamination_and_land_restoration",
       "source_id": "soil_2017",
       "direction_title": "低累积作物品种筛选与超富集植物间套作修复技术研发"
@@ -3332,7 +3332,7 @@
       "scope_and_role_conditions": "Only soil-metal removal materials and new remediation operations.",
       "page_start_1based": 10,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "soil_contamination_and_land_restoration",
       "source_id": "soil_2017",
       "direction_title": "农田重金属污染地球化学工程修复技术研发"
@@ -3359,7 +3359,7 @@
       "scope_and_role_conditions": "Only explicitly developed contaminated-residue processing equipment; replacement-crop downstream industry remains unresolved.",
       "page_start_1based": 10,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "soil_contamination_and_land_restoration",
       "source_id": "soil_2017",
       "direction_title": "重金属污染耕地安全利用技术与产品研发"
@@ -3387,7 +3387,7 @@
       "scope_and_role_conditions": "Only specified safe-cropping and soil-control protocols, not every high-yield crop process.",
       "page_start_1based": 10,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "soil_contamination_and_land_restoration",
       "source_id": "soil_2017",
       "direction_title": "重金属污染耕地安全利用技术与产品研发"
@@ -3415,7 +3415,7 @@
       "scope_and_role_conditions": "Only environmental/soil-resource monitoring instruments and software.",
       "page_start_1based": 12,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "soil_pollution_measurement",
       "source_id": "soil_2017",
       "direction_title": "农业面源和重金属污染检测技术设备研发及标准研制"
@@ -3443,7 +3443,7 @@
       "scope_and_role_conditions": "Only new remediation-production/nursery equipment tied to secondary-pollution control, not ordinary nursery machinery.",
       "page_start_1based": 14,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "soil_contamination_and_land_restoration",
       "source_id": "soil_2017",
       "direction_title": "中南镉砷污染农田综合防治与修复技术示范"
@@ -3473,7 +3473,7 @@
       "scope_and_role_conditions": "Only explicit new pollution-control/residue-reuse process branches, not all integrated restoration technologies.",
       "page_start_1based": 14,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "soil_contamination_and_land_restoration",
       "source_id": "soil_2017",
       "direction_title": "中南镉砷污染农田综合防治与修复技术示范"
@@ -3507,7 +3507,7 @@
       "scope_and_role_conditions": "Only named energy/emission-saving food unit-operation equipment and new processing protocols. High water use is background motivation, not a specific water-saving branch in this direction.",
       "page_start_1based": 9,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "food_resource_efficient_unit_processing",
       "source_id": "food_2017",
       "direction_title": "食品绿色节能制造关键技术及装备开发"
@@ -3533,7 +3533,7 @@
       "scope_and_role_conditions": "Only explicit liquid-egg loss-reduction processing; other nutritional products excluded.",
       "page_start_1based": 12,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "food_resource_efficient_unit_processing",
       "source_id": "food_2017",
       "direction_title": "营养专用型蛋制品绿色加工关键技术研究及开发"
@@ -3561,7 +3561,7 @@
       "scope_and_role_conditions": "Only lower-energy juice-processing equipment and beverage processes.",
       "page_start_1based": 14,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "food_resource_efficient_unit_processing",
       "source_id": "food_2017",
       "direction_title": "新型果蔬汁加工关键技术及装备开发"
@@ -3591,7 +3591,7 @@
       "scope_and_role_conditions": "Only explicit low-carbon tea-food/drink processing; food-residue safety removal does not establish environmental pollution reduction.",
       "page_start_1based": 15,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "food_resource_efficient_unit_processing",
       "source_id": "food_2017",
       "direction_title": "现代茶制品加工与贮藏品质控制关键技术及装备开发"
@@ -3622,7 +3622,7 @@
       "scope_and_role_conditions": "Only low-energy/low-pollution drying and food-loss-reduction equipment/processes; quality detectors are not inherited as green monitoring.",
       "page_start_1based": 16,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "food_drying_cooling_and_postharvest_loss_control",
       "source_id": "food_2017",
       "direction_title": "果蔬干燥减损关键技术与装备研发"
@@ -3651,7 +3651,7 @@
       "scope_and_role_conditions": "Only grain-storage loss monitoring and warning products; price/policy-stock anti-fraud modules excluded.",
       "page_start_1based": 17,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "grain_storage_resource_monitoring",
       "source_id": "food_2017",
       "direction_title": "粮情监测监管云平台关键技术研究及装备开发"
@@ -3686,7 +3686,7 @@
       "scope_and_role_conditions": "Only new rice/byproduct unit processes and their saving/control equipment; product-quality instruments not mapped to environmental monitoring.",
       "page_start_1based": 18,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "food_resource_efficient_unit_processing",
       "source_id": "food_2017",
       "direction_title": "大宗米制品适度加工关键技术装备研发与示范"
@@ -3719,7 +3719,7 @@
       "scope_and_role_conditions": "Only new grain-food saving/control unit processes/equipment; nutritional claims excluded.",
       "page_start_1based": 20,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "food_resource_efficient_unit_processing",
       "source_id": "food_2017",
       "direction_title": "传统杂粮加工关键新技术装备研究及示范"
@@ -3752,7 +3752,7 @@
       "scope_and_role_conditions": "Only new meat-processing resource/energy/water/emission-saving branches; health/low-salt claims excluded.",
       "page_start_1based": 21,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "food_resource_efficient_unit_processing",
       "source_id": "food_2017",
       "direction_title": "西式肉制品绿色制造关键技术与装备开发及示范"
@@ -3784,7 +3784,7 @@
       "standard_activity_codes": [
         "3464"
       ],
-      "review_status": "P31_targeted_source_review",
+      "review_status": "targeted_source_review",
       "page_start_1based": 22,
       "technology_family": "food_drying_cooling_and_postharvest_loss_control",
       "source_id": "food_2017",
@@ -3816,7 +3816,7 @@
       ],
       "scope_and_role_conditions": "Only newly developed on-farm/professional postharvest cooling operating methods, conditional on the named activity; adoption alone is insufficient.",
       "standard_activity_codes": [],
-      "review_status": "P31_targeted_source_review",
+      "review_status": "targeted_source_review",
       "page_start_1based": 22,
       "technology_family": "food_drying_cooling_and_postharvest_loss_control",
       "source_id": "food_2017",
@@ -3851,7 +3851,7 @@
       "scope_and_role_conditions": "Only new grain handling/drying and loss-saving processes/equipment; grading/quality instruments and unspecified packaging types excluded.",
       "page_start_1based": 23,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "food_drying_cooling_and_postharvest_loss_control",
       "source_id": "food_2017",
       "direction_title": "粮食产后“全程不落地”技术模式示范工程"
@@ -3880,7 +3880,7 @@
       "scope_and_role_conditions": "Only newly developed veterinary herbal-drug production linked to explicit lower antibiotic use; ordinary pharmaceutical or husbandry activity not certified.",
       "page_start_1based": 11,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "veterinary_products_for_antibiotic_reduction",
       "source_id": "livestock_2017",
       "direction_title": "中兽医药现代化与绿色养殖技术研究"
@@ -3902,7 +3902,7 @@
       "scope_and_role_conditions": "Qualified species-conservation R&D; zoos/conservation centres not equated with commercial livestock industry.",
       "page_start_1based": 12,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "species_conservation",
       "source_id": "livestock_2017",
       "direction_title": "珍稀濒危野生动物重要疫病防控与驯养繁殖技术研发"
@@ -3932,7 +3932,7 @@
       "scope_and_role_conditions": "Only new resource-saving feeding equipment/husbandry processes. Health/household-condition applications not automatically environmental monitoring software.",
       "page_start_1based": 14,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "resource_efficient_husbandry",
       "source_id": "livestock_2017",
       "direction_title": "畜禽现代化饲养关键技术研发"
@@ -3965,7 +3965,7 @@
       "scope_and_role_conditions": "Only low-loss forage production and new crop-livestock residue/circular protocols; nutrition/yield alone excluded.",
       "page_start_1based": 15,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "forage_and_crop_livestock_circular_operations",
       "source_id": "livestock_2017",
       "direction_title": "优质饲草供给及草畜种养循环关键技术研发"
@@ -3991,7 +3991,7 @@
       "scope_and_role_conditions": "Only new soil-maintaining/sustainable cultivation of the stated species/regions, not timber-yield growth alone.",
       "page_start_1based": 4,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "soil_maintaining_forest_cultivation",
       "source_id": "forest_2017",
       "direction_title": "马尾松高效培育技术研究"
@@ -4017,7 +4017,7 @@
       "scope_and_role_conditions": "Only specified soil-maintaining sustainable larch cultivation protocols.",
       "page_start_1based": 4,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "soil_maintaining_forest_cultivation",
       "source_id": "forest_2017",
       "direction_title": "落叶松高效培育技术研究"
@@ -4043,7 +4043,7 @@
       "scope_and_role_conditions": "Only specified soil-maintaining/agroforestry cultivation methods, not ordinary breeding/productivity.",
       "page_start_1based": 5,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "soil_maintaining_forest_cultivation",
       "source_id": "forest_2017",
       "direction_title": "油松等速生用材树种高效培育技术研究"
@@ -4069,7 +4069,7 @@
       "scope_and_role_conditions": "Only near-natural cultivation branches, not all precious-timber production.",
       "page_start_1based": 6,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "soil_maintaining_forest_cultivation",
       "source_id": "forest_2017",
       "direction_title": "北方主要珍贵用材树种高效培育技术研究"
@@ -4095,7 +4095,7 @@
       "scope_and_role_conditions": "Only forest-resource/environment software, not generic sensing-device purchase or automatic forestry invention.",
       "page_start_1based": 9,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "forest_resource_monitoring",
       "source_id": "forest_2017",
       "direction_title": "人工林资源监测关键技术研究"
@@ -4123,7 +4123,7 @@
       ],
       "scope_and_role_conditions": "Only residue-based resins/activated-carbon products and corresponding manufacture.",
       "standard_activity_codes": [],
-      "review_status": "P31_targeted_source_review",
+      "review_status": "targeted_source_review",
       "page_start_1based": 10,
       "technology_family": "forest_residue_products_and_manufacture",
       "source_id": "forest_2017",
@@ -4152,7 +4152,7 @@
       ],
       "scope_and_role_conditions": "Only forest-residue pulp products/manufacture, not all chemical/material products.",
       "standard_activity_codes": [],
-      "review_status": "P31_targeted_source_review",
+      "review_status": "targeted_source_review",
       "page_start_1based": 10,
       "technology_family": "forest_residue_products_and_manufacture",
       "source_id": "forest_2017",
@@ -4180,7 +4180,7 @@
       ],
       "scope_and_role_conditions": "Only residue-based feed-additive manufacture; not a chemical-resin or pulp activity.",
       "standard_activity_codes": [],
-      "review_status": "P31_targeted_source_review",
+      "review_status": "targeted_source_review",
       "page_start_1based": 10,
       "technology_family": "forest_residue_products_and_manufacture",
       "source_id": "forest_2017",
@@ -4204,7 +4204,7 @@
       ],
       "scope_and_role_conditions": "Mushroom cultivation is a substrate user; the unspecified substrate supplier remains unresolved, not automatically C13.",
       "standard_activity_codes": [],
-      "review_status": "P31_targeted_source_review",
+      "review_status": "targeted_source_review",
       "page_start_1based": 10,
       "technology_family": "forest_residue_products_and_manufacture",
       "source_id": "forest_2017",
@@ -4236,7 +4236,7 @@
       "scope_and_role_conditions": "Only new lower-material-loss wood/furniture products/processes inside demonstration; cultivation/yield claims excluded.",
       "page_start_1based": 11,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "low_material_loss_wood_and_furniture_processing",
       "source_id": "forest_2017",
       "direction_title": "珍贵树种定向培育和增值加工技术集成与示范"
@@ -4269,7 +4269,7 @@
       "scope_and_role_conditions": "Only named new chemical/foam/coating products and saving manufacturing processes; all forest cultivation or food extracts not assigned to these codes.",
       "page_start_1based": 13,
       "standard_activity_codes": [],
-      "review_status": "P29_provisional_link_retained_not_independently_certified",
+      "review_status": "provisional_link_not_independently_verified",
       "technology_family": "nonwood_forest_chemical_and_rubber_processing",
       "source_id": "forest_2017",
       "direction_title": "工业原料林高效培育和增值加工技术集成与示范"
@@ -4295,7 +4295,7 @@
       ],
       "scope_and_role_conditions": "Retain only the explicit new living-biopesticide application-method output inside scientific-basis research. The program concerns pesticide reduction; mechanisms, shelf-life research and insect production are not all promoted to manufacturing R&D.",
       "standard_activity_codes": [],
-      "review_status": "P31_targeted_source_review",
+      "review_status": "targeted_source_review",
       "page_start_1based": 4,
       "technology_family": "biological_and_physical_crop_pest_control",
       "source_id": "agro_2017",
@@ -4322,7 +4322,7 @@
       ],
       "scope_and_role_conditions": "Only development of new green-manure/nitrogen-fixation fertilizer-substitution field methods; fertilizer manufacture remains a separate branch.",
       "standard_activity_codes": [],
-      "review_status": "P31_targeted_source_review",
+      "review_status": "targeted_source_review",
       "page_start_1based": 7,
       "technology_family": "cropping_nutrient_loss_control",
       "source_id": "agro_2017",
@@ -4349,7 +4349,7 @@
       ],
       "scope_and_role_conditions": "Only development of crop-specific in-situ nutrient diagnostic/monitoring operating methods; instruments remain C40 suppliers. This is not generic quality testing or mere sensor purchase.",
       "standard_activity_codes": [],
-      "review_status": "P31_targeted_source_review",
+      "review_status": "targeted_source_review",
       "page_start_1based": 12,
       "technology_family": "crop_nutrient_diagnostics",
       "source_id": "agro_2017",
@@ -4375,7 +4375,7 @@
       ],
       "scope_and_role_conditions": "The new interception-material branch is explicit, but composition/manufacture does not establish a unique supplier code. Supplier candidates remain unresolved, not zero.",
       "standard_activity_codes": [],
-      "review_status": "P31_targeted_source_review",
+      "review_status": "targeted_source_review",
       "page_start_1based": 5,
       "technology_family": "soil_contamination_and_land_restoration",
       "source_id": "soil_2017",
